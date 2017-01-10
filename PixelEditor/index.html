@@ -391,25 +391,22 @@ function ComposeShareLink (options) {
     console.log ("ComponseSharedLink() - total bytes: " + num_x*num_y*pixelbytes);
     link = link + "&pd=";
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
-
-        link = link + toHex(pixeldata[i]);
-        //console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-        //var tmp = 'cpf.set(\"rgb led\",pixeldata[i] ,pixeldata[i]) ,pixeldata[i]);';
-        
+        link = link + toHex(pixeldata[i]);       
     }
-//     for (i = 0; i < num_x*num_y*3; i+3) {
-//         var rgbparam =  i  + "," + 
-// 	  pixeldata[i] + "," + 
-// 	 pixeldata[i+1]  + "," + 
-// 	  pixeldata[i+2]   + ";";
-	  
-//       randomRGB += rgbparam;    
-//    }
+    var i;
+    for (i = 0; i < num_x*num_y*3 ; i++) {
+        var rgbparam =  i  + "," + 
+	  pixeldata[i] + "," + 
+	  pixeldata[i+1]  + "," + 
+	  pixeldata[i+2]   + ";";
+	  i = i+3;
+      randomRGB += rgbparam;    
+   }
 	
-//     if(cpf) {
-//         cpf.setChainableLed(randomRGB);
-// 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-//     }
+    if(cpf) {
+        cpf.setChainableLed(randomRGB);
+	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+    }
 	
     console.log ("linkZZZZZZ: "+link);
     
