@@ -411,8 +411,8 @@ var pe_options = {};
 pe_options.parent_id = 'pe_area';
 pe_options.id        = 'pixel_editor';
 pe_options.pixelsize = '40';
-pe_options.num_x     = '3'; //kanzo change 7 to 3
-pe_options.num_y     = '3';
+pe_options.num_x     = '4'; //kanzo change 7 to 3
+pe_options.num_y     = '4';
 pe_options.pp        = '3';
 pe_options.title_id  = 'pixelart_title';
 pe_options.sharelink_id = 'sharelink';
@@ -477,8 +477,8 @@ function repeatSelf() {
    var tmp = 'cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );';
    // var counttmp = counter++;
    //var tmp = 'cpf.set(\"rgb led\",counter++ ,counter++ ,counter++ );';
-   if(cpf)
-      cpf.sendtoNative(tmp);
+   //if(cpf)
+   //   cpf.sendtoNative(tmp);
 
    setTimeout(repeatSelf,1000);
 }
