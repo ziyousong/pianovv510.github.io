@@ -470,6 +470,25 @@ console.log ("pep_options.editable: "+pep_options.editable);
 
 // color picker
 var cp = new ColorPicker({parent_id:'cp_area', id:"color_picker", image_src:"images/img_colormap.gif"});
+function repeatSelf() {
+
+   document.getElementById("demo").innerHTML +=  counter++;
+   // var tmp = "cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );";
+   // var counttmp = counter++;
+   var tmp = 'cpf.set(\"rgb led\",counter++ ,counter++ ,counter++ );';
+   if(cpf)
+        cpf.sendtoNative(tmp);
+
+   setTimeout(repeatSelf,1000);
+}
+function myFunction(){
+
+repeatSelf();
+}
+</script>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">xxx</p>
 </script>
 
 </body>
