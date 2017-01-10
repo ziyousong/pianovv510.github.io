@@ -11,7 +11,7 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test5</a> </h2>
+    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test6</a> </h2>
 </div>
 
 <div id='pe_area' class='pe_block'></div>
@@ -395,12 +395,14 @@ function ComposeShareLink (options) {
     }
  
    var i=0;
-   while(i!= 3*3*3) {
-	var rgbparam =  i  + "," + 
+   var j=0;
+   while(i!= 4*4*3) {
+	var rgbparam =  j  + "," + 
 	pixeldata[i] + "," + 
 	pixeldata[i+1]  + "," + 
 	pixeldata[i+2]   + ";";
  	i = i+3;
+	j = j+1;
   	randomRGB += rgbparam;    
      }
  
