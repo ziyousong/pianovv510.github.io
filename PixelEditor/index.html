@@ -398,15 +398,16 @@ function ComposeShareLink (options) {
         
     }
     for (i = 0; i < num_x*num_y; i++) {
-      var rgbparam =  i  + "," + 
-      Math.round(Math.random() * redcolor) + "," + 
-	  Math.round(Math.random() * greencolor) + "," + 
-	  Math.round(Math.random() * bluecolor) + ";";
+        var rgbparam =  i  + "," + 
+	  Math.round(Math.random() * 255) + "," + 
+	  Math.round(Math.random() * 255) + "," + 
+	  Math.round(Math.random() * 255) + ";";
 	  
       randomRGB += rgbparam;    
    }
     if(cpf)
         cpf.setChainableLed(randomRGB);
+	
     console.log ("linkZZZZZZ: "+link);
     
     return link;
