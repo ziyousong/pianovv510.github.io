@@ -397,19 +397,19 @@ function ComposeShareLink (options) {
         //var tmp = 'cpf.set(\"rgb led\",pixeldata[i] ,pixeldata[i]) ,pixeldata[i]);';
         
     }
-    for (i = 0; i < num_x*num_y*3; i+3) {
-        var rgbparam =  i  + "," + 
-	  pixeldata[i] + "," + 
-	 pixeldata[i+1]  + "," + 
-	  pixeldata[i+2]   + ";";
+//     for (i = 0; i < num_x*num_y*3; i+3) {
+//         var rgbparam =  i  + "," + 
+// 	  pixeldata[i] + "," + 
+// 	 pixeldata[i+1]  + "," + 
+// 	  pixeldata[i+2]   + ";";
 	  
-      randomRGB += rgbparam;    
-   }
+//       randomRGB += rgbparam;    
+//    }
 	
-    if(cpf) {
-        cpf.setChainableLed(randomRGB);
-	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-    }
+//     if(cpf) {
+//         cpf.setChainableLed(randomRGB);
+// 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+//     }
 	
     console.log ("linkZZZZZZ: "+link);
     
