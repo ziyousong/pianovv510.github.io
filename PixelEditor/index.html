@@ -11,7 +11,7 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test3</a> </h2>
+    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test4</a> </h2>
 </div>
 
 <div id='pe_area' class='pe_block'></div>
@@ -393,16 +393,17 @@ function ComposeShareLink (options) {
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
         link = link + toHex(pixeldata[i]);       
     }
-    var i;
-    for (i = 0; i < num_x*num_y*3 ; i++) {
-        var rgbparam =  i  + "," + 
-	  pixeldata[i] + "," + 
-	  pixeldata[i+1]  + "," + 
-	  pixeldata[i+2]   + ";";
-	  i = i+3;
-      randomRGB += rgbparam;    
-   }
-	
+ 
+   var i=0;
+   while(i!= num_x*num_y*3) {
+	var rgbparam =  i  + "," + 
+	pixeldata[i] + "," + 
+	pixeldata[i+1]  + "," + 
+	pixeldata[i+2]   + ";";
+ 	i = i+3;
+  	randomRGB += rgbparam;    
+     }
+ 
     if(cpf) {
         cpf.setChainableLed(randomRGB);
 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
