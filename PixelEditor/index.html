@@ -393,11 +393,11 @@ function ComposeShareLink (options) {
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
 
         link = link + toHex(pixeldata[i]);
-        console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-        var tmp = 'cpf.set(\"rgb led\",pixeldata[i] ,pixeldata[i]) ,pixeldata[i]);';
+        //console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+        //var tmp = 'cpf.set(\"rgb led\",pixeldata[i] ,pixeldata[i]) ,pixeldata[i]);';
         
     }
-    for (i = 0; i < num_x*num_y; i++) {
+    for (i = 0; i < num_x*num_y*3; i+3) {
         var rgbparam =  i  + "," + 
 	  pixeldata[i] + "," + 
 	 pixeldata[i+1]  + "," + 
@@ -405,8 +405,11 @@ function ComposeShareLink (options) {
 	  
       randomRGB += rgbparam;    
    }
-    if(cpf)
+	
+    if(cpf) {
         cpf.setChainableLed(randomRGB);
+	console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+    }
 	
     console.log ("linkZZZZZZ: "+link);
     
