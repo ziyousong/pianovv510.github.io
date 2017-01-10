@@ -368,6 +368,8 @@ function UpdateUIElems (options) {
     }
 }
 
+ var randomRGB ="";   
+ var endRGB="";
 function ComposeShareLink (options) {
     console.log ("ComponseSharedLink() - options: " + options);
     //var titleElem = document.getElementById(options.title_id);
@@ -391,11 +393,22 @@ function ComposeShareLink (options) {
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
 
         link = link + toHex(pixeldata[i]);
-         console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+        console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+        var tmp = 'cpf.set(\"rgb led\",pixeldata[i] ,pixeldata[i]) ,pixeldata[i]);';
+        
     }
-
+    for (i = 0; i < num_x*num_y; i++) {
+      var rgbparam =  i  + "," + 
+      Math.round(Math.random() * redcolor) + "," + 
+	  Math.round(Math.random() * greencolor) + "," + 
+	  Math.round(Math.random() * bluecolor) + ";";
+	  
+      randomRGB += rgbparam;    
+   }
+    if(cpf)
+        cpf.setChainableLed(randomRGB);
     console.log ("linkZZZZZZ: "+link);
-
+    
     return link;
 }
 
