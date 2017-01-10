@@ -477,8 +477,8 @@ function repeatSelf() {
    // var tmp = "cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );";
    // var counttmp = counter++;
    var tmp = 'cpf.set(\"rgb led\",counter++ ,counter++ ,counter++ );';
-   //if(cpf)
-        //cpf.sendtoNative(tmp);
+   if(cpf)
+      cpf.sendtoNative(tmp);
 
    setTimeout(repeatSelf,1000);
 }
