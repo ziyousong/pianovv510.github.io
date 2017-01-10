@@ -11,31 +11,31 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-<h2><a href="?">CPF Pixel Editor</a></h2>
+    <h2><a href="?">CPF Pixel Editor</a></h2>
 </div>
 
-        <div id='pe_area' class='pe_block'></div>
-        <div id='pe_preview_area' class='pe_preview_block'> </div>
+<div id='pe_area' class='pe_block'></div>
+<div id='pe_preview_area' class='pe_preview_block'> </div>
 
-    <div id='area' class="cp_block">
-        <div id='cp_area'></div>
-        <ul style="list-style-type:none;margin:1">
-          <li><div id='cp_area'></div></li>
-          <li>Click or tap to pick a color</li>
-          <li>HEX: <input type="text" id="hex" size="7"></input></li>
-          <li>RGB: <input type="text" id="rgb" size="10"></input><br></li>
-        </ul>
-    </div>
+<div id='area' class="cp_block">
+    <div id='cp_area'></div>
+    <ul style="list-style-type:none;margin:1">
+        <li><div id='cp_area'></div></li>
+        <li>Click or tap to pick a color</li>
+        <li>HEX: <input type="text" id="hex" size="7"></input></li>
+        <li>RGB: <input type="text" id="rgb" size="10"></input><br></li>
+    </ul>
+</div>
 <p>
 <p>
 
 <div class="sharelink_block">
-<!--
-Pixel Art Title:<br>
-<textarea id="pixelart_title" rows="1" cols="90" style="font-family:arial;font-size:14px;">My Pixel Art</textarea><p>
--->
-<b>Copy this link to share:</b><br>
-<textarea id="sharelink" rows="6" cols="90" style="font-family:arial;font-size:14px;" readonly onclick="this.select();OnShareLinkClick();">Click on pixels to generate link.</textarea>
+    <!--
+    Pixel Art Title:<br>
+    <textarea id="pixelart_title" rows="1" cols="90" style="font-family:arial;font-size:14px;">My Pixel Art</textarea><p>
+    -->
+    <b>Copy this link to share:</b><br>
+    <textarea id="sharelink" rows="6" cols="90" style="font-family:arial;font-size:14px;" readonly onclick="this.select();OnShareLinkClick();">Click on pixels to generate link.</textarea>
 </div>
 
 
@@ -146,12 +146,12 @@ var PixelEditor = function (options) {
     this.canv       = createHiDPICanvas (cx, cy);  console.log ("cx: " + cx + "      cy: " + cy);
     this.pixelsize  = Number(options.pixelsize);
     this.pp         = Number(options.pp);
-    
+
     //canv = document.getElementById(options.id);
     //var ps = + options.pixelsize;
     //var cx = ps * options.num_x;
     //var cy = ps * options.num_y;
- 
+
     var canv = this.canv;
     canv.options = options;
     canv.options.cx = cx;
@@ -189,7 +189,7 @@ var PixelEditor = function (options) {
     g_init = 0;
     b_init = 192;
     this.setRGB (r_init, g_init, b_init);
-    
+
     // draw pixel function
     this.FillPixel = function (x_idx, y_idx, r, g, b) {
         var pp = this.pp;
@@ -198,9 +198,9 @@ var PixelEditor = function (options) {
         var ctx = canv.getContext ('2d');
         var rect_x = x_idx * ps + pp - 0.5;
         var rect_y = y_idx * ps + pp - 0.5;
-        
+
         ps = ps - pp * 2 + 0.5; // pixel size is reduced by paddings
-        
+
         //this.setRGB (r, g, b);
         ctx.fillStyle = "#" + rgbToHex (r, g, b);
         ctx.fillRect (rect_x, rect_y, ps, ps);
@@ -221,12 +221,12 @@ var PixelEditor = function (options) {
                 ctx.moveTo(0,y);
                 ctx.lineTo(canv.width,y);
             }
-            
+
             for (x=0; x<=canv.width; x+=ps) {
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canv.height);
             }
-            
+
             ctx.stroke();
         }
 
@@ -244,7 +244,7 @@ var PixelEditor = function (options) {
             }
         }
     }
-    
+
     this.CopyPixelData = function (src_pe) {
         var num_bytes = this.canv.options.num_x*this.canv.options.num_y*this.pixelbytes;
 
@@ -262,10 +262,10 @@ var PixelEditor = function (options) {
         var eventclick = function (event) {
             var x = event.pageX - this.offsetLeft;
             var y = event.pageY - this.offsetTop;
-            
+
             if (x >= this.width ) x = this.width  - 1;
             if (y >= this.height) y = this.height - 1;
-            
+
             var x_idx = Math.floor (x / ps);
             var y_idx = Math.floor (y / ps);
 
@@ -296,7 +296,7 @@ var PixelEditor = function (options) {
             */
             UpdateUIElems (options);
         }
-        
+
         canv.addEventListener ('click', eventclick, false);
     }
 }
@@ -335,7 +335,7 @@ var ColorPicker = function (options) {
             // show hex
             var rgbhex_box = document.getElementById ('hex');
             rgbhex_box.setAttribute ("value", rgbToHex(R,G,B));
-            
+
             // show rgb
             var RGB = R + ',' + G + "," + B;
             var rgb_box = document.getElementById ('rgb');
@@ -391,17 +391,18 @@ function ComposeShareLink (options) {
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
 
         link = link + toHex(pixeldata[i]);
+         console.log ("num_x:" + num_x+ " num_x:"+ num_x+ "XXX:" +  pixeldata[i] );
     }
 
-    console.log ("link: "+link);
+    console.log ("linkZZZZZZ: "+link);
 
     return link;
 }
 
 function OnShareLinkClick () {
     console.log ("OnShareLinkClick");
-    var intent = new Intent("http://webintents.org/share", 
-                        "text/uri-list", 
+    var intent = new Intent("http://webintents.org/share",
+                        "text/uri-list",
                         window.location.href);
     window.navigator.startActivity(intent);
 }
@@ -410,8 +411,8 @@ var pe_options = {};
 pe_options.parent_id = 'pe_area';
 pe_options.id        = 'pixel_editor';
 pe_options.pixelsize = '40';
-pe_options.num_x     = '7';
-pe_options.num_y     = '7';
+pe_options.num_x     = '3'; //kanzo change 7 to 3
+pe_options.num_y     = '3';
 pe_options.pp        = '3';
 pe_options.title_id  = 'pixelart_title';
 pe_options.sharelink_id = 'sharelink';
@@ -469,11 +470,7 @@ console.log ("pep_options.editable: "+pep_options.editable);
 
 // color picker
 var cp = new ColorPicker({parent_id:'cp_area', id:"color_picker", image_src:"images/img_colormap.gif"});
-function myFunction(){
-cpf.set("rgb led",255,255,0);
-}
 </script>
-<button onclick="myFunction()">Try it</button>
 
 </body>
 
