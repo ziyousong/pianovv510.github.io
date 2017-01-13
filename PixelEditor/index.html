@@ -488,12 +488,14 @@ var cp = new ColorPicker({parent_id:'cp_area', id:"color_picker", image_src:"ima
 var counter = 0;
 function repeatSelf() {
 
-   document.getElementById("demo").innerHTML +=  counter++;
-   var tmp = 'cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );';
-   // var counttmp = counter++;
-   //var tmp = 'cpf.set(\"rgb led\",counter++ ,counter++ ,counter++ );';
-   //if(cpf)
-   //   cpf.sendtoNative(tmp);
+   //document.getElementById("demo").innerHTML +=  counter++;
+   //var tmp = 'cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );';
+    if(cpf) {
+        cpf.setChainableLed(randomRGB);
+	sensordata = cpf.get("light sensor");
+	document.getElementById("demo").innerHTML += sensordata + </br>;
+	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
+    }
 
    setTimeout(repeatSelf,1000);
 }
@@ -501,12 +503,7 @@ var sensordata;
 function myFunction(){
 
     repeatSelf();
-    if(cpf) {
-        cpf.setChainableLed(randomRGB);
-	sensordata = cpf.get("light sensor");
-	document.getElementById("demo").innerHTML += sensordata;
-	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-    }
+
 }
  
 
