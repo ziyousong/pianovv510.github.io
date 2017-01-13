@@ -503,6 +503,7 @@ function repeatSelf() {
 }
 var sensordata;
 function myFunction(){
+    if(cpf)
     cpf.init('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
     //repeatSelf();
 
