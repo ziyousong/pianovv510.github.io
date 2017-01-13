@@ -11,7 +11,7 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test0</a> </h2>
+    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test1</a> </h2>
 </div>
 
 <div id='pe_area' class='pe_block'></div>
@@ -504,7 +504,8 @@ function repeatSelf() {
 var sensordata;
 function myFunction(){
     if(cpf)
-    cpf.init('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
+	 cpf.sendtoNative("SSS");
+    //cpf.init('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
     //repeatSelf();
 
 }
