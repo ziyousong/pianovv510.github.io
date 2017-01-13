@@ -497,11 +497,14 @@ function repeatSelf() {
 
    setTimeout(repeatSelf,1000);
 }
+var sensordata;
 function myFunction(){
 
 //repeatSelf();
 	if(cpf) {
         cpf.setChainableLed(randomRGB);
+	sensordata = cpf.get("light sensor");
+	document.getElementById("demo").innerHTML += sensordata;
 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
     }
 }
