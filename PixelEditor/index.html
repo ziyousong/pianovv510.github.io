@@ -500,8 +500,8 @@ function repeatSelf() {
 var sensordata;
 function myFunction(){
 
-//repeatSelf();
-	if(cpf) {
+    repeatSelf();
+    if(cpf) {
         cpf.setChainableLed(randomRGB);
 	sensordata = cpf.get("light sensor");
 	document.getElementById("demo").innerHTML += sensordata;
