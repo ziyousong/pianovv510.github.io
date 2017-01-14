@@ -49,3 +49,12 @@ table, th, td {
     height: 250px auto;
     border: 1px;// solid black;
 } 
+
+.result {
+    float: left;
+    margin: 2px;
+    padding: 2px;
+    max-width: 600px;
+    height: 250px auto;
+    border: 1px;// solid black;
+} 
