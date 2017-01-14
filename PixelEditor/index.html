@@ -11,7 +11,7 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test2</a> </h2>
+    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test0</a> </h2>
 </div>
 
 <div id='pe_area' class='pe_block'></div>
@@ -38,6 +38,7 @@
     <textarea id="sharelink" rows="6" cols="90" style="font-family:arial;font-size:14px;" readonly onclick="this.select();OnShareLinkClick();">Click on pixels to generate link.</textarea>
 </div>
 <div>
+setup();
 <button onclick="myFunction()">Try it</button>
 
 <p id="demo">xxx</p>
@@ -503,14 +504,16 @@ function repeatSelf() {
 }
 var sensordata;
 function myFunction(){
-    if(cpf)
-      var ret = cpf.setupPin('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
-      document.getElementById("demo").innerHTML += ret + "<br>";
+    
 	//repeatSelf();
 
 }
  
-
+function setup(){
+    if(cpf)
+      var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
+    document.getElementById("demo").innerHTML += ret + "<br>";
+}
 </script>
 
 </body>
