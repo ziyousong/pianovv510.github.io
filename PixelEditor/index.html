@@ -400,7 +400,7 @@ function ComposeShareLink (options) {
  
    var i=0;
    var j=0;
-   while(i!= 4*4*3) {
+   while(i!= num_x*num_y*pixelbyte) {
 	var rgbparam =  j  + "," + 
 	pixeldata[i] + "," + 
 	pixeldata[i+1]  + "," + 
@@ -412,7 +412,9 @@ function ComposeShareLink (options) {
      }
  
       //console.log ("randomRGB: "+randomRGB);
-	
+    if(cpf)
+       cpf.setChainableLed(randomRGB);
+    
     console.log ("linkZZZZZZ: "+link);
     
     return link;
@@ -495,7 +497,7 @@ function repeatSelf() {
    //document.getElementById("demo").innerHTML +=  counter++;
    //var tmp = 'cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );';
     if(cpf) {
-        cpf.setChainableLed(randomRGB);
+       
 	sensordata = cpf.get("light sensor");
 	document.getElementById("demo").innerHTML += sensordata + "<br>";
 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
