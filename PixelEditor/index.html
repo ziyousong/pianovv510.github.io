@@ -11,45 +11,45 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-    <h2> <a href="https://pianovv510.github.io/PixelEditor/">CPF Pixel Editor test１</a> </h2>
+<h2><a href="?">CPF Pixel Editor</a></h2>
 </div>
 
-<div id='pe_area' class='pe_block'></div>
-<div id='pe_preview_area' class='pe_preview_block'> </div>
+        <div id='pe_area' class='pe_block'></div>
+        <div id='pe_preview_area' class='pe_preview_block'> </div>
 
-<div id='area' class="cp_block">
-    <div id='cp_area'></div>
-    <ul style="list-style-type:none;margin:1">
-        <li><div id='cp_area'></div></li>
-        <li>Click or tap to pick a color</li>
-        <li>HEX: <input type="text" id="hex" size="7"></input></li>
-        <li>RGB: <input type="text" id="rgb" size="10"></input><br></li>
-    </ul>
-</div>
+    <div id='area' class="cp_block">
+        <div id='cp_area'></div>
+        <ul style="list-style-type:none;margin:1">
+          <li><div id='cp_area'></div></li>
+          <li>Click or tap to pick a color</li>
+          <li>HEX: <input type="text" id="hex" size="7"></input></li>
+          <li>RGB: <input type="text" id="rgb" size="10"></input><br></li>
+        </ul>
+    </div>
 <p>
 <p>
 
 <div class="sharelink_block">
-    <!--
-    Pixel Art Title:<br>
-    <textarea id="pixelart_title" rows="1" cols="90" style="font-family:arial;font-size:14px;">My Pixel Art</textarea><p>
-    -->
-    <b>Copy this link to share:</b><br>
-    <textarea id="sharelink" rows="6" cols="90" style="font-family:arial;font-size:14px;" readonly onclick="this.select();OnShareLinkClick();">Click on pixels to generate link.</textarea>
-</div>
- 	
-<div class="result"> 
-<p id="demo">result:</p>
-<button onclick="myFunction()">Try it</button>
+<!--
+Pixel Art Title:<br>
+<textarea id="pixelart_title" rows="1" cols="90" style="font-family:arial;font-size:14px;">My Pixel Art</textarea><p>
+-->
+<b>Copy this link to share:</b><br>
+<textarea id="sharelink" rows="6" cols="90" style="font-family:arial;font-size:14px;" readonly onclick="this.select();OnShareLinkClick();">Click on pixels to generate link.</textarea>
 </div>
 
+<div class="result"> 
+<p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"> result:</p>
+</div>
  
 <script>
 console.log("location.href: "+location.href);
 console.log("location.protocol: "+location.protocol);
 console.log("location.hostname: "+location.hostname);
 console.log(location);
-setup();
+
 // helper function
 // from http://www.webdesignerdepot.com
 function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
@@ -150,12 +150,12 @@ var PixelEditor = function (options) {
     this.canv       = createHiDPICanvas (cx, cy);  console.log ("cx: " + cx + "      cy: " + cy);
     this.pixelsize  = Number(options.pixelsize);
     this.pp         = Number(options.pp);
-
+    
     //canv = document.getElementById(options.id);
     //var ps = + options.pixelsize;
     //var cx = ps * options.num_x;
     //var cy = ps * options.num_y;
-
+ 
     var canv = this.canv;
     canv.options = options;
     canv.options.cx = cx;
@@ -193,7 +193,7 @@ var PixelEditor = function (options) {
     g_init = 0;
     b_init = 192;
     this.setRGB (r_init, g_init, b_init);
-
+    
     // draw pixel function
     this.FillPixel = function (x_idx, y_idx, r, g, b) {
         var pp = this.pp;
@@ -202,9 +202,9 @@ var PixelEditor = function (options) {
         var ctx = canv.getContext ('2d');
         var rect_x = x_idx * ps + pp - 0.5;
         var rect_y = y_idx * ps + pp - 0.5;
-
+        
         ps = ps - pp * 2 + 0.5; // pixel size is reduced by paddings
-
+        
         //this.setRGB (r, g, b);
         ctx.fillStyle = "#" + rgbToHex (r, g, b);
         ctx.fillRect (rect_x, rect_y, ps, ps);
@@ -225,12 +225,12 @@ var PixelEditor = function (options) {
                 ctx.moveTo(0,y);
                 ctx.lineTo(canv.width,y);
             }
-
+            
             for (x=0; x<=canv.width; x+=ps) {
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canv.height);
             }
-
+            
             ctx.stroke();
         }
 
@@ -248,7 +248,7 @@ var PixelEditor = function (options) {
             }
         }
     }
-
+    
     this.CopyPixelData = function (src_pe) {
         var num_bytes = this.canv.options.num_x*this.canv.options.num_y*this.pixelbytes;
 
@@ -266,10 +266,10 @@ var PixelEditor = function (options) {
         var eventclick = function (event) {
             var x = event.pageX - this.offsetLeft;
             var y = event.pageY - this.offsetTop;
-
+            
             if (x >= this.width ) x = this.width  - 1;
             if (y >= this.height) y = this.height - 1;
-
+            
             var x_idx = Math.floor (x / ps);
             var y_idx = Math.floor (y / ps);
 
@@ -300,7 +300,7 @@ var PixelEditor = function (options) {
             */
             UpdateUIElems (options);
         }
-
+        
         canv.addEventListener ('click', eventclick, false);
     }
 }
@@ -339,7 +339,7 @@ var ColorPicker = function (options) {
             // show hex
             var rgbhex_box = document.getElementById ('hex');
             rgbhex_box.setAttribute ("value", rgbToHex(R,G,B));
-
+            
             // show rgb
             var RGB = R + ',' + G + "," + B;
             var rgb_box = document.getElementById ('rgb');
@@ -372,8 +372,6 @@ function UpdateUIElems (options) {
     }
 }
 
- var randomRGB ="";   
- var endRGB="";
 function ComposeShareLink (options) {
     console.log ("ComponseSharedLink() - options: " + options);
     //var titleElem = document.getElementById(options.title_id);
@@ -389,41 +387,44 @@ function ComposeShareLink (options) {
     //link = link + "title="+ title;
     link = link + "nx=" + num_x;
     link = link + "&ny=" + num_y;
-
+    var link2 = "";
     // append pixel data
     console.log ("ComponseSharedLink() - pixelbytes: " + pixelbytes);
     console.log ("ComponseSharedLink() - total bytes: " + num_x*num_y*pixelbytes);
     link = link + "&pd=";
     for (var i=0; i<num_x*num_y*pixelbytes; i++) {
-        link = link + toHex(pixeldata[i]);       
-    }
- 
-   var i=0;
-   var j=0;
-   while(i!= num_x*num_y*pixelbyte) {
-	var rgbparam =  j  + "," + 
-	pixeldata[i] + "," + 
-	pixeldata[i+1]  + "," + 
-	pixeldata[i+2]   + ";";
- 	i = i+3;
-	j = j+1;
-  	randomRGB += rgbparam;  
+
+        link = link + toHex(pixeldata[i]);
 	 
-     }
- 
-      //console.log ("randomRGB: "+randomRGB);
+		
+    }
+	
+	var randomRGB ="";   
+	var i=0;
+    var j=0;
+    while(i!= num_x*num_y*pixelbytes) {
+	   var rgbparam =  j  + "," + 
+	   pixeldata[i] + "," + 
+	   pixeldata[i+1]  + "," + 
+	   pixeldata[i+2]   + ";";
+ 	   i = i+3;
+	   j = j+1;
+  	   randomRGB += rgbparam;  
+    }
+	
     if(cpf)
        cpf.setChainableLed(randomRGB);
-    
-    console.log ("linkZZZZZZ: "+link);
-    
+
+    document.getElementById("demo").innerHTML += randomRGB;
+    console.log ("link: "+link);
+
     return link;
 }
 
 function OnShareLinkClick () {
     console.log ("OnShareLinkClick");
-    var intent = new Intent("http://webintents.org/share",
-                        "text/uri-list",
+    var intent = new Intent("http://webintents.org/share", 
+                        "text/uri-list", 
                         window.location.href);
     window.navigator.startActivity(intent);
 }
@@ -432,7 +433,7 @@ var pe_options = {};
 pe_options.parent_id = 'pe_area';
 pe_options.id        = 'pixel_editor';
 pe_options.pixelsize = '40';
-pe_options.num_x     = '4'; //kanzo change 7 to 3
+pe_options.num_x     = '4';
 pe_options.num_y     = '4';
 pe_options.pp        = '3';
 pe_options.title_id  = 'pixelart_title';
@@ -493,23 +494,20 @@ console.log ("pep_options.editable: "+pep_options.editable);
 var cp = new ColorPicker({parent_id:'cp_area', id:"color_picker", image_src:"images/img_colormap.gif"});
 var counter = 0;
 function repeatSelf() {
-
    //document.getElementById("demo").innerHTML +=  counter++;
    //var tmp = 'cpf.set(\"rgb led\",Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) ,Math.floor((Math.random() * 255) + 1) );';
-    if(cpf) {
-       
+     //if(cpf) {
+     //   cpf.setChainableLed(randomRGB);
 	sensordata = cpf.get("light sensor");
 	document.getElementById("demo").innerHTML += sensordata + "<br>";
 	//console.log ("num_x:" + num_x+ " num_x:"+ num_x+ " pixeldata[" + i + "]" +  pixeldata[i] );
-    }
-
+    //}
    setTimeout(repeatSelf,1000);
 }
 var sensordata;
 function myFunction(){
     
-	repeatSelf();
-
+	//repeatSelf();
 }
  
 function setup(){
@@ -518,6 +516,7 @@ function setup(){
     document.getElementById("demo").innerHTML += ret + "<br>";
 }
 </script>
+ 
 
 </body>
 
