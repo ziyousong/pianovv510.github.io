@@ -3,7 +3,7 @@
 <!--2016/12/26 Mark Yang - simple pixel editor for CPF web app -->
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>CPF Pixel Editor test</title>
+<title>CPF Pixel Editor test1</title>
 <head>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -398,9 +398,8 @@ function ComposeShareLink (options) {
 	 
 		
     }
-	
-	   
-	var i=0;
+		   
+    var i=0;
     var j=0;
     while(i!= num_x*num_y*pixelbytes) {
 	   var rgbparam =  j  + "," + 
@@ -505,8 +504,10 @@ function repeatSelf() {
 }
 var sensordata;
 function myFunction(){
-     if(cpf)
-       cpf.setChainableLed(randomRGB);
+if(cpf){
+  cpf.setChainableLed(randomRGB);
+}
+  randomRGB = "";	
 	//repeatSelf();
 }
  
