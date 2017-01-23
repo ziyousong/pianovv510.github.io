@@ -371,7 +371,7 @@ function UpdateUIElems (options) {
         pep.Render();
     }
 }
-
+var randomRGB ="";
 function ComposeShareLink (options) {
     console.log ("ComponseSharedLink() - options: " + options);
     //var titleElem = document.getElementById(options.title_id);
@@ -399,7 +399,7 @@ function ComposeShareLink (options) {
 		
     }
 	
-	var randomRGB ="";   
+	   
 	var i=0;
     var j=0;
     while(i!= num_x*num_y*pixelbytes) {
@@ -412,8 +412,7 @@ function ComposeShareLink (options) {
   	   randomRGB += rgbparam;  
     }
 	
-    if(cpf)
-       cpf.setChainableLed(randomRGB);
+   
 
     document.getElementById("demo").innerHTML += randomRGB;
     console.log ("link: "+link);
@@ -506,7 +505,8 @@ function repeatSelf() {
 }
 var sensordata;
 function myFunction(){
-    
+     if(cpf)
+       cpf.setChainableLed(randomRGB);
 	//repeatSelf();
 }
  
