@@ -527,9 +527,10 @@ function catrequest() {
 
 function runset(){
    fLen = junk.length;
-	 document.getElementById("demo").innerHTML += "fLen:" + fLen + "<br>";
+   document.getElementById("demo").innerHTML += "fLen:" + fLen + "<br>";
    for (i = 0; i < fLen; i++) {    
      if(cpf){
+       document.getElementById("demo").innerHTML += "cpf:" + junk[i] + "<br>";     
        cpf.setChainableLed(junk[i]);
      }
    } 
