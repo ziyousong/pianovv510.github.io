@@ -11,7 +11,7 @@
 <body style="font-family:arial;width:100%">
 
 <div class="header">
-<h2><a href="?">CPF Pixel Editor2</a></h2>
+<h2><a href="?">CPF Pixel Editor3</a></h2>
 </div>
 
         <div id='pe_area' class='pe_block'></div>
@@ -40,7 +40,10 @@ Pixel Art Title:<br>
 
 <div class="result"> 
 <p>
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Send</button>
+<button onclick="catrequest()">CatRequset</button>
+<button onclick="runset()">Runset</button>
+	
 <p id="demo"> result:</p>
 </div>
 
@@ -503,17 +506,32 @@ function repeatSelf() {
     //}
    setTimeout(repeatSelf,1000);
 }
-var sensordata;
-function myFunction(){
-if(cpf){
-  cpf.setChainableLed(g_randomRGB);
-	g_randomRGB = "";
 	
-}
-  	
+var sensordata;
+function myFunction() {
+	
+  if(cpf){
+    cpf.setChainableLed(g_randomRGB);
+	g_randomRGB = "";	
+   }  	
 	//repeatSelf();
 }
- 
+	
+var fLen,i;
+var junk = new Array();
+	
+function catrequest() {
+   junk.push(g_randomRGB);		
+}
+
+function runset(){
+   for (i = 0; i < fLen; i++) {    
+     if(cpf){
+       cpf.setChainableLed(junk[i]);
+     }
+   } 
+}
+
 function setup(){
     if(cpf)
       var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"setPinMode\", \"digital\", 2,\"OUTPUT\"],[\"setPinMode\", \"digital\", 3,\"PWM\"],[\"grove_newChainableLED\", 7, 8, 50]'); 
