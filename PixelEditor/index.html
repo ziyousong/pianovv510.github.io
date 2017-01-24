@@ -417,7 +417,7 @@ function ComposeShareLink (options) {
 	
    g_randomRGB = randomRGB;
 
-    document.getElementById("demo").innerHTML += g_randomRGB;
+    document.getElementById("demo").innerHTML += g_randomRGB + "<br>";
     console.log ("link: "+link);
 
     return link;
@@ -522,7 +522,7 @@ var junk = new Array();
 	
 function catrequest() {
    junk.push(g_randomRGB);
-   document.getElementById("demo").innerHTML += g_randomRGB + "<br>";
+   document.getElementById("demo").innerHTML += junk + "<br>";
 }
 
 function runset(){
