@@ -41,8 +41,8 @@ Pixel Art Title:<br>
 <div class="result"> 
 <p>
 <button onclick="myFunction()">Send</button>
-<button onclick="catrequest()">CatRequset</button>
-<button onclick="runset()">Runset</button>
+<button onclick="savepixel()">Save Pixel</button>
+<button onclick="runset()">Run all Pixel</button>
 	
 <p id="demo"> result:</p>
 </div>
@@ -520,7 +520,7 @@ function myFunction() {
 var fLen,i;
 var junk = new Array();
 	
-function catrequest() {
+function savepixel() {
    junk.push(g_randomRGB);
    document.getElementById("demo").innerHTML += junk + "<br>";
 }
