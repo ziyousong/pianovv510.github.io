@@ -1,0 +1,26 @@
+html {
+	font-family: Microsoft JhengHei;
+}
+
+#title {
+	display: block;
+	margin-top: 50px;
+	font-size: 35px;
+	color: #66DD00;
+	font-weight: bold;
+	text-align: center;
+}
+
+#content {
+	height: 600px;
+	width: 100%;
+}
+
+#robot {
+	display: inline-block;
+	position: relative;
+	margin-top: 50px;
+	height: 450px;
+	width: auto;
+	z-index: -1;
+}
