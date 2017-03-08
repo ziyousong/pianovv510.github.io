@@ -1,0 +1,94 @@
+html {
+	font-family: Microsoft JhengHei;
+}
+
+a {
+	color: #aaa;
+	margin-left: 55%;
+}
+
+#title {
+	display: block;
+	margin-top: 50px;
+	font-size: 35px;
+	color: #66DD00;
+	font-weight: bold;
+	text-align: center;
+}
+
+.content {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	line-height: 35px;
+	text-align: center;
+	width:60%;
+}
+
+#map {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	height: 170px;
+	width: auto;
+}
+
+input {
+	font-size: 15px;
+	width: 200px;
+	text-align: center;
+}
+
+hr {
+	width: 30%;
+}
+
+.led {
+	margin-top: 25px;
+	margin-left: 40%;
+}
+
+.button {
+	margin-bottom: 30px;
+	margin-left: 15%;
+}
+
+#submit {
+	display: block;
+	width: 30%;
+	height: 45px;
+	margin: 0 auto;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	font-size: 25px;
+	font-family: Microsoft JhengHei;
+	background-color: #ddd;
+	box-shadow: 0px 5px #eee;
+	cursor: pointer;
+}
+
+#submit:hover {
+	box-shadow: 0px 0px #eee;
+	color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		width: 85%;
+	}
+	#map {
+		left:1%;
+	}
+	hr {
+		width: 80%;
+	}
+	a {
+		color: #aaa;
+		margin-left: 65%;
+	}
+
+	#submit {
+		width: 80%;
+	}
+
+}
