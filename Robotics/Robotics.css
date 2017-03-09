@@ -45,7 +45,7 @@ html {
 
 .motor:nth-child(2) {
 	top: 30%;
-	left: 24;
+	left: 24%;
 }
 .motor:nth-child(3) {
 	top: 34%;
@@ -61,7 +61,7 @@ html {
 }
 .motor:nth-child(6) {
 	top: 73%;
-	left: 24;
+	left: 24%;
 }
 
 .input {
