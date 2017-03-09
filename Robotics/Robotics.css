@@ -22,6 +22,7 @@ html {
 	display: inline-block;
 	position: relative;
 	margin-top: 50px;
+	margin-left: -25px;
 	height: 450px;
 	width: auto;
 	z-index: -1;
@@ -37,30 +38,30 @@ html {
 	text-align: center;
 	font-size: 16px;
 	border-radius: 7px;
-	top: 20%;
+	top: 29%;
 	left: 65%;
 	z-index: 10;
 	box-shadow: 2px 1px #eee;
 }
 
 .motor:nth-child(2) {
-	top: 30%;
+	top: 16%;
 	left: 24%;
 }
 .motor:nth-child(3) {
-	top: 34%;
+	top: 56%;
 	left: 65%;
 }
 .motor:nth-child(4) {
-	top: 52%;
+	top: 31%;
 	left: 24%;
 }
 .motor:nth-child(5) {
-	top: 66%;
+	top: 75%;
 	left: 65%;
 }
 .motor:nth-child(6) {
-	top: 73%;
+	top: 57%;
 	left: 24%;
 }
 
