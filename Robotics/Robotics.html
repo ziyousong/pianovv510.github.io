@@ -8,14 +8,49 @@
 <font id="title">Location report</font><p>
 
 <div id="content">
-	<center><img id="robot" src="img/robotics.gif" /></center>
+	<center><img id="robot" src="robotics2.png" /></center>
 
-	<div class="motor">M1</div>
-	<div class="motor">M2</div>
-	<div class="motor">M3</div>
-	<div class="motor">M4</div>
-	<div class="motor">M5</div>
-	<div class="motor">M6</div>
+	<table>
+	<tr>
+		<td class="motor">
+			M1<p><input class="input" type="text" value="10" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+		<td class="motor">
+			M2<p><input class="input" type="text" value="20" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+		<td class="motor">
+			M3<p><input class="input" type="text" value="30" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+		<td class="motor">
+			M4<p><input class="input" type="text" value="40" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+		<td class="motor">
+			M5<p><input class="input" type="text" value="50" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+		<td class="motor">
+			M6<p><input class="input" type="text" value="60" maxlength="3" >
+			<input class="confirm" type="submit" value="Confirm">
+		</td>
+	</tr>
+	</table>
+</div>
+
+<div style="height: 300px; width:100%;">
+<center>
+	<input id="command" type="text" value="Robotics(10,20,30,40,50,60);" readonly="readonly">
+	<input class="sendbutton" type="submit" value="Save"><p><br>
+	<textarea id="data" readonly="readonly">
+Robotics(90,90,90,90,90,90);
+delay(1000);
+	</textarea>
+	<input class="sendbutton" type="submit" value="Delay"><p>
+	<input class="sendbutton" type="submit" value="Run">
+</center>
 </div>
 
 </body>
