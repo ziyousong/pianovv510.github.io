@@ -39,30 +39,30 @@ html {
 	font-size: 16px;
 	border-radius: 7px;
 	top: 29%;
-	left: 65%;
+	left: 75%;
 	z-index: 10;
 	box-shadow: 2px 1px #eee;
 }
 
 .motor:nth-child(2) {
 	top: 16%;
-	left: 24%;
+	left: 14%;
 }
 .motor:nth-child(3) {
 	top: 56%;
-	left: 65%;
+	left: 75%;
 }
 .motor:nth-child(4) {
 	top: 31%;
-	left: 24%;
+	left: 14%;
 }
 .motor:nth-child(5) {
 	top: 75%;
-	left: 65%;
+	left: 75%;
 }
 .motor:nth-child(6) {
 	top: 57%;
-	left: 24%;
+	left: 14%;
 }
 
 .input {
