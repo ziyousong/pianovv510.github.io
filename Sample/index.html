@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<title>Sample</title>
+<script type="text/javascript" src="main.js"></script>
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<font id="title">Sample</font><p><br>
+
+<div id="content">
+
+	<div id="analog">
+		<div>
+		<img class="analogsensor" src="img/light.png" />
+		<span class="analogvalue" id="lightvalue"></span><br>
+		</div>
+		<div>
+		<img class="analogsensor" src="img/temp.png" />
+		<span class="analogvalue" id="temperaturevalue">15</span>
+		</div>
+	</div>
+	
+	<div id="rgb">
+		<img class="rgbled" src="img/rgb.png" />
+		<table style="margin: 0 auto; margin-top: 10px;">
+			<tr style="text-align: center;">
+				<td>Red</td>
+				<td>Green</td>
+				<td>Blue</td>
+			</tr>
+			<tr>
+				<td><input type="range" id="rled" value="0" min="0" max="255"></td>
+				<td><input type="range" id="gled" value="0" min="0" max="255"></td>
+				<td><input type="range" id="bled" value="0" min="0" max="255"></td>
+			</tr>
+		</table>
+	</div>
+	
+	<button id="submit">Start</button><p>
+	<button id="submit">Stop</button>
+		
+</div>
+
+<script>
+
+	var lightdata = cpf.get("light sensor");
+	var lightdata = cpf.get("temperature sensor");
+	
+	document.getElementById("lightvalue").innerHTML = lightdata;
+	document.getElementById("temperaturevalue").innerHTML = lightdata;
+	
+	
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"analog\", 0, \"INPUT\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"],[\"grove_newChainableLED\", 7, 8, 1]'); 
+			//document.getElementById("demo").innerHTML += ret + "<br>";
+	}
+	
+</script>
+</body>
+</html>
