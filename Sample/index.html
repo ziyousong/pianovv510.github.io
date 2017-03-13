@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Sample</title>
+<script type="text/javascript" src="main.js"></script>
 <link rel="stylesheet" href="main.css">
 
 </head>
@@ -45,13 +46,12 @@
 	
 	var i = 0;
 	function loop() {
-			var lightdata = cpf.get("light sensor");
-			var lightdata = cpf.get("temperature sensor");
+		var lightdata = cpf.get("light sensor");
+		var tempdata = cpf.get("temperature sensor");
 		
-			document.getElementById("lightvalue").innerHTML = lightdata;
-			document.getElementById("temperaturevalue").innerHTML = lightdata;
-			
-			i++;
+		document.getElementById("lightvalue").innerHTML = lightdata;
+		document.getElementById("temperaturevalue").innerHTML = tempdata;
+		i++;
 		if( i < 10 ){
 			setTimeout( f, 3000 );
 		}
