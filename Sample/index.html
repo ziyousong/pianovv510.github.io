@@ -14,6 +14,7 @@
 		<img class="analogsensor" src="img/light.png" />
 		<span class="analogvalue" id="lightvalue"></span><br>
 		</div>
+		<p>
 		<div>
 		<img class="analogsensor" src="img/temp.png" />
 		<span class="analogvalue" id="temperaturevalue">15</span>
@@ -28,10 +29,15 @@
 				<td>Green</td>
 				<td>Blue</td>
 			</tr>
+			<tr style="text-align: center;">
+				<td id="redvalue">0</td>
+				<td id="greenvalue">0</td>
+				<td id="bluevalue">0</td>
+			</tr>
 			<tr>
-				<td><input type="range" id="rled" value="0" min="0" max="255"></td>
-				<td><input type="range" id="gled" value="0" min="0" max="255"></td>
-				<td><input type="range" id="bled" value="0" min="0" max="255"></td>
+				<td><input Onchange="red(this.value);" type="range" id="rled" value="0" min="0" max="255"></td>
+				<td><input Onchange="green(this.value);" type="range" id="gled" value="0" min="0" max="255"></td>
+				<td><input Onchange="blue(this.value);" type="range" id="bled" value="0" min="0" max="255"></td>
 			</tr>
 		</table>
 	</div>
@@ -57,6 +63,18 @@
 	}
 	loop();
 	
+	
+	function red(value) {
+		document.getElementById("redvalue").innerHTML = value;
+	}
+	
+	function green(value) {
+		document.getElementById("greenvalue").innerHTML = value;
+	}
+	
+	function blue(value) {
+		document.getElementById("bluevalue").innerHTML = value;
+	}
 	
 	
 	
