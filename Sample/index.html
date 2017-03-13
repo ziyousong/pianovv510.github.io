@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <title>Sample</title>
+<script type="text/javascript" src="main.js"></script>
 <link rel="stylesheet" href="main.css">
 
 </head>
@@ -42,15 +43,23 @@
 </div>
 
 <script>
-
 	
-	var lightdata = cpf.get("light sensor");
-	var lightdata = cpf.get("temperature sensor");
+	var i = 0;
+	function f() {
+		var lightdata = cpf.get("light sensor");
+		var lightdata = cpf.get("temperature sensor");
+		
+		document.getElementById("lightvalue").innerHTML = lightdata;
+		document.getElementById("temperaturevalue").innerHTML = lightdata;
+		i++;
+		if( i < 10 ){
+			setTimeout( f, 3000 );
+		}
+	}
+	f();
 	
-	document.getElementById("lightvalue").innerHTML = lightdata;
-	document.getElementById("temperaturevalue").innerHTML = lightdata;
 	
-	cpf.repeat();
+	
 	
 	function setup(){
 		if(cpf)
