@@ -45,7 +45,6 @@
 	
 	var i = 0;
 	function loop() {
-		if(cpf){
 			var lightdata = cpf.get("light sensor");
 			var lightdata = cpf.get("temperature sensor");
 		
@@ -53,7 +52,6 @@
 			document.getElementById("temperaturevalue").innerHTML = lightdata;
 			
 			i++;
-		}
 		if( i < 10 ){
 			setTimeout( f, 3000 );
 		}
