@@ -45,7 +45,7 @@
 <script>
 	
 	var i = 0;
-	function f() {
+	function loop() {
 		var lightdata = cpf.get("light sensor");
 		var lightdata = cpf.get("temperature sensor");
 		
@@ -56,7 +56,7 @@
 			setTimeout( f, 3000 );
 		}
 	}
-	f();
+	loop();
 	
 	
 	
