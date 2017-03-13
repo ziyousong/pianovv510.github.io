@@ -10,17 +10,16 @@
 <div id="content">
 
 	<div id="analog">
-		<div>
+		<div class="analogclass">
 		<img class="analogsensor" src="img/light.png" />
 		<span class="analogvalue" id="lightvalue"></span><br>
 		</div>
 		<p>
-		<div>
+		<div class="analogclass">
 		<img class="analogsensor" src="img/temp.png" />
 		<span class="analogvalue" id="temperaturevalue">15</span>
 		</div>
 	</div>
-	
 	<div id="rgb">
 		<img class="rgbled" src="img/rgb.png" />
 		<table style="margin: 0 auto; margin-top: 10px;">
@@ -39,9 +38,13 @@
 				<td><input Onchange="green(this.value);" type="range" id="gled" value="0" min="0" max="255"></td>
 				<td><input Onchange="blue(this.value);" type="range" id="bled" value="0" min="0" max="255"></td>
 			</tr>
+			<tr>
+				
+			</tr>
 		</table>
 	</div>
 	
+	<p><br>
 	<button id="submit">Start</button><p>
 	<button id="submit">Stop</button>
 		
@@ -66,6 +69,7 @@
 	}
 	loop();
 	
+	cpf.repeat();
 	
 	function red(value) {
 		document.getElementById("redvalue").innerHTML = value;
