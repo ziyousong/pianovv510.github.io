@@ -46,8 +46,10 @@
 	
 	var i = 0;
 	function loop() {
-		var lightdata = cpf.get("light sensor");
-		var lightdata = cpf.get("temperature sensor");
+		if(cpf){
+			var lightdata = cpf.get("light sensor");
+			var lightdata = cpf.get("temperature sensor");
+		}
 		
 		document.getElementById("lightvalue").innerHTML = lightdata;
 		document.getElementById("temperaturevalue").innerHTML = lightdata;
