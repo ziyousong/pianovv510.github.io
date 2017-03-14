@@ -54,6 +54,7 @@
 	var i = 0;
 	var lightdata;
 	var tempdata;
+	var temperature;
 	
 	var Rled = document.getElementById("rled");
 	var Gled = document.getElementById("gled");
@@ -64,9 +65,10 @@
 	
 			lightdata = cpf.get("light sensor");
 			tempdata = cpf.get("temperature sensor");
+			temperature = toCelsuis(tempdata);
 				
 			document.getElementById("lightvalue").innerHTML = lightdata;
-			document.getElementById("temperaturevalue").innerHTML = tempdata;
+			document.getElementById("temperaturevalue").innerHTML = temperature;
 			
 		}
 		setTimeout("loop()", 1000);
@@ -97,12 +99,11 @@
 		}
 	}
 	
-	function send() {
-		if(cpf){
-			
-			cpf.setChainableLed("0," + Rled.value + "," + Gled.value + "," + Bled.value + ";");
+	function toCelsuis(value) {
+		var resistance = parseFloat((1023-value) * 1000 / value);
+		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15)) - 273.15;
 		
-		}
+		return temperature.toFixed(2);
 	}
 	
 	function setup(){
