@@ -102,6 +102,13 @@ html {
 	color: #aaa;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (min-width: 820px) {
+	
+	#content {
+		width: 1000px;
+	}
+	
+	#rgb {
+		float: right;
+	}
 }
