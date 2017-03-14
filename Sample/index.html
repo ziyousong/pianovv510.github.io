@@ -67,6 +67,8 @@
 			document.getElementById("lightvalue").innerHTML = lightdata;
 			document.getElementById("temperaturevalue").innerHTML = tempdata;
 			
+			cpf.setChainableLed("0," + Rled.value + "," + Gled.value + "," + Bled.value + ";");
+			
 		}
 		setTimeout("loop()", 1000);
 	}
