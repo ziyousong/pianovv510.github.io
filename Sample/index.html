@@ -24,9 +24,9 @@
 		<img class="rgbled" src="img/rgb.png" />
 		<table style="margin: 0 auto; margin-top: 10px;">
 			<tr style="text-align: center;">
-				<td>Red</td>
-				<td>Green</td>
-				<td>Blue</td>
+				<td><font color="red"><b>Red</b></font></td>
+				<td><font color="green"><b>green</b></font></td>
+				<td><font color="blue"><b>blue</b></font></td>
 			</tr>
 			<tr style="text-align: center;">
 				<td id="redvalue">0</td>
@@ -38,14 +38,12 @@
 				<td><input Onchange="green(this.value);" type="range" id="gled" value="0" min="0" max="255"></td>
 				<td><input Onchange="blue(this.value);" type="range" id="bled" value="0" min="0" max="255"></td>
 			</tr>
-			<tr>
-				
-			</tr>
 		</table>
+		<span id="showcolor"></span>
 	</div>
 	
 	<p><br>
-	<button id="submit">Start</button><p>
+	<button id="submit" onclick="send()">Start</button><p>
 	<button id="submit">Stop</button>
 		
 </div>
@@ -56,34 +54,47 @@
 	var lightdata;
 	var tempdata;
 	
-	function loop() {
+	var Rled = document.getElementById("rled");
+	var Gled = document.getElementById("gled");
+	var Bled = document.getElementById("bled");
+	
+	if(cpf){
 		lightdata = cpf.get("light sensor");
 		tempdata = cpf.get("temperature sensor");
-		
+			
 		document.getElementById("lightvalue").innerHTML = lightdata;
 		document.getElementById("temperaturevalue").innerHTML = tempdata;
-		i++;
-		if( i < 10 ){
-			setTimeout( f, 3000 );
-		}
+		
+		cpf.repeat();
 	}
-	loop();
-	
-	cpf.repeat();
 	
 	function red(value) {
 		document.getElementById("redvalue").innerHTML = value;
+		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + value + ',' + Gled.value + ',' + Bled.value + ')';
 	}
 	
 	function green(value) {
 		document.getElementById("greenvalue").innerHTML = value;
+		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + value + ',' + Bled.value + ')';
 	}
 	
 	function blue(value) {
 		document.getElementById("bluevalue").innerHTML = value;
+		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + Gled.value + ',' + value + ')';
 	}
 	
-	
+	function send() {
+		if(cpf){
+			lightdata = cpf.get("light sensor");
+			tempdata = cpf.get("temperature sensor");
+			
+			document.getElementById("lightvalue").innerHTML = lightdata;
+			document.getElementById("temperaturevalue").innerHTML = tempdata;
+			
+			cpf.set("rgb led", Rled.value, Gled.value, Bled.value);
+		
+		}
+	}
 	
 	function setup(){
 		if(cpf)
