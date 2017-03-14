@@ -58,15 +58,19 @@
 	var Gled = document.getElementById("gled");
 	var Bled = document.getElementById("bled");
 	
-	if(cpf){
-		lightdata = cpf.get("light sensor");
-		tempdata = cpf.get("temperature sensor");
+	function loop() {
+		if(cpf){
+	
+			lightdata = cpf.get("light sensor");
+			tempdata = cpf.get("temperature sensor");
+				
+			document.getElementById("lightvalue").innerHTML = lightdata;
+			document.getElementById("temperaturevalue").innerHTML = tempdata;
 			
-		document.getElementById("lightvalue").innerHTML = lightdata;
-		document.getElementById("temperaturevalue").innerHTML = tempdata;
-		
-		cpf.repeat();
+		}
+		setTimeout("loop()", 1000);
 	}
+	loop();
 	
 	function red(value) {
 		document.getElementById("redvalue").innerHTML = value;
