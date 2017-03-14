@@ -34,31 +34,21 @@
 				<td id="bluevalue">0</td>
 			</tr>
 			<tr>
-				<td><input Onchange="red(this.value);" type="range" id="rled" value="0" min="0" max="255"></td>
-				<td><input Onchange="green(this.value);" type="range" id="gled" value="0" min="0" max="255"></td>
-				<td><input Onchange="blue(this.value);" type="range" id="bled" value="0" min="0" max="255"></td>
+				<td><input Onchange="changeColor();" type="range" id="rled" value="0" min="0" max="255"></td>
+				<td><input Onchange="changeColor();" type="range" id="gled" value="0" min="0" max="255"></td>
+				<td><input Onchange="changeColor();" type="range" id="bled" value="0" min="0" max="255"></td>
 			</tr>
 		</table>
 		<span id="showcolor"></span>
 	</div>
-	<p><br>
-	
-	<div class="button">
-		<button id="submit" onclick="send()">Start</button><p>
-		<button id="submit">Stop</button>
-	</div>
+
 </div>
 
 <script>
 	
-	var i = 0;
 	var lightdata;
 	var tempdata;
 	var temperature;
-	
-	var Rled = document.getElementById("rled");
-	var Gled = document.getElementById("gled");
-	var Bled = document.getElementById("bled");
 	
 	function loop() {
 		if(cpf){
@@ -75,28 +65,21 @@
 	}
 	loop();
 	
-	function red(value) {
-		document.getElementById("redvalue").innerHTML = value;
-		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + value + ',' + Gled.value + ',' + Bled.value + ')';
+	function changeColor() {
+		var Rled = document.getElementById("rled").value;
+		var Gled = document.getElementById("gled").value;
+		var Bled = document.getElementById("bled").value;
+		
+		document.getElementById("redvalue").innerHTML = Rled;
+		document.getElementById("greenvalue").innerHTML = Gled;
+		document.getElementById("bluevalue").innerHTML = Bled;
+		
+		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled + ',' + Gled + ',' + Bled + ')';
+		
 		if(cpf){
-			cpf.setChainableLed("0," + value + "," + Gled.value + "," + Bled.value + ";");
+			cpf.setChainableLed("0," + Rled + "," + Gled + "," + Bled + ";");
 		}
-	}
-	
-	function green(value) {
-		document.getElementById("greenvalue").innerHTML = value;
-		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + value + ',' + Bled.value + ')';
-		if(cpf){
-			cpf.setChainableLed("0," + Rled.value + "," + value + "," + Bled.value + ";");
-		}
-	}
-	
-	function blue(value) {
-		document.getElementById("bluevalue").innerHTML = value;
-		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + Gled.value + ',' + value + ')';
-		if(cpf){
-			cpf.setChainableLed("0," + Rled.value + "," + Gled.value + "," + value + ";");
-		}
+		
 	}
 	
 	function toCelsuis(value) {
