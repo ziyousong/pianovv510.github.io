@@ -13,7 +13,8 @@ html {
 
 #content {
 	height: 48em;
-	width: 600px;
+	width: 500px;
+	float: left;
 	//background-color: gray;
 }
 
@@ -21,7 +22,8 @@ html {
 
 #analog {
 	height: 300px;
-	width: 600px;
+	width: 500px;
+	float: left;
 	//background-color: green;
 }
 
@@ -52,7 +54,8 @@ html {
 
 #rgb {
 	height: 280px;
-	width: 600px;
+	width: 500px;
+	float: left;
 	//background-color: red;
 }
 
@@ -76,7 +79,8 @@ html {
 
 .button {
 	height: 220px;
-	width: 600px;
+	width: 500px;
+	float: left;
 }
 
 #submit {
