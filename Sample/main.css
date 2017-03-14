@@ -13,16 +13,16 @@ html {
 
 #content {
 	height: 48em;
-	width: 70em;
+	width: 600px;
 	//background-color: gray;
-	margin: 0 auto;
 }
+
+/******** Analog ********/
 
 #analog {
 	height: 300px;
-	width: 40em;
+	width: 600px;
 	//background-color: green;
-	margin: 0 auto;
 }
 
 .analogclass {
@@ -48,11 +48,12 @@ html {
 	margin-right: 40px;
 }
 
+/******** RGB ********/
+
 #rgb {
 	height: 280px;
 	width: 600px;
 	//background-color: red;
-	margin: 0 auto;
 }
 
 .rgbled {
@@ -71,11 +72,18 @@ html {
 	margin-top: 30px;
 }
 
+/******** Button ********/
+
+.button {
+	height: 220px;
+	width: 600px;
+}
+
 #submit {
 	display: block;
+	margin: 0 auto;
 	width: 150px;
 	height: 45px;
-	margin: 0 auto;
 	border: 1px solid #bbb;
 	border-radius: 5px;
 	font-size: 22px;
