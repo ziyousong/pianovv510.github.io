@@ -75,19 +75,25 @@
 	function red(value) {
 		document.getElementById("redvalue").innerHTML = value;
 		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + value + ',' + Gled.value + ',' + Bled.value + ')';
-		cpf.setChainableLed("0," + value + "," + Gled.value + "," + Bled.value + ";");
+		if(cpf){
+			cpf.setChainableLed("0," + value + "," + Gled.value + "," + Bled.value + ";");
+		}
 	}
 	
 	function green(value) {
 		document.getElementById("greenvalue").innerHTML = value;
 		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + value + ',' + Bled.value + ')';
-		cpf.setChainableLed("0," + Rled.value + "," + value + "," + Bled.value + ";");
+		if(cpf){
+			cpf.setChainableLed("0," + Rled.value + "," + value + "," + Bled.value + ";");
+		}
 	}
 	
 	function blue(value) {
 		document.getElementById("bluevalue").innerHTML = value;
 		document.getElementById("showcolor").style.backgroundColor = 'rgb(' + Rled.value + ',' + Gled.value + ',' + value + ')';
-		cpf.setChainableLed("0," + Rled.value + "," + Gled.value + "," + value + ";");
+		if(cpf){
+			cpf.setChainableLed("0," + Rled.value + "," + Gled.value + "," + value + ";");
+		}
 	}
 	
 	function send() {
