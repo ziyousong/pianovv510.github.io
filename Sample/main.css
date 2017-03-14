@@ -12,7 +12,7 @@ html {
 }
 
 #content {
-	height: 48em;
+	height: 40em;
 	width: 500px;
 	float: left;
 	//background-color: gray;
@@ -104,6 +104,7 @@ input[type=range]::-webkit-slider-runnable-track {
 @media screen and (min-width: 820px) {
 	
 	#content {
+		height: 20em;
 		width: 1000px;
 	}
 	
