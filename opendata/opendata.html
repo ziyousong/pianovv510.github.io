@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+
 <title>Opendata test</title>
 </head>
 <body>
@@ -12,7 +13,7 @@ var request = new XMLHttpRequest();
 request.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
       
-	  myFunction(this);
+	  myFunction(this.responseText);
 	  
     }
 };
