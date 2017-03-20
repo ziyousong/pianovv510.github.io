@@ -17,7 +17,7 @@ request.onreadystatechange = function() {
     }
 };
   
-request.open("GET", "https://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=CWB-7B13DF32-1D22-417F-97DF-9F1D4E5A7EB2", true);
+request.open("GET", "http://opendata.cwb.gov.tw/datadownload?dataid=F-C0032-001", true);
 request.timeout = 4000;
 request.send();
 
