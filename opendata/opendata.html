@@ -11,12 +11,25 @@ var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this;
+      
+	  myFunction(this);
+	  
     }
 };
   
 request.open("GET", "F-C0032-001.xml", true);
 request.send();
+
+function myFunction (xml) {
+	var x, i, xmlDoc, txt;
+	xmlDoc = xml.responseXML;
+	txt = "";
+	x = xmlDoc.getElementByTagName("locationName");
+	for (i = 0; i < x.length; i++) {
+		txt += x[i].childNodes[0].nodeValue + "<br>";
+	}
+	document.getElementById("demo").innerHTML = txt;
+}
 
 </script>
 
