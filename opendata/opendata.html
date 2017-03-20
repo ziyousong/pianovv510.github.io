@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<title>Opendata test</title>
+</head>
+<body>
+<div id="demo"></div>
+
+<script>
+
+var request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this;
+    }
+};
+  
+request.open("GET", "F-C0032-001.xml", true);
+request.send();
+
+</script>
+
+</body>
+</html>
