@@ -18,14 +18,14 @@ request.onreadystatechange = function() {
     }
 };
   
-request.open("GET", "http://opendata.cwb.gov.tw/datadownload?dataid=F-C0032-001", true);
+request.open("GET", "http://opendata.cwb.gov.tw/opendata/DIV4/O-A0011-006.xml", true);
 request.send();
 
 function myFunction (xml) {
 	var x, i, xmlDoc, txt;
 	xmlDoc = xml.responseXML;
 	txt = "";
-	x = xmlDoc.getElementsByTagName("locationName");
+	x = xmlDoc.getElementsByTagName("parameterValue");
 	for (i = 0; i < x.length; i++) {
 		txt += x[i].childNodes[0].nodeValue + "<br>";
 	}
