@@ -24,7 +24,7 @@ function myFunction (xml) {
 	var x, i, xmlDoc, txt;
 	xmlDoc = xml.responseXML;
 	txt = "";
-	x = xmlDoc.getElementByTagName("locationName");
+	x = xmlDoc.getElementsByTagName("locationName");
 	for (i = 0; i < x.length; i++) {
 		txt += x[i].childNodes[0].nodeValue + "<br>";
 	}
