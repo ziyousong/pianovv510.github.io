@@ -19,7 +19,6 @@ request.onreadystatechange = function() {
 };
   
 request.open("GET", "http://opendata.cwb.gov.tw/datadownload?dataid=F-C0032-001", true);
-request.timeout = 4000;
 request.send();
 
 function myFunction (xml) {
