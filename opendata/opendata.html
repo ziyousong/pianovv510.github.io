@@ -7,17 +7,18 @@
 
 <script>
 
-/*var request = new XMLHttpRequest();
+var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
       
-	  myFunction(this);
+	  myFunction(this.responseText);
 	  
     }
 };
   
-request.open("GET", "https://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=CWB-7B13DF32-1D22-417F-97DF-9F1D4E5A7EB2", true);
+request.open("GET", "http://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001", true);
+request.setRequestHeader('Authorizationkey', 'CWB-7B13DF32-1D22-417F-97DF-9F1D4E5A7EB2');
 request.send();
 
 function myFunction (xml) {
@@ -29,21 +30,7 @@ function myFunction (xml) {
 		txt += x[i].childNodes[0].nodeValue + "<br>";
 	}
 	document.getElementById("demo").innerHTML = txt;
-}*/
-
-  $.ajax({
-    type: "GET",
-    url: "http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml",
-    dataType: "xml",
-    error: function (e) {
-      console.log('oh no');
-    },
-    success: function (e) {
-      var xml = e;
-      console.log($(xml));
-    }
-  });
-
+}
 
 </script>
 
