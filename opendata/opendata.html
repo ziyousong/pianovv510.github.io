@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>Opendata test</title>
 </head>
 <body>
@@ -8,29 +7,45 @@
 
 <script>
 
-var request = new XMLHttpRequest();
+/*var request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
       
-	  myFunction(this.responseText);
+	  myFunction(this);
 	  
     }
 };
   
-request.open("GET", "http://opendata.cwb.gov.tw/opendata/DIV4/O-A0011-006.xml", true);
+request.open("GET", "https://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=CWB-7B13DF32-1D22-417F-97DF-9F1D4E5A7EB2", true);
 request.send();
 
 function myFunction (xml) {
 	var x, i, xmlDoc, txt;
 	xmlDoc = xml.responseXML;
 	txt = "";
-	x = xmlDoc.getElementsByTagName("parameterValue");
+	x = xmlDoc.getElementsByTagName("locationName");
 	for (i = 0; i < x.length; i++) {
 		txt += x[i].childNodes[0].nodeValue + "<br>";
 	}
 	document.getElementById("demo").innerHTML = txt;
-}
+}*/
+
+$(function () {
+  $.ajax({
+    type: "GET",
+    url: "http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml",
+    dataType: "xml",
+    error: function (e) {
+      console.log('oh no');
+    },
+    success: function (e) {
+      var xml = e;
+      console.log($(xml));
+    }
+  });
+});
+
 
 </script>
 
