@@ -31,7 +31,6 @@ function myFunction (xml) {
 	document.getElementById("demo").innerHTML = txt;
 }*/
 
-$(function () {
   $.ajax({
     type: "GET",
     url: "http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml",
@@ -44,7 +43,6 @@ $(function () {
       console.log($(xml));
     }
   });
-});
 
 
 </script>
