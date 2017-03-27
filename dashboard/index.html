@@ -1,32 +1,41 @@
-<!DOCTYPE html>
+<html>
 <head>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
       google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
+    function drawChart() {
+	
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Temperature Data');
 
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+	  for(var i = 1; i <= 10 ; i++){
+		var store = aop.getStore(storeId);
+		var temp = JSON.parse(store);
+		
+		data.addRows([
+			[i,  temp.temperature]
+		  ]);
+	  }
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+      var options = {
+        chart: {
+          title: '30 Day Temperature Dashboard',
+          subtitle: 'Celsius'
+        },
+        width: 900,
+        height: 500
+      };
 
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-  </body>
+      var chart = new google.charts.Line(document.getElementById('dashboard'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="dashboard"></div>
+</body>
 </html>
