@@ -2,47 +2,73 @@
 <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-      google.charts.load('current', {'packages':['line']});
-      google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
+    
+	var json = [];
+	var index = index || 1;
+	
+	function readTemps() {
+	
+		var obj = [];
+		//var tempdata = cpf.get("temperature sensor");
+		
+		var d = new Date();
+		var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
+		
+		obj = {"key":index, "value": [{"date":time, "temperature":123}]};
+		json.push(obj);
+		
+		document.getElementById("temp").innerHTML = index;
+		
+		index += 1;
+		
+		setTimeout("readTemps()", 1000);
+	}
+	
+	function upload() {
+		var str = JSON.stringify(json);
+		aop.setStore("store1", str);
+	}
+	
+	function download() {
+	
+		google.charts.load('current', {'packages':['line']});
+		google.charts.setOnLoadCallback(drawChart);	
+	
+	}
+	
+	function drawChart() {
 	
       var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Day');
+      data.addColumn('number', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
-
-	  for (var index = 1; index <= 10 ; index++){
-		
-		var tempdata = cpf.get("temperature sensor");
-		
-		var obj = {"temperature": tempdata};
-		var str = JSON.stringify(obj);
-		var storeId = "store" + index;
-		aop.setStore(storeId, str);
-	
-	  }
 	  
-	  for (var i = 1; i <= 10 ; i++){
+	  var store = aop.getStore("store1");
+	  var data = JSON.parse(store);
 	  
-		var storeId = "store" + i;
-		var store = aop.getStore(storeId);
-		var temp = JSON.parse(store);
-		
-		var Celsius = toCelsius(temp.temperature);
-		document.getElementById("temp").innerHTML = Celsius;
+	  for (var i in data){
 		
 		data.addRows([
-			[i,  25.2]
+			[i, data.value.temperature]
 		  ]);
 	  }
 
       var options = {
         chart: {
-          title: '30 Day Temperature Dashboard',
+          title: 'Average Temperatures in Taipei Throughout the Day',
           subtitle: 'Celsius'
         },
         width: 900,
-        height: 500
+        height: 500,
+		series: {
+          // Gives each series an axis name that matches the Y-axis below.
+          0: {axis: 'Temps'}
+        },
+        axes: {
+          // Adds labels to each axis; they don't have to match the axis names.
+          y: {
+            Temps: {label: 'Temps (Celsius)'}
+          }
+        }
       };
 
       var chart = new google.charts.Line(document.getElementById('dashboard'));
@@ -62,7 +88,12 @@
   </script>
 </head>
 <body>
+
 	<div id="temp"></div>
-  <div id="dashboard"></div>
+	<div id="dashboard"></div>
+	
+	<button id="upload" onclick="readTemps()">Read Temps</button>
+	<button id="upload" onclick="upload()">Upload</button>
+	<button id="download" onclick="download()">Make Dashboard</button>
 </body>
 </html>
