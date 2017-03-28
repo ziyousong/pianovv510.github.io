@@ -11,12 +11,19 @@
       data.addColumn('number', 'Day');
       data.addColumn('number', 'Temperature Data');
 
-	  /*for (var index = 1; index <= 10 ; index++){
-		var obj = {"temperature": 30};
+	  for (var index = 1; index <= 10 ; index++){
+		
+		var tempdata = cpf.get("temperature sensor");
+		
+		var obj = {"temperature": tempdata};
 		var str = JSON.stringify(obj);
 		var storeId = "store" + index;
 		aop.setStore(storeId, str);
-	  }*/
+		
+		document.getElementById("temp").innerHTML = tempdata;
+		
+		cpf.sleep(5000);
+	  }
 	  
 	  for (var i = 1; i <= 10 ; i++){
 	  
@@ -45,6 +52,7 @@
   </script>
 </head>
 <body>
+	<div id="temp"></div>
   <div id="dashboard"></div>
 </body>
 </html>
