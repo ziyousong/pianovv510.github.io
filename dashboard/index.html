@@ -49,10 +49,12 @@
 	  
 	  for (var i = 0; i < result.length; i++){
 		
-		document.getElementById("test").innerHTML += result[i].value[0].temperature;
+		var temp = toCelsius(result[i].value[0].temperature);
+		
+		document.getElementById("test").innerHTML += temp;
 		
 		data.addRows([
-			[result[i].value[0].date, result[i].value[0].temperature]
+			[result[i].value[0].date, temp]
 		  ]);
 	  }
 
