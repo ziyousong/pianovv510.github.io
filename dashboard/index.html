@@ -51,10 +51,10 @@
 		
 		var temp = toCelsius(result[i].value[0].temperature);
 		
-		document.getElementById("test").innerHTML += temp;
+		document.getElementById("test").innerHTML += toCelsius(result[i].value[0].temperature);
 		
 		data.addRows([
-			[result[i].value[0].date, temp]
+			[result[i].value[0].date, toCelsius(result[i].value[0].temperature)]
 		  ]);
 	  }
 
@@ -88,7 +88,7 @@
 		var resistance = parseFloat((1023-value) * 10000 / value);
 		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 		
-		return temperature.toFixed(0);
+		return temperature.toFixed(2);
 	}
 	
   </script>
