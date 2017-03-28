@@ -15,14 +15,10 @@
 		
 		var tempdata = cpf.get("temperature sensor");
 		
-		var celsius = toCelsius(tempdata);
-		
-		var obj = {"temperature": celsius};
+		var obj = {"temperature": tempdata};
 		var str = JSON.stringify(obj);
 		var storeId = "store" + index;
 		aop.setStore(storeId, str);
-		
-		document.getElementById("temp").innerHTML = celsius;
 	
 	  }
 	  
@@ -32,8 +28,11 @@
 		var store = aop.getStore(storeId);
 		var temp = JSON.parse(store);
 		
+		var Celsius = toCelsius(temp.temperature);
+		document.getElementById("temp").innerHTML = Celsius;
+		
 		data.addRows([
-			[i,  temp.temperature]
+			[i,  Celsius]
 		  ]);
 	  }
 
