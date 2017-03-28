@@ -39,7 +39,7 @@
 	function drawChart() {
 	
       var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Time of Day');
+      data.addColumn('string', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
 	  
 	  var store = aop.getStore("store1");
@@ -52,7 +52,7 @@
 		document.getElementById("test").innerHTML += result[i].value[0].temperature;
 		
 		data.addRows([
-			[i, result[i].value[0].temperature]
+			[result[i].value[0].date, result[i].value[0].temperature]
 		  ]);
 	  }
 
