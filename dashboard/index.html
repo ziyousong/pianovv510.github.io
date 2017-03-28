@@ -43,21 +43,18 @@
       data.addColumn('number', 'Temperature Data');
 	  
 	  var store = aop.getStore("store1");
+	  var result = JSON.parse(store);
 	  
-	  document.getElementById("test").innerHTML = store[1].value.temperature;
+	  //document.getElementById("test").innerHTML = store[1].value.temperature;
 	  
-	  /*for (var i = 1; i <= store.length; i++){
+	  for (var i = 0; i <= result.length; i++){
 		
-		document.getElementById("test").innerHTML += store[i].value.temperature;
+		document.getElementById("test").innerHTML += result[i].value[0].temperature;
 		
 		data.addRows([
-			[i, store[i].value.temperature]
+			[i, result[i].value[0].temperature]
 		  ]);
-	  }*/
-	  data.addRows([
-			[1, store.value.temperature],
-			[2, store.value.temperature]
-		  ]);
+	  }
 
       var options = {
         chart: {
