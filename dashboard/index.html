@@ -27,6 +27,7 @@
 	function upload() {
 		var str = JSON.stringify(json);
 		aop.setStore("store1", str);
+		alert("Upload Success!");
 	}
 	
 	function download() {
@@ -51,11 +52,13 @@
 		
 		var temp = toCelsius(result[i].value[0].temperature);
 		
-		document.getElementById("test").innerHTML += toCelsius(result[i].value[0].temperature);
+		document.getElementById("test").innerHTML += temp;
 		
 		data.addRows([
-			[result[i].value[0].date, toCelsius(result[i].value[0].temperature)]
+			[result[i].value[0].date, result[i].value[0].temperature]
 		  ]);
+		  
+		temp = '';
 	  }
 
       var options = {
