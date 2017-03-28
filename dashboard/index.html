@@ -2,8 +2,6 @@
 <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    //google.charts.load('current', {'packages':['line']});
-	//google.charts.setOnLoadCallback(drawChart);	
 	
 	var json = [];
 	var index = index || 1;
@@ -46,7 +44,7 @@
 	  
 	  var store = aop.getStore("store1");
 	  
-	  //document.getElementById("test").innerHTML = store;
+	  document.getElementById("test").innerHTML = store;
 	  
 	  /*for (var i = 1; i <= store.length; i++){
 		
@@ -57,13 +55,9 @@
 		  ]);
 	  }*/
 	  data.addRows([
-		[1, 25],
-		[2, 25],
-		[3, 26],
-		[4, 26],
-		[5, 25],
-		[6, 23]
-	  ]);
+			[1, store.value.temperature],
+			[2, store.value.temperature]
+		  ]);
 
       var options = {
         chart: {
