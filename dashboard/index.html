@@ -39,6 +39,8 @@
 	
 	function drawChart() {
 	
+	  var temp;
+	
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
@@ -50,7 +52,7 @@
 	  
 	  for (var i = 0; i < result.length; i++){
 		
-		var temp = toCelsius(result[i].value[0].temperature);
+		temp = toCelsius(result[i].value[0].temperature);
 		
 		document.getElementById("test").innerHTML += temp;
 		
