@@ -46,10 +46,10 @@
 	  
 	  //document.getElementById("test").innerHTML = data;
 	  
-	  for (var i in data){
+	  for (var i = 1; i <= data.length; i++){
 		
 		data.addRows([
-			[i, data.value.temperature]
+			[i, data[i].value.temperature]
 		  ]);
 	  }
 
@@ -94,8 +94,8 @@
 	<div id="test"><div>
 	<div id="dashboard"></div>
 	
-	<button id="upload" onclick="readTemps()">Read Temps</button>
-	<button id="upload" onclick="upload()">Upload</button>
-	<button id="download" onclick="download()">Make Dashboard</button>
+	<button style="height: 60px; width: 100px;" onclick="readTemps()">Read Temps</button>
+	<button style="height: 60px; width: 100px;" onclick="upload()">Upload</button>
+	<button style="height: 60px; width: 100px;" onclick="download()">Make Dashboard</button>
 </body>
 </html>
