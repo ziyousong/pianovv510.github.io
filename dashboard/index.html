@@ -2,8 +2,8 @@
 <head>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    google.charts.load('current', {'packages':['line']});
-	google.charts.setOnLoadCallback(drawChart);	
+    //google.charts.load('current', {'packages':['line']});
+	//google.charts.setOnLoadCallback(drawChart);	
 	
 	var json = [];
 	var index = index || 1;
@@ -33,6 +33,7 @@
 	
 	function download() {
 	
+		google.charts.load('current', {'packages':['line']});
 		google.charts.setOnLoadCallback(drawChart);	
 	
 	}
@@ -47,14 +48,22 @@
 	  
 	  //document.getElementById("test").innerHTML = store;
 	  
-	  for (var i = 1; i <= store.length; i++){
+	  /*for (var i = 1; i <= store.length; i++){
 		
 		document.getElementById("test").innerHTML += store[i].value.temperature;
 		
 		data.addRows([
 			[i, store[i].value.temperature]
 		  ]);
-	  }
+	  }*/
+	  data.addRows([
+		[1, 25],
+		[2, 25],
+		[3, 26],
+		[4, 26],
+		[5, 25],
+		[6, 23]
+	  ]);
 
       var options = {
         chart: {
