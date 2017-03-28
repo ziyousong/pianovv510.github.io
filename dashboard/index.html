@@ -45,6 +45,8 @@
 	  var store = aop.getStore("store1");
 	  var data = JSON.parse(store);
 	  
+	  document.getElementById("test").innerHTML = data;
+	  
 	  for (var i in data){
 		
 		data.addRows([
@@ -90,6 +92,7 @@
 <body>
 
 	<div id="temp"></div>
+	<div id="test"><div>
 	<div id="dashboard"></div>
 	
 	<button id="upload" onclick="readTemps()">Read Temps</button>
