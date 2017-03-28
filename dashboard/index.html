@@ -42,14 +42,16 @@
       data.addColumn('number', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
 	  
-	  var data = aop.getStore("store1");
+	  var store = aop.getStore("store1");
 	  
-	  //document.getElementById("test").innerHTML = data;
+	  //document.getElementById("test").innerHTML = store;
 	  
-	  for (var i = 1; i <= data.length; i++){
+	  for (var i = 1; i <= store.length; i++){
+		
+		document.getElementById("test").innerHTML += store[i].value.temperature;
 		
 		data.addRows([
-			[i, data[i].value.temperature]
+			[i, store[i].value.temperature]
 		  ]);
 	  }
 
