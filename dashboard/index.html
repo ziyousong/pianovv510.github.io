@@ -87,7 +87,7 @@
     }
 	
 	// Temperature
-	function toCelsius(value) {
+	int toCelsius(value) {
 		var resistance = parseFloat((1023-value) * 10000 / value);
 		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 		
