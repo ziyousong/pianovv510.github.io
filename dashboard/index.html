@@ -15,9 +15,9 @@
 		
 		var tempdata = cpf.get("temperature sensor");
 		
-		toCelsius(tempdata);
+		var celsius = toCelsius(tempdata);
 		
-		var obj = {"temperature": tempdata};
+		var obj = {"temperature": celsius};
 		var str = JSON.stringify(obj);
 		var storeId = "store" + index;
 		aop.setStore(storeId, str);
