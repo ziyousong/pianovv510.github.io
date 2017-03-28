@@ -17,12 +17,12 @@
 		
 		var celsius = toCelsius(tempdata);
 		
-		var obj = {"temperature": celsius};
+		var obj = {"temperature": tempdata};
 		var str = JSON.stringify(obj);
 		var storeId = "store" + index;
 		aop.setStore(storeId, str);
 		
-		document.getElementById("temp").innerHTML = celsius;
+		document.getElementById("temp").innerHTML = tempdata;
 	
 	  }
 	  
