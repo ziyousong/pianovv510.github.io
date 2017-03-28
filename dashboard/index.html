@@ -15,6 +15,8 @@
 		
 		var tempdata = cpf.get("temperature sensor");
 		
+		toCelsius(tempdata);
+		
 		var obj = {"temperature": tempdata};
 		var str = JSON.stringify(obj);
 		var storeId = "store" + index;
@@ -47,7 +49,17 @@
       var chart = new google.charts.Line(document.getElementById('dashboard'));
 
       chart.draw(data, options);
+	  
     }
+	
+	// Temperature
+	function toCelsius(value) {
+		var resistance = parseFloat((1023-value) * 10000 / value);
+		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
+		
+		return temperature.toFixed(2);
+	}
+	
   </script>
 </head>
 <body>
