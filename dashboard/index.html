@@ -9,12 +9,12 @@
 	function readTemps() {
 	
 		var obj = [];
-		//var tempdata = cpf.get("temperature sensor");
+		var tempdata = cpf.get("temperature sensor");
 		
 		var d = new Date();
 		var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
 		
-		obj = {"key":index, "value": [{"date":time, "temperature":123}]};
+		obj = {"key":index, "value": [{"date":time, "temperature":tempdata}]};
 		json.push(obj);
 		
 		document.getElementById("temp").innerHTML = index;
@@ -42,10 +42,9 @@
       data.addColumn('number', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
 	  
-	  var store = aop.getStore("store1");
-	  var data = JSON.parse(store);
+	  var data = aop.getStore("store1");
 	  
-	  document.getElementById("test").innerHTML = store;
+	  //document.getElementById("test").innerHTML = data;
 	  
 	  for (var i in data){
 		
