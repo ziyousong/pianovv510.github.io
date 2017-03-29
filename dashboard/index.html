@@ -8,19 +8,21 @@
 	
 	function readTemps() {
 	
-		var obj = [];
-		var tempdata = cpf.get("temperature sensor");
-		var Celsius = toCelsius(tempdata);
-		
-		var d = new Date();
-		var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
-		
-		obj = {"key":index, "value": [{"date":time, "temperature":Celsius}]};
-		json.push(obj);
-		
-		document.getElementById("temp").innerHTML = index;
-		
-		index += 1;
+		if(cpf) {
+			var obj = [];
+			var tempdata = cpf.get("temperature sensor");
+			var Celsius = toCelsius(tempdata);
+			
+			var d = new Date();
+			var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
+			
+			obj = {"key":index, "value": [{"date":time, "temperature":Celsius}]};
+			json.push(obj);
+			
+			document.getElementById("temp").innerHTML = index;
+			
+			index += 1;
+		}
 		
 		setTimeout("readTemps()", 1000);
 	}
@@ -85,6 +87,12 @@
 		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 		
 		return Math.round(temperature * 100) / 100;
+	}
+	
+	// cpf setup
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"analog\", 1,\"INPUT\"]'); 
 	}
 	
   </script>
