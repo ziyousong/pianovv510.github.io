@@ -10,24 +10,20 @@
 	
 		var obj = [];
 		var tempdata = cpf.get("temperature sensor");
-		var Celsius = toCelsius(tempdata);
+		
+		// toCelsius
+		var resistance = parseFloat((1023-tempdata) * 10000 / tempdata);
+		var Celsius = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 		
 		var d = new Date();
 		var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
 		
-		obj = {"key":index, "value": [{"date":time, "temperature":Celsius}]};
+		obj = {"key":index, "value": [{"date":time, "temperature":Celsius.toFixed(2)}]};
 		json.push(obj);
 		
 		document.getElementById("temp").innerHTML = index;
 		
 		index += 1;
-		
-		function toCelsius(value) {
-			var resistance = parseFloat((1023-value) * 10000 / value);
-			var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
-			
-			return temperature.toFixed(2);
-		}
 		
 		setTimeout("readTemps()", 1000);
 	}
@@ -90,7 +86,12 @@
     }
 	
 	// Temperature
-	
+	function toCelsius(value) {
+		var resistance = parseFloat((1023-value) * 10000 / value);
+		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
+		
+		return temperature.toFixed(2);
+	}
 	
   </script>
 </head>
