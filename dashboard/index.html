@@ -33,7 +33,7 @@
 	
 	function download() {
 	
-		google.charts.load('current', {'packages':['line']});
+		google.charts.load('current', {'packages':['corechart']});
 		google.charts.setOnLoadCallback(drawChart);	
 	
 	}
@@ -58,25 +58,22 @@
 	  }
 
       var options = {
-        chart: {
-          title: 'Average Temperatures in Taipei Throughout the Day',
-          subtitle: 'Celsius'
-        },
+        title: 'Average Temperatures in Taipei Throughout a Day',
         width: 900,
         height: 500,
-		series: {
-          // Gives each series an axis name that matches the Y-axis below.
-          0: {axis: 'Temps'}
+        vAxes: {
+          // Adds titles to each axis.
+          0: {title: 'Temps (Celsius)'}
         },
-        axes: {
-          // Adds labels to each axis; they don't have to match the axis names.
-          y: {
-            Temps: {label: 'Temps (Celsius)'}
+        vAxis: {
+          viewWindow: {
+            max: 40,
+			min: 0
           }
         }
       };
 
-      var chart = new google.charts.Line(document.getElementById('dashboard'));
+      var chart = new google.visualization.LineChart(document.getElementById('dashboard'));
 
       chart.draw(data, options);
 	  
@@ -96,7 +93,7 @@
 
 	<div id="temp"></div>
 	<div id="test"><div>
-	<div id="dashboard"></div>
+	<div style="margin-left: -40px; " id="dashboard"></div>
 	
 	<button style="height: 60px; width: 100px;" onclick="readTemps()">Read Temps</button>
 	<button style="height: 60px; width: 100px;" onclick="upload()">Upload</button>
