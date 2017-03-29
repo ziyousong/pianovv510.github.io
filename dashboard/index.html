@@ -24,7 +24,7 @@
 			index += 1;
 		}
 		
-		setTimeout("readTemps()", 10);
+		setTimeout("readTemps()", 1000);
 	}
 	
 	function upload() {
@@ -52,16 +52,19 @@
 	  
 	  for (var i = 0; i < result.length; i++){
 		
-		document.getElementById("test").innerHTML += result[i].temperature + ' ';
-		
 		data.addRows([
 			[result[i].date, result[i].temperature]
 		  ]);
 		  
 	  }
-
+	  
       var options = {
-        title: 'Average Temperatures in Taipei Throughout a Day',
+        title: 'Average Temperatures Throughout a Day',
+		titleTextStyle: {
+			color: '#009FCC',
+			fontSize: 25
+		},
+		fontSize: 17.5,
         width: 900,
         height: 500,
         vAxes: {
@@ -71,10 +74,11 @@
 		hAxes: {
           // Adds titles to each axis.
           0: {title: 'Time of day'}
-        }
+        },
+		colors:['#00FFFF']
       };
 
-      var chart = new google.visualization.LineChart(document.getElementById('dashboard'));
+      var chart = new google.visualization.AreaChart(document.getElementById('dashboard'));
 
       chart.draw(data, options);
 	  
