@@ -10,7 +10,8 @@
 	
 		var obj = [];
 		var tempdata = cpf.get("temperature sensor");
-		var Celsius = toCelsius(tempdata);
+		var resistance = parseFloat((1023-tempdata) * 10000 / tempdata);
+		var Celsius = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
 		
 		var d = new Date();
 		var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
@@ -40,8 +41,6 @@
 	
 	function drawChart() {
 	
-	  var temp;
-	
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
@@ -50,8 +49,6 @@
 	  var result = JSON.parse(store);
 	  
 	  for (var i = 0; i < result.length; i++){
-		
-		//temp = toCelsius(result[i].value[0].temperature);
 		
 		document.getElementById("test").innerHTML += result[i].value[0].temperature;
 		
