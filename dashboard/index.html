@@ -16,7 +16,7 @@
 			var d = new Date();
 			var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds();
 			
-			obj = {"key":index, "value": [{"date":time, "temperature":Celsius}]};
+			obj = {"date": time, "temperature": Celsius};
 			json.push(obj);
 			
 			document.getElementById("temp").innerHTML = index;
@@ -24,7 +24,7 @@
 			index += 1;
 		}
 		
-		setTimeout("readTemps()", 10);
+		setTimeout("readTemps()", 1000);
 	}
 	
 	function upload() {
@@ -52,10 +52,10 @@
 	  
 	  for (var i = 0; i < result.length; i++){
 		
-		document.getElementById("test").innerHTML += result[i].value[0].temperature + ' ';
+		document.getElementById("test").innerHTML += result[i].temperature + ' ';
 		
 		data.addRows([
-			[result[i].value[0].date, result[i].value[0].temperature]
+			[result[i].date, result[i].temperature]
 		  ]);
 		  
 	  }
