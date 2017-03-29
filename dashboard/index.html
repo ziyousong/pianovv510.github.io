@@ -14,7 +14,7 @@
 			var Celsius = toCelsius(tempdata);
 			
 			var d = new Date();
-			var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds() + "." + d.getMilliseconds();
+			var time = d.getHours() + ":" +d.getMinutes() + ":" + d.getSeconds();
 			
 			obj = {"key":index, "value": [{"date":time, "temperature":Celsius}]};
 			json.push(obj);
