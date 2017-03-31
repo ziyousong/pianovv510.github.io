@@ -60,22 +60,22 @@
 	  }
 	  
       var options = {
-		fontSize: 17.5,
+		fontSize: 18,
         width: 900,
         height: 500,
-		legend: {position: 'top', textStyle: {color: '1FB3DF', fontSize: 18}},
+		legend: {position: 'top', textStyle: {color: '1FB3DF', fontSize: 22}},
         vAxes: {
           // Adds titles to each axis.
           0: {
 			title: 'Temps (Celsius)',
-			titleTextStyle: {fontSize: 22}
+			titleTextStyle: {fontSize: 24}
 		  }
         },
 		hAxes: {
           // Adds titles to each axis.
           0: {
 			title: 'Time of day',
-			titleTextStyle: {fontSize: 22}
+			titleTextStyle: {fontSize: 24}
 		  }
         },
 		colors:['#1FB3DF']
@@ -109,15 +109,11 @@
 		background-color: #ddd;
 		border-radius: 5px;
 		font-size: 22px;
-		font-weight: bold;
 	}
   </style>
 </head>
 <body>
-
-	<div style="margin-left: -40px; margin-top: -25px;" id="dashboard"></div>
-	
-	<table style="margin-top: 50px;">
+	<table>
 		<tr style="text-align: center; font-size: 20px;">
 			<td>一</td>
 			<td>二</td>
@@ -132,5 +128,7 @@
 			<td id="temp" style="text-align:center;"></td>
 		</tr>
 	</table>
+	
+	<div style="margin-left: -40px; margin-top: 25px;" id="dashboard"></div>
 </body>
 </html>
