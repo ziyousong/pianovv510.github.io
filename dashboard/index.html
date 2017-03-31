@@ -48,7 +48,7 @@
       data.addColumn('string', 'Time of Day');
       data.addColumn('number', 'Temperature Data');
 	  
-	  var store = aop.getStore("store1");
+	  /*var store = aop.getStore("store1");
 	  var result = JSON.parse(store);
 	  
 	  for (var i = 0; i < result.length; i++){
@@ -57,7 +57,11 @@
 			[result[i].date, result[i].temperature]
 		  ]);
 		  
-	  }
+	  }*/
+	  
+	  data.addRows([
+			["1", 12]
+		  ]);
 	  
       var options = {
 		fontSize: 20,
@@ -74,7 +78,7 @@
 		hAxes: {
           // Adds titles to each axis.
           0: {
-			title: 'Time of day',
+			title: 'Time of day\n' + 'Total：' + result.length.toString(),
 			titleTextStyle: {fontSize: 26}
 		  }
         },
