@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<title>Remote Control Car</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<script>
+
+/*function left_right_event() {
+	document.getElementById("left_right_control").src = "right_event.png";
+}*/
+
+$(document).ready(function(){
+
+	/*$("#left_right_control").on("click", function(){
+		$(this).attr("src", "right_event.png");
+	}, function() {
+		$("#left_right_control").attr("src", "left_right_control.png");
+	});*/
+	
+	$("#left_control")
+	  .mouseup(function() {
+		$("#left_right_control").attr("src", "left_right_control.png");
+	  })
+	  .mousedown(function() {
+		$("#left_right_control").attr("src", "left_event.png");
+	  });
+
+	
+	$("#right_control")
+	  .mouseup(function() {
+		$("#left_right_control").attr("src", "left_right_control.png");
+	  })
+	  .mousedown(function() {
+		$("#left_right_control").attr("src", "right_event.png");
+	  });
+
+});
+</script>
+
+<body>
+<img src="controller.png" id="controller" />
+
+<img src="left_right_control.png" id="left_right_control">
+	<span id="left_control"></span>
+	<span id="right_control"></span>
+</img>
+
+<img src="top_bottom_control.png" id="top_bottom_control" />
+</body>

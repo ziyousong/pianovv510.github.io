@@ -1,0 +1,37 @@
+
+#controller {
+	position: absolute;
+	height: 400px;
+}
+
+#left_right_control {
+	position: absolute;
+	top: 45px;
+	left: 75px;
+	height: 180px;
+}
+
+#top_bottom_control {
+	position: absolute;
+	top: 45px;
+	left: 525px;
+	height: 180px;
+}
+
+#left_control {
+	position: absolute;
+	height: 180px;
+	width: 90px;
+	top: 45px;
+	left: 75px;
+	border-radius: 100px 0px 0px 100px;
+}
+
+#right_control {
+	position: absolute;
+	height: 180px;
+	width: 90px;
+	top: 45px;
+	left: 165px; /*left_control left + left_control width*/
+	border-radius: 0px 100px 100px 0px;
+}
