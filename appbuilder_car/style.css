@@ -1,7 +1,9 @@
 
+
+
 #controller {
-	position: absolute;
-	width: 100%;
+	position: relative;
+	width: 90%;
 }
 
 #left_right_control {
@@ -19,6 +21,7 @@
 }
 
 #left_control {
+	background-color: blue;
 	position: absolute;
 	height: 180px;
 	width: 90px;
@@ -28,6 +31,7 @@
 }
 
 #right_control {
+	background-color: green;
 	position: absolute;
 	height: 180px;
 	width: 90px;
