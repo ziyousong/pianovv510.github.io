@@ -19,7 +19,7 @@ $(document).ready(function(){
 		$(this).attr("src", "right_event.png");
 	}, function() {
 		$("#left_right_control").attr("src", "left_right_control.png");
-	});*/
+	});
 	
 	$("#left_control")
 	  .mouseup(function() {
@@ -27,7 +27,14 @@ $(document).ready(function(){
 	  })
 	  .mousedown(function() {
 		$("#left_right_control").attr("src", "left_event.png");
-	  });
+	  });*/
+	  
+	 $("#left_control").bind( "mouseup touchend", function(e){
+		$("#left_right_control").attr("src", "left_right_control.png");
+	 });
+	 $("#left_control").bind( "mousedown touchstart", function(e){
+		$("#left_right_control").attr("src", "left_event.png");
+	 });
 
 	
 	$("#right_control")
