@@ -68,7 +68,9 @@ $(document).ready(function(){
 		var ret = cpf.request('["digitalWrite", 1, 1]');
 		var ret = cpf.request('["digitalWrite", 3, 1]');
 	 });*/
-	 cpf.set("d1", 1);
+	 setup();
+	 cpf.set("led 101", "d0", 1);
+	 cpf.set("led 101", "d2", 1);
 	 // cpf setup
 	function setup(){
 		if(cpf)
