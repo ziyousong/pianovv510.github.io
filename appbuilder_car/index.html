@@ -19,48 +19,39 @@ $(document).ready(function(){
 		$(this).attr("src", "right_event.png");
 	}, function() {
 		$("#left_right_control").attr("src", "left_right_control.png");
-	});
-	
-	$("#left_control")
-	  .mouseup(function() {
-		$("#left_right_control").attr("src", "left_right_control.png");
-	  })
-	  .mousedown(function() {
-		$("#left_right_control").attr("src", "left_event.png");
-	  });*/
-	  
+	});*/
+
+	 // 左轉
 	 $("#left_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "left_right_control.png");
 	 });
 	 $("#left_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "left_event.png");
 	 });
-
-	
-	$("#right_control")
-	  .mouseup(function() {
+	 
+	 // 右轉
+	 $("#right_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "left_right_control.png");
-	  })
-	  .mousedown(function() {
+	 });
+	 $("#right_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "right_event.png");
-	  });
-	  
-	  $("#top_control")
-	  .mouseup(function() {
+	 });
+	 
+	 // 前進
+	 $("#top_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "top_bottom_control.png");
-	  })
-	  .mousedown(function() {
+	 });
+	 $("#top_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "top_event.png");
-	  });
+	 });
 
-	
-	$("#bottom_control")
-	  .mouseup(function() {
+	 // 後退
+	 $("#bottom_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "top_bottom_control.png");
-	  })
-	  .mousedown(function() {
+	 });
+	 $("#bottom_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "bottom_event.png");
-	  });
+	 });
 
 });
 </script>
