@@ -35,8 +35,8 @@ $(document).ready(function(){
 	 });
 	 $("#left_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/left_event.png");
-		cpf.set("d2", 0);
-		cpf.set("d4", 1);
+		cpf.set("d2", 1);
+		cpf.set("d4", 0);
 	 });
 	 
 	 // 右轉
@@ -47,8 +47,8 @@ $(document).ready(function(){
 	 });
 	 $("#right_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/right_event.png");
-		cpf.set("d2", 1);
-		cpf.set("d4", 0);
+		cpf.set("d2", 0);
+		cpf.set("d4", 1);
 	 });
 	 
 	 // 前進
@@ -77,8 +77,8 @@ $(document).ready(function(){
 	 });
 	 
 });
-	//cpf.set("white led", 1);
- // cpf setup
+
+	// cpf setup
 	function setup(){
 		if(cpf)
 			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2, "OUTPUT"],["setPinMode", "digital", 3,"OUTPUT"],["setPinMode", "digital", 4,"OUTPUT"],["setPinMode", "digital", 5,"OUTPUT"]');
