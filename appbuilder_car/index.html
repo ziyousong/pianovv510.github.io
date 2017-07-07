@@ -47,7 +47,7 @@ $(document).ready(function(){
 	 $("#top_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
 		//cpf.set("led 101", "d0", 1);
-		cpf.set("d2", 1);
+		
 	 });
 	 $("#top_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_event.png");
@@ -64,7 +64,7 @@ $(document).ready(function(){
 	 });
 	 
 });
-
+	cpf.set("white led", 1);
  // cpf setup
 	function setup(){
 		if(cpf)
