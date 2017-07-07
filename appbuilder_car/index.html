@@ -2,70 +2,78 @@
 <head>
 <title>Remote Control Car</title>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <script>
 
-/*function left_right_event() {
-	document.getElementById("left_right_control").src = "right_event.png";
-}*/
-
 $(document).ready(function(){
-
-	/*$("#left_right_control").on("click", function(){
-		$(this).attr("src", "right_event.png");
-	}, function() {
-		$("#left_right_control").attr("src", "left_right_control.png");
-	});*/
 
 	 // 左轉
 	 $("#left_control").bind( "mouseup touchend", function(e){
-		$("#left_right_control").attr("src", "left_right_control.png");
+		$("#left_right_control").attr("src", "./images/left_right_control.png");
+		cpf.set("led 101", "d0", 1);
 	 });
 	 $("#left_control").bind( "mousedown touchstart", function(e){
-		$("#left_right_control").attr("src", "left_event.png");
+		$("#left_right_control").attr("src", "./images/left_event.png");
+		cpf.set("led 101", "d0", 0);
 	 });
 	 
 	 // 右轉
 	 $("#right_control").bind( "mouseup touchend", function(e){
-		$("#left_right_control").attr("src", "left_right_control.png");
+		$("#left_right_control").attr("src", "./images/left_right_control.png");
+		cpf.set("led 101", "d2", 1);
 	 });
 	 $("#right_control").bind( "mousedown touchstart", function(e){
-		$("#left_right_control").attr("src", "right_event.png");
+		$("#left_right_control").attr("src", "./images/right_event.png");
+		cpf.set("led 101", "d2", 0);
 	 });
 	 
 	 // 前進
 	 $("#top_control").bind( "mouseup touchend", function(e){
-		$("#top_bottom_control").attr("src", "top_bottom_control.png");
+		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
+		cpf.set("led 101", "d0", 1);
+		cpf.set("led 101", "d2", 1);
 	 });
 	 $("#top_control").bind( "mousedown touchstart", function(e){
-		$("#top_bottom_control").attr("src", "top_event.png");
+		$("#top_bottom_control").attr("src", "./images/top_event.png");
+		cpf.set("led 101", "d0", 0);
+		cpf.set("led 101", "d2", 0);
 	 });
 
 	 // 後退
 	 $("#bottom_control").bind( "mouseup touchend", function(e){
-		$("#top_bottom_control").attr("src", "top_bottom_control.png");
+		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
+		cpf.set("led 101", "d1", 1);
+		cpf.set("led 101", "d3", 1);
 	 });
 	 $("#bottom_control").bind( "mousedown touchstart", function(e){
-		$("#top_bottom_control").attr("src", "bottom_event.png");
+		$("#top_bottom_control").attr("src", "./images/bottom_event.png");
+		cpf.set("led 101", "d1", 0);
+		cpf.set("led 101", "d3", 0);
 	 });
 
+	 // cpf setup
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"digital\", 0, \"OUTPUT\"],[\"setPinMode\", \"digital\", 1, \"OUTPUT\"],[\"setPinMode\", \"digital\", 2, \"OUTPUT\"],[\"setPinMode\", \"digital\", 3, \"OUTPUT\"]'); 
+	}
+	 
 });
 </script>
 
 <body>
 
 <center>
-<img src="controller.png" id="controller">
-<img src="left_right_control.png" id="left_right_control"/>
-	<img src="left.png" id="left_control">
-	<img src="right.png" id="right_control">
-<img src="top_bottom_control.png" id="top_bottom_control"/>
-	<img src="top.png" id="top_control">
-	<img src="bottom.png" id="bottom_control">
+<img src="./images/controller.png" id="controller">
+<img src="./images/left_right_control.png" id="left_right_control"/>
+	<img src="./images/left.png" id="left_control">
+	<img src="./images/right.png" id="right_control">
+<img src="./images/top_bottom_control.png" id="top_bottom_control"/>
+	<img src="./images/top.png" id="top_control">
+	<img src="./images/bottom.png" id="bottom_control">
 </center>
 
 

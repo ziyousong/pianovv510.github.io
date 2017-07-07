@@ -1,0 +1,52 @@
+
+#controller {
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#left_right_control {
+	position: absolute;
+	top: 8%;
+	left: 17%;
+	width: 20%;
+}
+
+#top_bottom_control {
+	position: absolute;
+	top: 8%;
+	left: 63%;
+	width: 20%;
+}
+
+#left_control {
+	position: absolute;
+	width: 10%;
+	top: 8%;
+	left: 17%;
+	opacity: 0;
+}
+
+#right_control {
+	position: absolute;
+	width: 10%;
+	top: 8%;
+	left: 27%; /*left_control left + left_control width*/
+	opacity: 0;
+}
+
+#top_control {
+	position: absolute;
+	width: 20%;
+	top: 8%;
+	left: 63%;
+	opacity: 0;
+}
+
+#bottom_control {
+	position: absolute;
+	width: 20%;
+	top: 26%;
+	left: 63%;
+	opacity: 0;
+}
