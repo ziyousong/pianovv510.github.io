@@ -14,46 +14,45 @@ $(document).ready(function(){
 	 // 左轉
 	 $("#left_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		var ret = cpf.request('["digitalWrite", 0, 1]');
+		var ret = cpf.request('["digitalWrite", 0, 0]');
 	 });
 	 $("#left_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/left_event.png");
-		var ret = cpf.request('["digitalWrite", 0, 0]');
+		var ret = cpf.request('["digitalWrite", 0, 1]');
 	 });
 	 
 	 // 右轉
 	 $("#right_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		var ret = cpf.request('["digitalWrite", 2, 1]');
+		var ret = cpf.request('["digitalWrite", 2, 0]');
 	 });
 	 $("#right_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/right_event.png");
-		var ret = cpf.request('["digitalWrite", 2, 0]');
+		var ret = cpf.request('["digitalWrite", 2, 1]');
 	 });
 	 
 	 // 前進
 	 $("#top_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		var ret = cpf.request('["digitalWrite", 0, 1]');
-		var ret = cpf.request('["digitalWrite", 2, 1]');
+		var ret = cpf.request('["digitalWrite", 0, 0]');
+		var ret = cpf.request('["digitalWrite", 2, 0]');
 	 });
 	 $("#top_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_event.png");
-		var ret = cpf.request('["digitalWrite", 0, 0]');
-		var ret = cpf.request('["digitalWrite", 2, 0]');
+		var ret = cpf.request('["digitalWrite", 0, 1]');
+		var ret = cpf.request('["digitalWrite", 2, 1]');
 	 });
 
 	 // 後退
 	 $("#bottom_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		var ret = cpf.request('["digitalWrite", 1, 1]');
-		var ret = cpf.request('["digitalWrite", 3, 1]');
-		cpf.set("led 101", "d3", 1);
+		var ret = cpf.request('["digitalWrite", 1, 0]');
+		var ret = cpf.request('["digitalWrite", 3, 0]');
 	 });
 	 $("#bottom_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/bottom_event.png");
-		var ret = cpf.request('["digitalWrite", 1, 0]');
-		var ret = cpf.request('["digitalWrite", 3, 0]');
+		var ret = cpf.request('["digitalWrite", 1, 1]');
+		var ret = cpf.request('["digitalWrite", 3, 1]');
 	 });
 
 	 // cpf setup
