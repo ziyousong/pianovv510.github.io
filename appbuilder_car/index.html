@@ -68,14 +68,12 @@ $(document).ready(function(){
 		var ret = cpf.request('["digitalWrite", 1, 1]');
 		var ret = cpf.request('["digitalWrite", 3, 1]');
 	 });*/
-
-	 //var ret = cpf.request('["digitalWrite", 0, 1]');
-	 cpf.set("led101", "d0", 1);
+	 var ret = cpf.request('["digitalWrite", 0, 1]');
 	 // cpf setup
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"digital\", 0, \"OUTPUT\"]);
-			//var ret = cpf.request('["resetPin"],["setPinMode", "digital", 0, "OUTPUT"],["setPinMode", "digital", 1, "OUTPUT"],["setPinMode", "digital", 2, "OUTPUT"],["setPinMode", "digital", 3, "OUTPUT"]'); 
+			//var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"digital\", 0, \"OUTPUT\"]);
+			var ret = cpf.request('["resetPin"],["setPinMode", "digital", 0, "OUTPUT"],["setPinMode", "digital", 1, "OUTPUT"],["setPinMode", "digital", 2, "OUTPUT"],["setPinMode", "digital", 3, "OUTPUT"]'); 
 	}
 	 
 });
