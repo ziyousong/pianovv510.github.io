@@ -47,13 +47,13 @@ $(document).ready(function(){
 	 $("#top_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
 		//cpf.set("led 101", "d0", 0);
-		cpf.set("led 101", "d2", 0);
+		cpf.set("d2", 0);
 		
 	 });
 	 $("#top_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_event.png");
 		//cpf.set("led 101", "d0", 1);
-		cpf.set("led 101", "d2", 1);
+		cpf.set("d2", 1);
 	 });
 
 	 // 後退
