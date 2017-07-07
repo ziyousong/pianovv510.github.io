@@ -23,9 +23,65 @@
 
 <script>
 setup();
-$(document).ready(function(){
-	
-	
+
+var going = document.getElementById("top_control");
+var back = document.getElementById("bottom_control");
+var left = document.getElementById("left_control");
+var right = document.getElementById("right_control");
+
+// 前進
+going.addEventListener('touchstart', function(event) {
+	document.getElementById("top_bottom_control").src= './images/top_event.png';
+	cpf.set("d2", 1);
+	cpf.set("d4", 1);
+});
+
+going.addEventListener('touchend', function(event) {
+	document.getElementById("top_bottom_control").src= './images/top_bottom_control.png';
+	cpf.set("d2", 0);
+	cpf.set("d4", 0);
+});
+
+// 後退
+left.addEventListener('touchstart', function(event) {
+	document.getElementById("top_bottom_control").src= './images/bottom_event.png';
+	cpf.set("d3", 1);
+	cpf.set("d5", 1);
+});
+
+left.addEventListener('touchend', function(event) {
+	document.getElementById("top_bottom_control").src= './images/top_bottom_control.png';
+	cpf.set("d3", 0);
+	cpf.set("d5", 0);
+});
+
+// 左轉
+back.addEventListener('touchstart', function(event) {
+	document.getElementById("left_right_control").src= './images/left_event.png';
+	cpf.set("d2", 1);
+	cpf.set("d4", 0);
+});
+
+back.addEventListener('touchend', function(event) {
+	document.getElementById("left_right_control").src= './images/left_right_control.png';
+	cpf.set("d2", 0);
+	cpf.set("d4", 0);
+});
+
+// 右轉
+back.addEventListener('touchstart', function(event) {
+	document.getElementById("left_right_control").src= './images/right_event.png';
+	cpf.set("d2", 0);
+	cpf.set("d4", 1);
+});
+
+back.addEventListener('touchend', function(event) {
+	document.getElementById("left_right_control").src= './images/left_right_control.png';
+	cpf.set("d2", 0);
+	cpf.set("d4", 0);
+});
+
+/*$(document).ready(function(){
 	
 	 // 左轉
 	 $("#left_control").bind( "mouseup touchend", function(e){
@@ -76,7 +132,7 @@ $(document).ready(function(){
 		cpf.set("d5", 1);
 	 });
 	 
-});
+});*/
 
 	// cpf setup
 	function setup(){
