@@ -14,51 +14,52 @@ $(document).ready(function(){
 	 // 左轉
 	 $("#left_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		cpf.set("led 101", "d0", 1);
+		var ret = cpf.request('["digitalWrite", 0, 1]');
 	 });
 	 $("#left_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/left_event.png");
-		cpf.set("led 101", "d0", 0);
+		var ret = cpf.request('["digitalWrite", 0, 0]');
 	 });
 	 
 	 // 右轉
 	 $("#right_control").bind( "mouseup touchend", function(e){
 		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		cpf.set("led 101", "d2", 1);
+		var ret = cpf.request('["digitalWrite", 2, 1]');
 	 });
 	 $("#right_control").bind( "mousedown touchstart", function(e){
 		$("#left_right_control").attr("src", "./images/right_event.png");
-		cpf.set("led 101", "d2", 0);
+		var ret = cpf.request('["digitalWrite", 2, 0]');
 	 });
 	 
 	 // 前進
 	 $("#top_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		cpf.set("led 101", "d0", 1);
-		cpf.set("led 101", "d2", 1);
+		var ret = cpf.request('["digitalWrite", 0, 1]');
+		var ret = cpf.request('["digitalWrite", 2, 1]');
 	 });
 	 $("#top_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_event.png");
-		cpf.set("led 101", "d0", 0);
-		cpf.set("led 101", "d2", 0);
+		var ret = cpf.request('["digitalWrite", 0, 0]');
+		var ret = cpf.request('["digitalWrite", 2, 0]');
 	 });
 
 	 // 後退
 	 $("#bottom_control").bind( "mouseup touchend", function(e){
 		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		cpf.set("led 101", "d1", 1);
+		var ret = cpf.request('["digitalWrite", 1, 1]');
+		var ret = cpf.request('["digitalWrite", 3, 1]');
 		cpf.set("led 101", "d3", 1);
 	 });
 	 $("#bottom_control").bind( "mousedown touchstart", function(e){
 		$("#top_bottom_control").attr("src", "./images/bottom_event.png");
-		cpf.set("led 101", "d1", 0);
-		cpf.set("led 101", "d3", 0);
+		var ret = cpf.request('["digitalWrite", 1, 0]');
+		var ret = cpf.request('["digitalWrite", 3, 0]');
 	 });
 
 	 // cpf setup
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('[\"resetPin\"],[\"setPinMode\", \"digital\", 0, \"OUTPUT\"],[\"setPinMode\", \"digital\", 1, \"OUTPUT\"],[\"setPinMode\", \"digital\", 2, \"OUTPUT\"],[\"setPinMode\", \"digital\", 3, \"OUTPUT\"]'); 
+			var ret = cpf.request('["resetPin"],["setPinMode", "digital", 0, "OUTPUT"],["setPinMode", "digital", 1, "OUTPUT"],["setPinMode", "digital", 2, "OUTPUT"],["setPinMode", "digital", 3, "OUTPUT"]'); 
 	}
 	 
 });
