@@ -16,6 +16,8 @@
 <img src="./images/top_bottom_control.png" id="top_bottom_control"/>
 	<img src="./images/top.png" id="top_control">
 	<img src="./images/bottom.png" id="bottom_control">
+<img src="./images/speed.gif" id="speed" />
+<span id="lightValue"></span>
 </center>
 
 
@@ -28,6 +30,10 @@ var going = document.getElementById("top_control");
 var back = document.getElementById("bottom_control");
 var left = document.getElementById("left_control");
 var right = document.getElementById("right_control");
+
+//顯示光數值
+var lightValue = cpf.get("light sensor");
+document.getElementById("lightValue").innerHTML = lightValue;
 
 // 前進
 going.addEventListener('touchstart', function(event) {
@@ -80,59 +86,6 @@ right.addEventListener('touchend', function(event) {
 	cpf.set("d2", 0);
 	cpf.set("d4", 0);
 });
-
-/*$(document).ready(function(){
-	
-	 // 左轉
-	 $("#left_control").bind( "mouseup touchend", function(e){
-		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		cpf.set("d2", 0);
-		cpf.set("d4", 0);
-	 });
-	 $("#left_control").bind( "mousedown touchstart", function(e){
-		$("#left_right_control").attr("src", "./images/left_event.png");
-		cpf.set("d2", 1);
-		cpf.set("d4", 0);
-	 });
-	 
-	 // 右轉
-	 $("#right_control").bind( "mouseup touchend", function(e){
-		$("#left_right_control").attr("src", "./images/left_right_control.png");
-		cpf.set("d2", 0);
-		cpf.set("d4", 0);
-	 });
-	 $("#right_control").bind( "mousedown touchstart", function(e){
-		$("#left_right_control").attr("src", "./images/right_event.png");
-		cpf.set("d2", 0);
-		cpf.set("d4", 1);
-	 });
-	 
-	 // 前進
-	 $("#top_control").bind( "mouseup touchend", function(e){
-		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		cpf.set("d2", 0);
-		cpf.set("d4", 0);
-		
-	 });
-	 $("#top_control").bind( "mousedown touchstart", function(e){
-		$("#top_bottom_control").attr("src", "./images/top_event.png");
-		cpf.set("d2", 1);
-		cpf.set("d4", 1);
-	 });
-
-	 // 後退
-	 $("#bottom_control").bind( "mouseup touchend", function(e){
-		$("#top_bottom_control").attr("src", "./images/top_bottom_control.png");
-		cpf.set("d3", 0);
-		cpf.set("d5", 0);
-	 });
-	 $("#bottom_control").bind( "mousedown touchstart", function(e){
-		$("#top_bottom_control").attr("src", "./images/bottom_event.png");
-		cpf.set("d3", 1);
-		cpf.set("d5", 1);
-	 });
-	 
-});*/
 
 	// cpf setup
 	function setup(){
