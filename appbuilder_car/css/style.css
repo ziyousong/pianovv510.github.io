@@ -63,7 +63,7 @@
 	top: 21%;
 	left: 47.5%;
 	font-family: monospace;
-	font-size: 40pt;
+	font-size: 28pt;
 	color: #77FFEE;
 	text-align: center;
 	opacity: 0.8;
@@ -99,7 +99,7 @@
 
 @media (max-width: 700px) {
 	#lightValue {
-		font-size: 12pt;
+		font-size: 5pt;
 	}
 }
 
