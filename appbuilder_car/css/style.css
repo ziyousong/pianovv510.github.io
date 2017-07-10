@@ -51,13 +51,6 @@
 	opacity: 0;
 }
 
-#speed {
-	position: absolute;
-	top: 12%;
-	left: 42%;
-	width: 14%;
-}
-
 @font-face {
   font-family: IrisUPC;
   src: url(./upcil.ttf);
@@ -73,6 +66,22 @@
 	text-align: center;
 	opacity: 0.8;
 	font-weight: normal;
+}
+
+#right_button {
+	position: absolute;
+	top: 42%;
+	left: 56.2%;
+	width: 10%;
+	opacity: 0;
+}
+
+#left_button {
+	position: absolute;
+	top: 42%;
+	left: 33.5%;
+	width: 10%;
+	opacity: 0;
 }
 
 @media (max-width: 1280px) {
@@ -123,9 +132,5 @@
 @media (max-height: 330px) {
 	#lightValue {
 		top: 25%;
-	}
-	#speed {
-		top: 14%;
-		left: 42%;
 	}
 }
