@@ -54,7 +54,7 @@
 #speed {
 	position: absolute;
 	top: 12%;
-	left: 42.5%;
+	left: 42%;
 	width: 14%;
 }
 
@@ -126,6 +126,6 @@
 	}
 	#speed {
 		top: 14%;
-		left: 43%;
+		left: 42%;
 	}
 }
