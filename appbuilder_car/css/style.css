@@ -84,13 +84,13 @@
 
 @media (max-width: 980px) {
 	#lightValue {
-		font-size: 16pt;
+		font-size: 5pt;
 	}
 }
 
 @media (max-width: 870px) {
 	#lightValue {
-		font-size: 14pt;
+		font-size: 5pt;
 	}
 	#speed {
 	left: 43%;
