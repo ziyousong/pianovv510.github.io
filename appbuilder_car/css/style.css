@@ -111,3 +111,10 @@
 		font-size: 12pt;
 	}
 }
+
+@media (max-height: 320px) {
+	#speed {
+		top: 13%;
+		left: 42.5%;
+	}
+}
