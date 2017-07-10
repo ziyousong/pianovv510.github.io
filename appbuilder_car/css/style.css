@@ -90,7 +90,7 @@
 
 @media (max-width: 870px) {
 	#lightValue {
-		font-size: 12pt;
+		font-size: 13pt;
 	}
 	#speed {
 	left: 43%;
@@ -111,7 +111,7 @@
 
 @media (max-width: 450px) {
 	#lightValue {
-		font-size: 6pt;
+		font-size: 8pt;
 	}
 }
 
