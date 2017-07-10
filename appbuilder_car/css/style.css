@@ -91,10 +91,11 @@
 @media (max-width: 870px) {
 	#lightValue {
 		font-size: 16pt;
+		top: 23%;
 	}
 	#speed {
 	left: 43%;
-}
+	}
 }
 
 @media (max-width: 700px) {
