@@ -63,7 +63,7 @@
 	top: 21%;
 	left: 47.5%;
 	font-family: monospace;
-	font-size: 40pt;
+	font-size: 12pt;
 	color: #77FFEE;
 	text-align: center;
 	opacity: 0.8;
@@ -72,13 +72,13 @@
 
 @media (max-width: 1280px) {
 	#lightValue {
-		font-size: 14pt;
+		font-size: 12pt;
 	}
 }
 
 @media (max-width: 1100px) {
 	#lightValue {
-		font-size: 14pt;
+		font-size: 12pt;
 	}
 }
 
