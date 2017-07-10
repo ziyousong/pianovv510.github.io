@@ -104,20 +104,20 @@
 	
 	// 左按鈕(自訂功能1)
 	function1.addEventListener('touchstart', function(event) {
-		document.getElementById("controller").src= './images/controller_2.png';
+		function1.style.opacity = 1;
 	});
 
 	function1.addEventListener('touchend', function(event) {
-		document.getElementById("controller").src= './images/controller.png';
+		function1.style.opacity = 0;
 	});
 	
 	// 右按鈕(自訂功能1)
 	function2.addEventListener('touchstart', function(event) {
-		document.getElementById("controller").src= './images/controller_1.png';
+		function2.style.opacity = 1;
 	});
 
 	function2.addEventListener('touchend', function(event) {
-		document.getElementById("controller").src= './images/controller.png';
+		function2.style.opacity = 0;
 	});
 
 	// cpf setup
