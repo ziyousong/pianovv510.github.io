@@ -9,7 +9,7 @@
 <body>
 
 <center>
-<img src="./images/controller2.png" id="controller">
+<img src="./images/controller.png" id="controller">
 <img src="./images/left_right_control.png" id="left_right_control"/>
 	<img src="./images/left.png" id="left_control">
 	<img src="./images/right.png" id="right_control">
@@ -17,6 +17,10 @@
 	<img src="./images/top.png" id="top_control">
 	<img src="./images/bottom.png" id="bottom_control">
 <span id="lightValue"></span>
+
+<img src="./images/right_button.png" id="right_button"/>
+<img src="./images/left_button.png" id="left_button"/>
+
 </center>
 
 
@@ -29,6 +33,8 @@
 	var back = document.getElementById("bottom_control");
 	var left = document.getElementById("left_control");
 	var right = document.getElementById("right_control");
+	var function1 = document.getElementById("left_button");
+	var function2 = document.getElementById("right_button");
 	var lightValue = 0;
 	
 	//顯示光數值
@@ -94,6 +100,24 @@
 		document.getElementById("left_right_control").src= './images/left_right_control.png';
 		cpf.set("d2", 0);
 		cpf.set("d4", 0);
+	});
+	
+	// 左按鈕(自訂功能1)
+	function1.addEventListener('touchstart', function(event) {
+		document.getElementById("controller").src= './images/controller_2.png';
+	});
+
+	function1.addEventListener('touchend', function(event) {
+		document.getElementById("controller").src= './images/controller.png';
+	});
+	
+	// 右按鈕(自訂功能1)
+	function2.addEventListener('touchstart', function(event) {
+		document.getElementById("controller").src= './images/controller_1.png';
+	});
+
+	function2.addEventListener('touchend', function(event) {
+		document.getElementById("controller").src= './images/controller.png';
 	});
 
 	// cpf setup
