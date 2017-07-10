@@ -25,13 +25,24 @@
 
 <script>
 	setup();
-	loop();
 
 	var going = document.getElementById("top_control");
 	var back = document.getElementById("bottom_control");
 	var left = document.getElementById("left_control");
 	var right = document.getElementById("right_control");
-
+	var lightValue = 0;
+	
+	//顯示光數值
+	function loop() {
+		if(cpf){
+		
+			lightValue = cpf.get("light sensor");
+			document.getElementById("lightValue").innerHTML = lightValue;
+				
+		}
+		setTimeout("loop()", 1000);
+	}
+	
 	loop();
 
 	// 前進
@@ -85,19 +96,6 @@
 		cpf.set("d2", 0);
 		cpf.set("d4", 0);
 	});
-
-	//顯示光數值
-	function loop() {
-		if(cpf){
-		
-			var lightValue = cpf.get("light sensor");
-			document.getElementById("lightValue").innerHTML = lightValue;
-				
-		}else {
-			document.getElementById("lightValue").innerHTML = 'None';
-		}
-		setTimeout("loop()", 1000);
-	}
 
 	// cpf setup
 	function setup(){
