@@ -93,6 +93,8 @@
 			var lightValue = cpf.get("light sensor");
 			document.getElementById("lightValue").innerHTML = lightValue;
 				
+		}else {
+			document.getElementById("lightValue").innerHTML = 'None';
 		}
 		setTimeout("loop()", 1000);
 	}
