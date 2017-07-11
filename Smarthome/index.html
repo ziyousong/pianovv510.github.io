@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+
+<title>Smart Home</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<meta charset="UTF-8">
+
+</head>
+<body>
+
+<div id="content">
+	<center>
+		<div class="analog">
+			<div class="analog_img">
+				<img src="./images/temp.png" class="sensors">
+			</div>
+			<div class="analog_title">
+				<h2>Temperature</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				&nbsp&nbsp32&nbsp<font size="5">℃</font>
+			</div>
+		</div>
+		<div class="analog">
+			<div class="analog_img">
+				<img src="./images/light.png" class="sensors" style="width: 75px; top: 25px;">
+			</div>
+			<div class="analog_title">
+				<h2>Brightness</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				567
+			</div>
+		</div>
+		<div class="analog">
+			<div class="analog_img">
+				<img src="./images/elec.png" class="sensors" style="top: 30px;">
+			</div>
+			<div class="analog_title">
+				<h2>Electricity</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				&nbsp&nbsp&nbsp305&nbsp<font size="5">mA</font>
+			</div>
+		</div>
+		<div class="analog">
+			<div class="analog_img">
+				<img src="./images/people.png" class="sensors" style="width: 57px; top: 30px;">
+			</div>
+			<div class="analog_title">
+				<h2>People</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				
+			</div>
+		</div>
+		<div class="analog">
+			<div class="analog_img">
+				<img src="./images/co.png" class="sensors" style="width: 90px; top: 35px;">
+			</div>
+			<div class="analog_title">
+				<h2>Carbon monoxide</h2>
+			</div>
+			<hr>
+			<div class="analog_value">
+				&nbsp&nbsp&nbsp20&nbsp<font size="5">PPM</font>
+			</div>
+		</div>
+		<p>
+		<div class="output">
+			<div class="output_title">
+				<h2 style="margin-top: 5px;">Mini fan</h2>
+			</div>
+			<hr style="margin-top: 0px;">
+			<div class="output_img">
+				<img src="./images/fan.png" class="sensors" style="width: 100px; top: 5%;">
+			</div>
+			<div class="output_content">
+				<input Onchange="Fan();" type="range" id="fan_bar" style="margin-top: 25%;" value="0" min="0" max="255">
+			</div>
+		</div>
+		<div class="output">
+			<div class="output_title">
+				<h2 style="margin-top: 5px;">Light</h2>
+			</div>
+			<hr style="margin-top: 0px;">
+			<div class="output_img">
+				<img src="./images/bulb.png" class="sensors" style="width: 55px; top: 5%;">
+			</div>
+			<div class="output_content">
+				<label class="switch" style="top: 25%;">
+				  <input type="checkbox">
+				  <div class="slider round"></div>
+				</label>
+			</div>
+		</div>
+	</center>
+</div>
+
+</body>
+
+</html>
