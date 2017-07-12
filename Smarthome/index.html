@@ -19,12 +19,12 @@
 			</div>
 			<hr>
 			<div class="analog_value">
-				&nbsp&nbsp32&nbsp<font size="5">℃</font>
+				&nbsp&nbsp32&nbsp<font class="unit">℃</font>
 			</div>
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/light.png" class="sensors" style="width: 75px; top: 25px;">
+				<img src="./images/light.png" class="sensors" style="width: 35%;">
 			</div>
 			<div class="analog_title">
 				<h2>Brightness</h2>
@@ -36,48 +36,48 @@
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/elec.png" class="sensors" style="top: 30px;">
+				<img src="./images/elec.png" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>Electricity</h2>
 			</div>
 			<hr>
 			<div class="analog_value">
-				&nbsp&nbsp&nbsp305&nbsp<font size="5">mA</font>
+				&nbsp&nbsp&nbsp305&nbsp<font class="unit">mA</font>
 			</div>
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/people.png" class="sensors" style="width: 57px; top: 30px;">
+				<img src="./images/people.png" class="sensors">
 			</div>
 			<div class="analog_title">
 				<h2>People</h2>
 			</div>
 			<hr>
 			<div class="analog_value">
-				
+				<img src="./images/people_on.png" id="people">
 			</div>
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/co.png" class="sensors" style="width: 90px; top: 35px;">
+				<img src="./images/co.png" class="sensors" style="width: 40%; top: 25%">
 			</div>
 			<div class="analog_title">
 				<h2>Carbon monoxide</h2>
 			</div>
 			<hr>
 			<div class="analog_value">
-				&nbsp&nbsp&nbsp20&nbsp<font size="5">PPM</font>
+				&nbsp&nbsp&nbsp20&nbsp<font class="unit">PPM</font>
 			</div>
 		</div>
 		<p>
 		<div class="output">
 			<div class="output_title">
-				<h2 style="margin-top: 5px;">Mini fan</h2>
+				<h2 style="margin-top: 5px;">Fan</h2>
 			</div>
 			<hr style="margin-top: 0px;">
 			<div class="output_img">
-				<img src="./images/fan.png" class="sensors" style="width: 100px; top: 5%;">
+				<img src="./images/fan.png" class="sensors" style="width: 60%; top: 5%;">
 			</div>
 			<div class="output_content">
 				<input Onchange="Fan();" type="range" id="fan_bar" style="margin-top: 25%;" value="0" min="0" max="255">
@@ -85,11 +85,11 @@
 		</div>
 		<div class="output">
 			<div class="output_title">
-				<h2 style="margin-top: 5px;">Light</h2>
+				<h2 style="margin-top: 5px;">Lighting</h2>
 			</div>
 			<hr style="margin-top: 0px;">
 			<div class="output_img">
-				<img src="./images/bulb.png" class="sensors" style="width: 55px; top: 5%;">
+				<img src="./images/bulb.png" class="sensors" style="width: 35%; top: 5%;">
 			</div>
 			<div class="output_content">
 				<label class="switch" style="top: 25%;">
@@ -103,4 +103,19 @@
 
 </body>
 
+<script>
+
+	setup();
+
+
+	// cpf setup
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"OUTPUT"],["setPinMode", "digital", 6,"OUTPUT"]');
+			
+	}
+
+</script>
+
 </html>
+
