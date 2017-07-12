@@ -1,7 +1,7 @@
 html {
 	font-family: Microsoft JhengHei;
 	background-image: url("../images/bg3.png");
-	background-size: 100% 70%;
+	background-size: 100% 100%;
 	background-color: rgb(135, 172, 85);
 	background-repeat: no-repeat;
 }
@@ -380,5 +380,23 @@ input:checked + .slider:before {
 		width: 160px;
 		margin-top: 1%;
 		margin-left: 6%;
+	}
+}
+
+@media (max-width: 370px) {
+	.output {
+		height: 70px;
+		width: 160px;
+		margin-top: 1%;
+		margin-left: 1%;
+		margin-right: 0%;
+	}
+}
+
+@media (max-width: 370px) {
+	.output {
+		display: inline-block;
+		margin-left: 25%;
+		margin-top: 4%;
 	}
 }
