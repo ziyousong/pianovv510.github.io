@@ -3,6 +3,7 @@ html {
 	background-image: url("../images/bg3.png");
 	background-size: cover;
 	background-color: rgb(135, 172, 85);
+	background-repeat: no-repeat;
 }
 
 h2 {
@@ -91,7 +92,7 @@ hr {
 	background-color: rgba(0, 0, 0, 0.2);
 	margin-left: 8%;
 	margin-right: -3%;
-	margin-top: 7%;
+	margin-top: 3%;
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
 	color: white;
 }
@@ -316,7 +317,7 @@ input:checked + .slider:before {
 	.output {
 		height: 100px;
 		width: 210px;
-		margin-top: 5%;
+		margin-top: 2%;
 	}
 }
 
@@ -349,7 +350,7 @@ input:checked + .slider:before {
 	.output {
 		height: 80px;
 		width: 190px;
-		margin-top: 3%;
+		margin-top: 2%;
 		margin-left: 6%;
 	}
 }
@@ -376,8 +377,8 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 70px;
-		width: 180px;
-		margin-top: 3%;
+		width: 160px;
+		margin-top: 1%;
 		margin-left: 6%;
 	}
 }
