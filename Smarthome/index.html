@@ -18,7 +18,7 @@
 				<h2>Temperature</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
+			<div class="analog_value" id="tempValue">
 				&nbsp&nbsp32&nbsp<font class="unit">℃</font>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 				<h2>Brightness</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
+			<div class="analog_value" id="lightValue">
 				567
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 				<h2>Electricity</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
+			<div class="analog_value" id="elecValue">
 				&nbsp&nbsp&nbsp305&nbsp<font class="unit">mA</font>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 				<h2>Carbon monoxide</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
+			<div class="analog_value" id="COValue">
 				&nbsp&nbsp&nbsp20&nbsp<font class="unit">PPM</font>
 			</div>
 		</div>
@@ -77,10 +77,10 @@
 			</div>
 			<hr style="margin-top: 0px;">
 			<div class="output_img">
-				<img src="./images/fan.png" id="fan" class="sensors" style="width: 55%; top: 5%;">
+				<img src="./images/fan.png" class="sensors" style="width: 55%; top: 5%;">
 			</div>
 			<div class="output_content">
-				<input Onchange="Fan();" type="range" id="fan_bar" style="margin-top: 25%;" value="0" min="0" max="255">
+				<input Onchange="fan(this.value);" type="range" id="fan" style="margin-top: 25%;" value="0" min="0" max="255">
 			</div>
 		</div>
 		<div class="output">
@@ -93,7 +93,7 @@
 			</div>
 			<div class="output_content">
 				<label class="switch" style="top: 25%;">
-				  <input type="checkbox">
+				  <input type="checkbox" id="bulb" Onchange="blub(this.value);">
 				  <div class="slider round"></div>
 				</label>
 			</div>
@@ -106,7 +106,54 @@
 <script>
 
 	setup();
-
+	
+	var tempValue;
+	var lightValue;
+	var elecValue;
+	var people;
+	var COValue;
+	var fan;
+	var bulb;
+	
+	// 上排數值顯示
+	function loop() {
+		if(cpf){
+			
+			// 溫度
+			tempValue = cpf.get("socket a1");
+			document.getElementById("tempValue").innerHTML = '&nbsp&nbsp'+tempValue+'&nbsp<font class="unit">℃</font>';
+			// 光敏
+			lightValue = cpf.get("socket a0");
+			document.getElementById("lightValue").innerHTML = lightValue;
+			// 電流
+			elecValue = cpf.get("socket a2");
+			document.getElementById("elecValue").innerHTML = '&nbsp&nbsp&nbsp'+elecValue+'&nbsp<font class="unit">mA</font>';
+			// 人體感測
+			people = cpf.get("socket d6");
+			if(people = 1) {
+				document.getElementById("people").src = './images/people_on.png';
+			}else {
+				document.getElementById("people").src = './images/people_off.png';
+			}
+			// 一氧化碳
+			COValue = cpf.get("socket a3");
+			document.getElementById("COValue").innerHTML = COValue;
+			
+		}
+		setTimeout("loop()", 1000);
+	}
+	
+	loop();
+	
+	// 風扇
+	function fan(value) {
+		cpf.set("socket d3", value);
+	}
+	
+	// LED燈
+	function blub(value) {
+		cpf.set("socket d2", value);
+	}
 
 	// cpf setup
 	function setup(){
