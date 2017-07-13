@@ -54,7 +54,7 @@
 				<h2>People</h2>
 			</div>
 			<hr>
-			<div class="analog_value">
+			<div class="analog_value" id="people_con">
 				<img src="./images/people_on.png" id="people">
 			</div>
 		</div>
@@ -135,6 +135,7 @@
 			}else {
 				document.getElementById("people").src = './images/people_off.png';
 			}
+			document.getElementById("people_con").innerHTML = people;
 			// 一氧化碳
 			COValue = cpf.get("socket a3");
 			document.getElementById("COValue").innerHTML = COValue;
@@ -147,10 +148,8 @@
 	
 	// 風扇
 	function fan(value) {
-		cpf.set("socket d3", value);
+		cpf.set("fan", value);
 	}
-	
-	cpf.set("socket d3", 100);
 	
 	// LED燈
 	/*function blub(value) {
