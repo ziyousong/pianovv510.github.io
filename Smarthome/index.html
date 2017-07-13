@@ -19,7 +19,8 @@
 			</div>
 			<hr>
 			<div class="analog_value" id="tempValue">
-				&nbsp&nbsp32&nbsp<font class="unit">℃</font>
+				<img src="./images/nice.png" class="status" />
+				32<font class="unit">℃</font>
 			</div>
 		</div>
 		<div class="analog">
@@ -31,6 +32,7 @@
 			</div>
 			<hr>
 			<div class="analog_value" id="lightValue">
+			<img src="./images/nice.png" class="status" />
 				567
 			</div>
 		</div>
@@ -43,7 +45,8 @@
 			</div>
 			<hr>
 			<div class="analog_value" id="elecValue">
-				&nbsp&nbsp&nbsp305&nbsp<font class="unit">mA</font>
+			<img src="./images/warn.png" class="status" />
+				305<font class="unit">mA</font>
 			</div>
 		</div>
 		<div class="analog">
@@ -67,7 +70,8 @@
 			</div>
 			<hr>
 			<div class="analog_value" id="COValue">
-				&nbsp&nbsp&nbsp20&nbsp<font class="unit">PPM</font>
+				<img src="./images/danger.png" class="status" />
+				20<font class="unit">PPM</font>
 			</div>
 		</div>
 		<p>
@@ -92,10 +96,8 @@
 				<img src="./images/bulb.png" id="bulb" class="sensors" style="width: 30%; top: 5%;">
 			</div>
 			<div class="output_content">
-				<label class="switch" style="top: 25%;">
-				  <input type="checkbox" id="bulb" onclick="blub(this.value);">
-				  <div class="slider round"></div>
-				</label>
+				<img src="./images/lighton.png" class="lighting" id="lighton">
+				<img src="./images/light_off.png" class="lighting" id="lightoff">
 			</div>
 		</div>
 	</center>
@@ -112,6 +114,9 @@
 	var elecValue;
 	var people;
 	var COValue;
+	
+	var lighton = document.getElementById("lighton");
+	var lightoff = document.getElementById("lightoff");
 	
 	// 上排數值顯示
 	function loop() {
@@ -149,9 +154,17 @@
 	}
 	
 	// LED燈
-	/*function blub(value) {
-		cpf.set("socket d2", value);
-	}*/
+	lighton.addEventListener('touchstart', function(event) {
+		lighton.src= './images/light_on.png';
+		lightoff.src= './images/lightoff.png';
+		cpf.set("socket d2", 1);
+	});
+	
+	lightoff.addEventListener('touchstart', function(event) {
+		lightoff.src= './images/light_off.png';
+		lighton.src= './images/lighton.png';
+		cpf.set("socket d2", 0);
+	});
 	
 	// Temperature
 	function toCelsius(value) {
