@@ -128,12 +128,11 @@
 			document.getElementById("elecValue").innerHTML = '&nbsp&nbsp&nbsp'+elecValue+'&nbsp<font class="unit">mA</font>';
 			// 人體感測
 			people = cpf.get("socket d6");
-			if(people = '1') {
+			if(people = 1) {
 				document.getElementById("people").src = './images/people_on.png';
 			}else {
 				document.getElementById("people").src = './images/people_off.png';
 			}
-			alert(people);
 			// 一氧化碳
 			COValue = cpf.get("socket a3");
 			document.getElementById("COValue").innerHTML = '&nbsp&nbsp&nbsp'+COValue+'&nbsp<font class="unit">PPM</font>';
@@ -165,7 +164,7 @@
 	// cpf setup
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"PWM"],["setPinMode", "digital", 6,"OUTPUT"]');
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"PWM"],["setPinMode", "digital", 6,"INPUT"]');
 			
 	}
 
