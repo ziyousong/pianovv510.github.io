@@ -147,10 +147,8 @@
 	
 	// 風扇
 	function fan(value) {
-		cpf.set("socket d3", 0);
+		cpf.set("socket d3", value);
 	}
-	
-	cpf.set("socket d3", 120);
 	
 	// LED燈
 	/*function blub(value) {
@@ -168,7 +166,7 @@
 	// cpf setup
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"OUTPUT"],["setPinMode", "digital", 6,"OUTPUT"]');
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "analog", 0, "INPUT"],["setPinMode", "analog", 1, "INPUT"],["setPinMode", "analog", 2, "INPUT"],["setPinMode", "analog", 3, "INPUT"],["setPinMode", "digital", 2,"OUTPUT"],["setPinMode", "digital", 3,"PWM"],["setPinMode", "digital", 6,"OUTPUT"]');
 			
 	}
 
