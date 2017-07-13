@@ -216,7 +216,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 160px;
-		width: 300px;
+		width: 290px;
 	}
 }
 
@@ -244,7 +244,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 130px;
-		width: 270px;
+		width: 260px;
 	}
 }
 
@@ -258,7 +258,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 110px;
-		width: 250px;
+		width: 240px;
 	}
 }
 
@@ -290,7 +290,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 100px;
-		width: 235px;
+		width: 230px;
 	}
 }
 
@@ -316,7 +316,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 100px;
-		width: 210px;
+		width: 200px;
 		margin-top: 2%;
 	}
 }
@@ -349,7 +349,7 @@ input:checked + .slider:before {
 	/**OUTPUT***/
 	.output {
 		height: 80px;
-		width: 190px;
+		width: 180px;
 		margin-top: 2%;
 		margin-left: 6%;
 	}
@@ -385,9 +385,12 @@ input:checked + .slider:before {
 
 @media (max-width: 370px) {
 	.output {
+		float: none;
 		display: inline-block;
-		margin-left: 24%;
-		margin-top: 4%;
+		height: 70px;
+		width: 130px;
+		margin-left: 2px;
+		margin-right: 2px;
 	}
 	html {
 		background-image: url("../images/bg_phone.png");
