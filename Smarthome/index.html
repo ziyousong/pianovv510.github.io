@@ -93,7 +93,7 @@
 			</div>
 			<div class="output_content">
 				<label class="switch" style="top: 25%;">
-				  <input type="checkbox" id="bulb" Onchange="blub(this.value);">
+				  <input type="checkbox" id="bulb" onclick="blub(this.value);">
 				  <div class="slider round"></div>
 				</label>
 			</div>
@@ -120,7 +120,7 @@
 		if(cpf){
 			
 			// 溫度
-			tempValue = cpf.get("socket a1");
+			tempValue = toCelsius(cpf.get("socket a1"));
 			document.getElementById("tempValue").innerHTML = '&nbsp&nbsp'+tempValue+'&nbsp<font class="unit">℃</font>';
 			// 光敏
 			lightValue = cpf.get("socket a0");
@@ -147,12 +147,20 @@
 	
 	// 風扇
 	function fan(value) {
-		cpf.set("socket d3", value);
+		cpf.set("fan", value);
 	}
 	
 	// LED燈
-	function blub(value) {
-		cpf.set("socket d2", 1);
+	/*function blub(value) {
+		cpf.set("socket d2", value);
+	}*/
+	
+	// Temperature
+	function toCelsius(value) {
+		var resistance = parseFloat((1023-value) * 10000 / value);
+		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
+		
+		return temperature.toFixed(2);
 	}
 
 	// cpf setup
