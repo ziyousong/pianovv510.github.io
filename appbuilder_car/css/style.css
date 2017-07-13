@@ -224,7 +224,7 @@ html {
 	}
 }
 
-@media (max-width: 500px){
+/*@media (max-width: 500px){
 	#content {
 		width: 150%;
 	}
@@ -246,7 +246,7 @@ html {
 	}
 	#right_control {
 		top: 115px;
-		left: 10%; /*left_control left + left_control width*/
+		left: 10%;
 	}
 
 	#top_control {
@@ -275,5 +275,5 @@ html {
 		left: 18%;
 		opacity: 1;
 	}
-}
+}*/
 
