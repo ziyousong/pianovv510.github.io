@@ -224,11 +224,3 @@ html {
 	}
 }
 
-@media (max-height: 330px) {
-	#lightValue {
-		top: 25%;
-	}
-	#content {
-		height: 8em;
-	}
-}
