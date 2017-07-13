@@ -112,8 +112,6 @@
 	var elecValue;
 	var people;
 	var COValue;
-	var fan;
-	var bulb;
 	
 	// 上排數值顯示
 	function loop() {
@@ -130,7 +128,7 @@
 			document.getElementById("elecValue").innerHTML = '&nbsp&nbsp&nbsp'+elecValue+'&nbsp<font class="unit">mA</font>';
 			// 人體感測
 			people = cpf.get("socket d6");
-			if(people = 1) {
+			if(people = '1') {
 				document.getElementById("people").src = './images/people_on.png';
 			}else {
 				document.getElementById("people").src = './images/people_off.png';
