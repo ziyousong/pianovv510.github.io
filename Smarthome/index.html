@@ -18,9 +18,9 @@
 				<h2>Temperature</h2>
 			</div>
 			<hr>
-			<div class="analog_value" id="tempValue">
-				<img src="./images/nice.png" class="status" />
-				32<font class="unit">℃</font>
+			<div class="analog_value" >
+				<img src="./images/nice.png" id="tempStatus" class="status" />
+				<span id="tempValue">32</span><font class="unit">℃</font>
 			</div>
 		</div>
 		<div class="analog">
@@ -31,9 +31,9 @@
 				<h2>Brightness</h2>
 			</div>
 			<hr>
-			<div class="analog_value" id="lightValue">
-			<img src="./images/nice.png" class="status" />
-				567
+			<div class="analog_value">
+			<img src="./images/nice.png" id="lightStatus" class="status" />
+				<span id="lightValue">567</span>
 			</div>
 		</div>
 		<div class="analog">
@@ -44,9 +44,9 @@
 				<h2>Electricity</h2>
 			</div>
 			<hr>
-			<div class="analog_value" id="elecValue">
-			<img src="./images/warn.png" class="status" />
-				305<font class="unit">mA</font>
+			<div class="analog_value">
+			<img src="./images/warn.png" id="elecStatus" class="status" />
+				<span id="elecValue">390</span><font class="unit">mA</font>
 			</div>
 		</div>
 		<div class="analog">
@@ -69,9 +69,9 @@
 				<h2>Carbon monoxide</h2>
 			</div>
 			<hr>
-			<div class="analog_value" id="COValue">
-				<img src="./images/danger.png" class="status" />
-				20<font class="unit">PPM</font>
+			<div class="analog_value">
+				<img src="./images/danger.png" id="COStatus" class="status" />
+				<span id="COValue">20</span><font class="unit">PPM</font>
 			</div>
 		</div>
 		<p>
@@ -125,12 +125,37 @@
 			// 溫度
 			tempValue = toCelsius(cpf.get("socket a1"));
 			document.getElementById("tempValue").innerHTML = '&nbsp&nbsp'+tempValue+'&nbsp<font class="unit">℃</font>';
+			
+			if (tempValue <= 20 || tempValue >= 35 ) {
+				document.getElementById("tempStatus").src= './images/warn.png';
+			}else if ( tempValue <= 15 || tempValue >= 40 ) {
+				document.getElementById("tempStatus").src= './images/danger.png';
+			}else {
+				document.getElementById("tempStatus").src= './images/nice.png';
+			}
+			
 			// 光敏
 			lightValue = cpf.get("socket a0");
 			document.getElementById("lightValue").innerHTML = lightValue;
+			
+			if (lightValue <= 50 ) {
+				document.getElementById("lightStatus").src= './images/warn.png';
+			}else {
+				document.getElementById("lightStatus").src= './images/nice.png';
+			}
+			
 			// 電流
 			elecValue = cpf.get("socket a2");
 			document.getElementById("elecValue").innerHTML = '&nbsp&nbsp&nbsp'+elecValue+'&nbsp<font class="unit">mA</font>';
+			
+			if (elecValue >= 500 ) {
+				document.getElementById("elecStatus").src= './images/warn.png';
+			}else if ( elecValue >= 1000 ) {
+				document.getElementById("elecStatus").src= './images/danger.png';
+			}else {
+				document.getElementById("elecStatus").src= './images/nice.png';
+			}
+			
 			// 人體感測
 			people = cpf.get("socket d7");
 			if(people == 1) {
@@ -141,6 +166,14 @@
 			// 一氧化碳
 			COValue = cpf.get("socket a3");
 			document.getElementById("COValue").innerHTML = '&nbsp&nbsp&nbsp'+COValue+'&nbsp<font class="unit">PPM</font>';
+			
+			if (COValue >= 50 ) {
+				document.getElementById("COStatus").src= './images/warn.png';
+			}else if ( elecValue >= 500 ) {
+				document.getElementById("COStatus").src= './images/danger.png';
+			}else {
+				document.getElementById("COStatus").src= './images/nice.png';
+			}
 			
 		}
 		setTimeout("loop()", 1000);
