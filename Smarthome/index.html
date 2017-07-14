@@ -51,14 +51,14 @@
 		</div>
 		<div class="analog">
 			<div class="analog_img">
-				<img src="./images/people.png" class="sensors">
+				<img src="./images/thief.png" style="width: 60%; top: 18%" class="sensors">
 			</div>
 			<div class="analog_title">
-				<h2>People</h2>
+				<h2>Thief</h2>
 			</div>
 			<hr>
-			<div class="analog_value" id="people_con">
-				<img src="./images/people_on.png" id="people">
+			<div class="analog_value">
+				<img src="./images/thief_off.png" id="thief">
 			</div>
 		</div>
 		<div class="analog">
@@ -112,7 +112,7 @@
 	var tempValue;
 	var lightValue;
 	var elecValue;
-	var people;
+	var thief;
 	var COValue;
 	
 	var lighton = document.getElementById("lighton");
@@ -157,11 +157,11 @@
 			}
 			
 			// 人體感測
-			people = cpf.get("socket d7");
-			if(people == 1) {
-				document.getElementById("people").src = './images/people_on.png';
+			thief = cpf.get("socket d7");
+			if(thief == 1) {
+				document.getElementById("thief").src = './images/thief_on.png';
 			}else {
-				document.getElementById("people").src = './images/people_off.png';
+				document.getElementById("thief").src = './images/thief_off.png';
 			}
 			
 			// 一氧化碳
