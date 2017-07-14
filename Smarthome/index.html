@@ -163,6 +163,7 @@
 			}else {
 				document.getElementById("people").src = './images/people_off.png';
 			}
+			
 			// 一氧化碳
 			COValue = cpf.get("socket a3");
 			document.getElementById("COValue").innerHTML = COValue;
@@ -199,7 +200,7 @@
 		cpf.set("socket d2", 0);
 	});
 	
-	// Temperature
+	// 溫度轉攝氏
 	function toCelsius(value) {
 		var resistance = parseFloat((1023-value) * 10000 / value);
 		var temperature = 1 / (Math.log(resistance / 10000) / 3975+1 / 298.15) - 273.15;
