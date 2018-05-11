@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ace Components Enterprise</title>
+
+<!-- Required meta tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/nav.css">
+
+<!-- Icon -->
+<link rel="icon" href="./images/ace-logo.png">
+
+</head>
+<body>
+
+<div class="layout-nav">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	  <a class="navbar-brand" href="./index.html">Ace Components Enterprise</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav justify-content-end" style="width: 90%;">
+		  <li class="nav-item dropdown">
+			<button class="btn btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="about"></button>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item lang" key="about-company" href="./layout.html?page=company"></a>
+			  <a class="dropdown-item lang" key="about-news" href="./layout.html?page=news"></a>
+			</div>
+		  </li>
+		  <li class="nav-item dropdown">
+			<button class="btn btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="product"></button>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item lang" key="product-1" href="./layout.html?page=semiconductor"></a>
+			  <a class="dropdown-item lang" key="product-2" href="#"></a>
+			  <a class="dropdown-item lang" key="product-3" href="#"></a>
+			  <a class="dropdown-item lang" key="product-4" href="#"></a>
+			  <a class="dropdown-item lang" key="product-5" href="#"></a>
+			</div>
+		  </li>
+		  <li class="nav-item dropdown">
+			<button class="btn btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="process"></button>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item lang" key="process-1" href="#"></a>
+			  <a class="dropdown-item lang" key="process-2" href="#"></a>
+			</div>
+		  </li>
+		  <li class="nav-item">
+			<button class="btn btn-md lang" key="contact" onclick="#"></button>
+		  </li>
+		</ul>
+		<ul class="navbar-nav justify-content-end" style="width: 10%;">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  <!--Language default-->
+				</a>
+				<div class="dropdown-menu" id="dropdown-menu" aria-labelledby="langDropdown">
+				  <!--Language select-->
+				</div>
+			  </li>
+		</ul>
+	  </div>
+	</nav>
+	<div class="container banner">
+		<div class="banner-name lang" id="bannerName" key="about">...</div>
+		<div style="width: 100px; height: 1px; background: #EB9900; margin: 0 auto;"></div>
+	</div>
+</div>
+
+<div class="container-fluid main" id="main">
+	<!-- content -->
+</div>
+
+<div id="footer">
+	<div class="container">
+		<div class="row footer-info">
+			<img src="./images/ace-logo.png" class="img-fluid" alt="..." style="width: 150px; height: 60px; margin-right: 80px;" />
+			<div class="col-lg-3">
+				<h3>Address</h3>
+				No.1 Hsiang-Pei Rd. Hsin-Chu 300,Taiwan
+			</div>
+			<div class="col-lg-3">
+				<h3>Contacts</h3>
+				E-mail:ace@acece.com.tw<br>
+				TEL:886-3-5304000<br>
+				FAX:886-3-5403000
+			</div>
+			<div class="col-lg-3">
+				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_fb.png" />
+				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_yt.png" />
+				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_gp.png" />
+			</div>
+		</div>
+		<hr>
+		<div class="col-12">
+			 Copyright © 2004 By Ace Components Enterprise.
+			 <span style="float: right;"> | Terms of Use | Security Policy |</span>
+		</div>
+	</div>
+</div>
+
+<!-- Javascript for Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- Javascript for ace web -->
+<script src="./js/language.js"></script>
+<script src="./js/layout.js"></script>
+
+</body>
+</html>
