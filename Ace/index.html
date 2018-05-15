@@ -33,7 +33,7 @@
         </div>
 	  </li>
 	  <li class="nav-item dropdown">
-		<button class="btn btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="product"></button>
+		<button class="btn btn-primary btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="product"></button>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item lang" key="product-1" href="./layout.html?page=semiconductor"></a>
           <a class="dropdown-item lang" key="product-2" href="#"></a>
@@ -43,21 +43,25 @@
         </div>
 	  </li>
 	  <li class="nav-item dropdown">
-		<button class="btn btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="process"></button>
+		<button class="btn btn-primary btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="process"></button>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item lang" key="process-1" href="#"></a>
           <a class="dropdown-item lang" key="process-2" href="#"></a>
         </div>
 	  </li>
 	  <li class="nav-item">
-		<button class="btn btn-md lang" key="contact" onclick="#"></button>
+		<button class="btn btn-primary btn-md lang" key="contact" onclick="javascript:location.href='./layout.html?page=contact';"></button>
 	  </li>
-	  <li class="nav-item dropdown">
-		<button class="btn btn-md dropdown-toggle lang" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-		<div class="dropdown-menu" id="dropdown-menu" style="text-align:center;padding-right:1rem;" aria-labelledby="langDropdown">
-		<!--Language select-->
-        </div>
-	  </li>
+	</ul>
+	<ul class="navbar-nav justify-content-end" style="width: 10%;">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  <!--Language default-->
+			</a>
+			<div class="dropdown-menu langDropdown" id="dropdown-menu" aria-labelledby="langDropdown">
+			  <!--Language select-->
+			</div>
+		  </li>
 	</ul>
   </div>
 </nav>

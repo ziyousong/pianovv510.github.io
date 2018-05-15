@@ -9,6 +9,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="./css/layout.css">
 <link rel="stylesheet" type="text/css" href="./css/nav.css">
 
@@ -51,7 +52,7 @@
 			</div>
 		  </li>
 		  <li class="nav-item">
-			<button class="btn btn-md lang" key="contact" onclick="#"></button>
+			<button class="btn btn-md lang" key="contact" onclick="javascript:location.href='./layout.html?page=contact';"></button>
 		  </li>
 		</ul>
 		<ul class="navbar-nav justify-content-end" style="width: 10%;">
@@ -59,7 +60,7 @@
 				<a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				  <!--Language default-->
 				</a>
-				<div class="dropdown-menu" id="dropdown-menu" aria-labelledby="langDropdown">
+				<div class="dropdown-menu langDropdown" id="dropdown-menu" aria-labelledby="langDropdown">
 				  <!--Language select-->
 				</div>
 			  </li>
@@ -68,7 +69,6 @@
 	</nav>
 	<div class="container banner">
 		<div class="banner-name lang" id="bannerName" key="about">...</div>
-		<div style="width: 100px; height: 1px; background: #EB9900; margin: 0 auto;"></div>
 	</div>
 </div>
 
@@ -81,18 +81,16 @@
 		<div class="row footer-info">
 			<img src="./images/ace-logo.png" class="img-fluid" alt="..." style="width: 150px; height: 60px; margin-right: 80px;" />
 			<div class="col-lg-3">
-				<h3>Address</h3>
-				No.1 Hsiang-Pei Rd. Hsin-Chu 300,Taiwan
+				<h3 class="lang" key="add-title">...</h3>
+				<p class="lang" key="add">...</p>
 			</div>
 			<div class="col-lg-3">
-				<h3>Contacts</h3>
-				E-mail:ace@acece.com.tw<br>
-				TEL:886-3-5304000<br>
-				FAX:886-3-5403000
+				<h3 class="lang" key="contact-way">...</h3>
+				<span class="lang" key="email">...</span><br>
+				<span class="lang" key="tel">...</span><br>
+				<span class="lang" key="fax">...</span>
 			</div>
 			<div class="col-lg-3">
-				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_fb.png" />
-				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_yt.png" />
 				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_gp.png" />
 			</div>
 		</div>
