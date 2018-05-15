@@ -11,7 +11,7 @@
 	"process": "Process",
 	"process-1": "Processing capacity",
 	"process-2": "Quality Control",
-	"contact": "Contact",
+	"contact": "Contact us",
 	
 	"company-ace": "Ace Components Enterprise",
 	"company-ace-content": "ACE has 20 years'experience in manufacturing electronic, computer and industrial fasteners. It has been dedicated to upgrading its quality level for many years and endeavored to reduce cost and strengthen delivery control in order to meet customers' expectations.",
@@ -35,6 +35,14 @@
 			"newsTitle":"New Product of Vented Screw..",
 			"newsContent":"Our vented screws are made in accordance with ANSI and DIN international standards. In tapping holes, we utilize precision machines and ..."
 		}
-	]
+	],
+	
+	"add-title":"Address",
+	"add":"No.380, Sec. 5, Zhonghua Rd. Hsin-chu, Taiwan",
+	"contact-way":"Contacts",
+	"email":"E-mail:ace@acece.com.tw",
+	"tel":"TEL:886-3-5304000",
+	"fax":"FAX:886-3-5403000"
+	
 	
 }
