@@ -26,9 +26,9 @@ Language.selector = function() {
 	
 	for(var key in Language.FAMILY) {
 		if(Language.FAMILY[key] == localStorage.lang) {
-			document.getElementById("langDropdown").innerHTML = '<img src="./images/icon/'+Language.FAMILY[key]+'.png" style="width:25px;"/>';
+			document.getElementById("langDropdown").innerHTML = '<img src="./images/icon/'+Language.FAMILY[key]+'.png" style="width:38px;"/>';
 		} else {
-		content += '<a class="dropdown-item" href="" onclick=Language.change("'+Language.FAMILY[key]+'")><img src="./images/icon/'+Language.FAMILY[key]+'.png" style="width:25px;"/></a>';
+		content += '<a class="dropdown-item" href="" onclick=Language.change("'+Language.FAMILY[key]+'")><img src="./images/icon/'+Language.FAMILY[key]+'.png" style="width:38px;"/></a>';
 		}
 	}
 	document.getElementById("dropdown-menu").innerHTML = content;

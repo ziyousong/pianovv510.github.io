@@ -8,18 +8,27 @@ Layout.getStringParamFromUrl = function(name, defaultValue) {
   return val ? decodeURIComponent(val[1].replace(/\+/g, '%20')) : defaultValue;
 };
 
-Layout.setHtml = function (page, bannerKey) {
+Layout.setHtml = function (page, pagename, callback) {
 	var xhr = new XMLHttpRequest();
+
+	/*xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            var html = this.responseText;
+			document.getElementById("main").innerHTML = html;
+			document.getElementById("bannerName").setAttribute("key",pagename);
+			Language.init();
+        }
+    };*/
 	
-	xhr.onload = function() {
-		var html = this.responseText;
-		document.getElementById("main").innerHTML = html;
-		document.getElementById("bannerName").setAttribute("key",bannerKey);
-		Language.init();
-	}
-	
-	xhr.open("GET", './html/'+page+'.html');
+	xhr.open("GET", './html/'+page+'.html', false);
 	xhr.send();
+
+	var html = xhr.responseText;
+	document.getElementById("main").innerHTML = html;
+	document.getElementById("bannerName").setAttribute("key",pagename);
+	Language.init();
+
+	callback();
 }
 
 Layout.getHtml = function() {
@@ -35,9 +44,15 @@ Layout.getHtml = function() {
 	else if (Layout.page === 'news') {
 		Layout.setHtml(Layout.page, 'about');
 	}
+	else if (Layout.page === 'contact') {
+		Layout.setHtml(Layout.page, 'contact');
+	}
 	else 
 	{
-		Layout.setHtml(Layout.page, 'product');
+		//Layout.setHtml(Layout.page, 'product');
+		Layout.setHtml(Layout.page, 'product', function() {
+			document.write('<script src="./js/product.js"></script>');
+		});
 	}
 	
 }
