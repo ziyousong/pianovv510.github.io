@@ -47,9 +47,13 @@ Layout.getHtml = function() {
 	else if (Layout.page === 'contact') {
 		Layout.setHtml(Layout.page, 'contact');
 	}
+	else if (Layout.page === 'process' || Layout.page === 'quality') {
+		Layout.setHtml(Layout.page, 'process', function() {
+			document.write('<script src="./js/animate.js"></script>');
+		});
+	}
 	else 
 	{
-		//Layout.setHtml(Layout.page, 'product');
 		Layout.setHtml(Layout.page, 'product', function() {
 			document.write('<script src="./js/product.js"></script>');
 		});

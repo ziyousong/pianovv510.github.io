@@ -6,19 +6,25 @@ Product.page_length = 3;
 Product.setItem = function(pagenum) {
 
 	var content = '';
-	var p = 2;
+	var p = 1;
 	
 	for (var i = 0; i < Product.item_length; i++) {
 		
 		content += '<li class="list">' +
-				'<a href="./layout.html?page=product">' +
+				'<a onclick="">' +
 					'<div class="item">' +
-						'<img class="img-fluid" src="./images/product/num'+pagenum+'p'+p+'.png" alt="..." />' +
+						'<img class="img-fluid" src="./images/product/num1p'+p+'.png" alt="..." />' +
 					'</div>' +
 				'</a></li>';
 		
-		if(i > 5) {
+		if(i >= 3) {
+			p = 2;
+		}
+		if(i >= 7) {
 			p = 3;
+		}
+		if(i >= 11) {
+			p = 4;
 		}
 		
 	}
@@ -43,8 +49,8 @@ Product.getPage = function(totalPage, nowPage) {
 
 	var prevPage = new Number(nowPage)-1;
 	var nextPage = new Number(nowPage)+1;
-	var prev = (nowPage == 1) ? '<span style="cursor:default"><</span>' : '<span><</span>';
-	var next = (nowPage == totalPage) ? '<span style="cursor:default">></span>' : '<span onclick=pageFunction("'+nextPage+'")>></span>';
+	var prev = (nowPage == 1) ? '<span style="cursor:default"><</span>' : '<span onclick=javascript:location.href="./layout.html?page='+Layout.page+'&num='+prevPage+'"><</span>';
+	var next = (nowPage == totalPage) ? '<span style="cursor:default">></span>' : '<span onclick=javascript:location.href="./layout.html?page='+Layout.page+'&num='+nextPage+'">></span>';
 
 	return prev + code + next;
 }
