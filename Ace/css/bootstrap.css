@@ -7,7 +7,7 @@
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
-  --purple: #6f42c1;
+  --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
@@ -2382,7 +2382,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
-  color: #fff;
+  color: #FFF;
   background-color: #0062cc;
   border-color: #005cbf;
 }
@@ -3148,7 +3148,9 @@ input[type="button"].btn-block {
   width: 100%;
   padding: 0.25rem 0.6rem 0.25rem 0.7rem;
   clear: both;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 15px;
+  //color: rgba(29, 32, 135, 0.8);
   color: #1D2087;
   text-align: inherit;
   white-space: nowrap;
@@ -5063,10 +5065,9 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-align: start;
   align-items: flex-start;
-  //border: 2px solid #3B3B3B;
-  box-shadow: 2px 2px 15px rgba(50,50,50,0.8);
   height: 240px;
-  background-color: rgba(255,255,255,1);
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 6px #97cbff inset;
 }
 
 .media-body {

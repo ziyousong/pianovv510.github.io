@@ -16,6 +16,9 @@
 	color: #1D2087;
 	margin: 0 0.7rem;
 }
+.navbar .btn:hover {
+	//color: #FFA600;
+}
 
 .navbar .navbar-nav {
 	
@@ -31,8 +34,8 @@
 
 .navbar .langDropdown {
 	text-align: center;
-	left: -13px;
-	width: 80px;
+	left: -3px;
+	width: 60px;
 	padding-top: 10px;
 }
 

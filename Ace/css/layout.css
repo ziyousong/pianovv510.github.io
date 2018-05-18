@@ -13,24 +13,25 @@ html, body {
 }
 
 .layout-nav {
-	background-image: url('../images/background/bg3.jpg');
-	background-size: 100% 135%;
-	height: 250px;
+	background-image: url('../images/background/banner.jpg');
+	background-size: 104% 135%;
+	height: 180px;
 	background-color: rgba(20,20,20,0.5);
 }
 
 /******* banner ********/
 
 .banner {
-	padding-top: 115px;
+	padding-top: 90px;
 }
 
 .banner-name {
 	color: white;
-	font-size: 50px;
+	font-size: 36px;
 	text-align: center;
 	font-weight: 700;
-	text-shadow: 0px 0px 20px #212121;
+	letter-spacing: 5px;
+	text-shadow: 2px -2.8px 10px #63FFFF;
 }
 
 /******* header ********/
@@ -51,7 +52,9 @@ html, body {
 /******* main ********/
 
 .main {
-	margin-top: 5em;
+	//margin-top: 2em;
+	padding-top: 2em;
+	padding-bottom: 6em;
 }
 
 /******* menu ********/
@@ -224,6 +227,7 @@ html, body {
 	float: left;
 	padding: 0px;
 	margin: 12px 16px;
+	cursor: pointer;
 }
 
 .product-ul .list:nth-child(4n+1) {
@@ -235,8 +239,9 @@ html, body {
 }
 
 .product-ul .item {
-	background-image: url('../images/product/graybox.png');
+	background-image: url('../images/product/border.png');
 	background-size: 100% 100%;
+	background-color: #C9C9C9;
 	border-radius: 8px;
 }
 
@@ -321,6 +326,100 @@ html, body {
 	color: #1D2087;
 }
 
+
+/******* process ********/
+
+.tile {
+    position: absolute;
+    /*width: 302px;
+    height: 268px;*/
+	width: 28%;
+	height: 28%;
+    overflow: hidden;
+	border: 5px solid #fff;
+	box-shadow: 2px 2px 8px #3B3B3B;
+}
+
+.process_photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	transition: transform .5s ease-out;
+}
+
+#process_system {
+	top: 40%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#process_command {
+	top: 10%;
+	left: 20%;
+}
+#process_product {
+	top: 10%;
+	right: 20%;
+}
+#process_order {
+	top: 40%;
+	left: 5%;
+}
+#process_account {
+	top: 40%;
+	right: 5%;
+}
+#process_purchase {
+	top: 70%;
+	left: 20%;
+}
+#process_stock {
+	top: 70%;
+	right: 20%;
+}
+
+.quality-main-img {
+	width: 95%;
+	border: 6px solid #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 8px #212121;
+	margin: 10px;
+}
+
+.quality-img {
+	width: 100%;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 8px #212121;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.quality-iso-img {
+	width: 100%;
+}
+
+.quality-iso-text {
+	padding-top: 100px;
+	padding-left: 40px;
+}
+
+.quality-iso-text p {
+	padding-top: 20px;
+	font-size: 20px;
+}
+
+.quality-iso-icon {
+	width: 100%;
+	cursor: pointer;
+}
+
 /******* contact ********/
 
 .contact-map {
@@ -328,7 +427,7 @@ html, body {
 }
 
 .contact-info {
-	height: 420px;
+	height: 450px;
 	background-color: white;
 	box-shadow: 0px 0px 20px 6px #97cbff inset;
 }
@@ -339,12 +438,18 @@ html, body {
 }
 
 .contact-info .staff {
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 .contact-info .staff .name {
 	font-size: 18px;
+	font-weight: bold;
 	color: rgb(51,51,51);
+}
+
+.contact-icon {
+	width: 20px;
+	margin-top: -2.5px;
 }
 
 .contact-msg {
@@ -417,10 +522,9 @@ html, body {
 /******* footer ********/
 
 #footer {
-	margin-top: 6em;
 	height: 250px;
 	//background-color: transparent;
-	background-image: url('../images/background/bg4.jpg');
+	background-image: url('../images/background/footer.jpg');
 	background-size: contain;
 	color: white;
 	//box-shadow: 0px -2px 10px rgba(10,10,10,0.7);
