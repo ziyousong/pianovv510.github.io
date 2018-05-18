@@ -81,24 +81,31 @@ html, body {
 	height: 40px;
 	margin-top: 10px;
 	border: 1px solid #fff;
-	background-color: rgba(50,50,50,0.2);
+	//background-color: rgba(50,50,50,0.2);
+	background-color: white;
+	box-shadow: inset 0px 0px 10px 4px #97cbff;
 }
 
 .menu .active {
 	background-color: #293F7A;
+	box-shadow: inset 0px 0px 7px 2px #97cbff;
 }
 
 .menu .nav-item:hover {
 	background-color: #293F7A;
+	box-shadow: inset 0px 0px 7px 2px #97cbff;
 }
 
 .menu .nav-item a {
-	color: #fff;
+	color: #1D2087;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 23px;
 }
 
+.menu .active a {
+	color: #fff;
+}
 .menu .nav-item a:hover {
 	color: #fff;
 }
