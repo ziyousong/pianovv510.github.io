@@ -10,6 +10,11 @@
 	color: white !important;
 }
 
+.navbar .navbar-brand img {
+	width: 120px;
+	margin-left: 10px;
+}
+
 .navbar .btn {
 	background-color: white;
 	box-shadow: inset 0px 0px 10px 4px #97cbff;
@@ -18,10 +23,6 @@
 }
 .navbar .btn:hover {
 	//color: #FFA600;
-}
-
-.navbar .navbar-nav {
-	
 }
 
 .navbar .navbar-nav .nav-item {

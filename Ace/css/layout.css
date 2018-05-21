@@ -77,11 +77,11 @@ html, body {
 
 .menu .nav-item {
 	text-align: center;
-	width: 200px;
+	width: 170px;
 	height: 40px;
 	margin-top: 10px;
+	margin-left: 5px;
 	border: 1px solid #fff;
-	//background-color: rgba(50,50,50,0.2);
 	background-color: white;
 	box-shadow: inset 0px 0px 10px 4px #97cbff;
 }
@@ -232,14 +232,14 @@ html, body {
 }
 
 .product-ul .list {
-	width: 200px;
+	width: 190px;
 	float: left;
 	padding: 0px;
 	margin: 12px 16px;
 	cursor: pointer;
 }
 
-.product-ul .list:nth-child(4n+1) {
+.product-ul .list:nth-child(5n+1) {
 	clear: left;
 }
 
@@ -394,20 +394,32 @@ html, body {
 }
 
 .quality-main-img {
-	width: 95%;
-	border: 6px solid #fff;
+	display: block;
+	width: 100%;
+	border: 10px solid #fff;
 	border-radius: 10px;
-	box-shadow: 2px 2px 8px #212121;
-	margin: 10px;
 }
 
 .quality-img {
+	display: block;
 	width: 100%;
-	border: 2px solid #fff;
+	border: 10px solid #fff;
 	border-radius: 10px;
-	box-shadow: 2px 2px 8px #212121;
-	margin: 10px;
+}
+
+.quality-shadow {
+	display: block;
+	position: relative;
 	cursor: pointer;
+}
+
+.quality-shadow:before {
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 10px 4px #97cbff;
+	content: "";
+	height: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .quality-iso-img {
@@ -432,28 +444,36 @@ html, body {
 /******* contact ********/
 
 .contact-map {
-	padding-left: 10%;
+	padding-left: 8%;
 }
 
 .contact-info {
-	height: 450px;
+	height: 185px;
 	background-color: white;
-	box-shadow: 0px 0px 20px 6px #97cbff inset;
+	border: 10px solid transparent;
+	border-image: url('../images/background/aceborder.png') 30 stretch;
 }
 
-.contact-info h2 {
+.contact-info h4 {
 	font-weight: bold;
 	color: #1D2087;
 }
 
+.contact-info .add {
+	font-weight: bold;
+	font-size: 18px;
+	color:#ff9224;
+}
+
 .contact-info .staff {
-	padding-top: 0px;
+	padding: 8px 2px;
 }
 
 .contact-info .staff .name {
 	font-size: 18px;
 	font-weight: bold;
 	color: rgb(51,51,51);
+	margin-bottom: 10px;
 }
 
 .contact-icon {
@@ -463,25 +483,25 @@ html, body {
 
 .contact-msg {
 	margin: 0 auto;
-	color: #fff;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+	color: #1D2087;
+	//text-shadow: 1px 1px 2px rgba(50,50,50,0.5);
 	font-weight: 600;
 }
 
 .contact-msg span {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .contact-msg input[type="text"] {
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 10px;
     width: 100%;
-    height: 35px;
+    height: 30px;
     line-height: 35px;
     border: 1px solid #D6D6D6;
     border-radius: 3px;
+	font-weight: 600;
 }
 
 .contact-msg textarea {
@@ -531,18 +551,15 @@ html, body {
 /******* footer ********/
 
 #footer {
-	height: 250px;
-	//background-color: transparent;
-	background-image: url('../images/background/footer.jpg');
-	background-size: contain;
+	height: 140px;
+	background-image: url('../images/background/footer3.jpg');
+	//background-size: contain;
+	background-size: 100% 135%;
 	color: white;
-	//box-shadow: 0px -2px 10px rgba(10,10,10,0.7);
-	//border-top: 1px solid black;
 }
 
 .footer-info {
-	padding-top: 40px;
-	font-size: 13pt;
+	padding-top: 10px;
 }
 
 #footer hr {
@@ -550,8 +567,8 @@ html, body {
     height: 1px;
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
-    margin: 1em 0;
-	margin-top: 2em;
+    margin-top: 5px;
+	margin-bottom: 2px;
     padding: 0; 
 }
 
