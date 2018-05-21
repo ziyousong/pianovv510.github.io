@@ -1,6 +1,6 @@
 var Product = {};
 
-Product.item_length = 16;
+Product.item_length = 15;
 Product.page_length = 3;
 
 Product.setItem = function(pagenum) {

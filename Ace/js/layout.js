@@ -49,7 +49,7 @@ Layout.getHtml = function() {
 	}
 	else if (Layout.page === 'process' || Layout.page === 'quality') {
 		Layout.setHtml(Layout.page, 'process', function() {
-			document.write('<script src="./js/animate.js"></script>');
+			document.write('<script src="./js/effect.js"></script>');
 		});
 	}
 	else 
