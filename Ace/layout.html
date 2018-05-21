@@ -20,7 +20,7 @@
 
 <div class="layout-nav">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-	  <a class="navbar-brand" href="./index.html">Ace Components Enterprise</a>
+	  <a class="navbar-brand" href="./index.html"><img src="./images/ace-logo.png" /></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	  </button>
@@ -48,7 +48,9 @@
 			<button class="btn btn-primary btn-md dropdown-toggle lang" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" key="process">...</button>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			  <a class="dropdown-item lang" key="process-1" href="./layout.html?page=process">...</a>
-			  <a class="dropdown-item lang" key="process-2" href="./layout.html?page=quality">...</a>
+			  <a class="dropdown-item lang" key="process-2" href="#">...</a>
+			  <a class="dropdown-item lang" key="process-3" href="#">...</a>
+			  <a class="dropdown-item lang" key="process-4" href="./layout.html?page=quality">...</a>
 			</div>
 		  </li>
 		  <li class="nav-item">
@@ -80,25 +82,35 @@
 <div id="footer">
 	<div class="container">
 		<div class="row footer-info">
-			<img src="./images/ace-logo.png" class="img-fluid" alt="..." style="width: 150px; height: 60px; margin-right: 80px;" />
+			<img src="./images/ace-logo.png" class="img-fluid" alt="..." style="width: 110px; height: 40px; margin-right: 60px; margin-top: 20px;" />
 			<div class="col-lg-3">
+				<!--
 				<h3 class="lang" key="add-title">...</h3>
 				<p class="lang" key="add">...</p>
+				-->
+				<img class="img-fluid" src="./images/footer_com.png" />
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
+				<!--
 				<h3 class="lang" key="contact-way">...</h3>
 				<span class="lang" key="email">...</span><br>
 				<span class="lang" key="tel">...</span><br>
 				<span class="lang" key="fax">...</span>
+				-->
+				<img class="img-fluid" src="./images/footer_data.png" />
 			</div>
 			<div class="col-lg-3">
+				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_fb.png" />
+				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_yt.png" />
 				<img class="img-fluid" style="width: 60px; margin-right: 20px; cursor: pointer;" src="./images/icon/icon_gp.png" />
 			</div>
 		</div>
 		<hr>
-		<div class="col-12">
-			 Copyright © 2004 By Ace Components Enterprise.
-			 <span style="float: right;"> | Terms of Use | Security Policy |</span>
+		<div class="row justify-content-between">
+			 Copyright © 2018 By Ace Components Enterprise.
+			 <div class="col-lg-3 col-md-6">
+				<img class="img-fluid" style="width: 50%; float:right;" src="./images/footer_iso.png" />
+			 </div>
 		</div>
 	</div>
 </div>
@@ -107,6 +119,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- Javascript for Plugin -->
+<script src="./js/jquery.elevatezoom.js"></script>
 <!-- Javascript for ace web -->
 <script src="./js/language.js"></script>
 <script src="./js/layout.js"></script>
