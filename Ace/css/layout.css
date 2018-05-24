@@ -41,7 +41,7 @@ html, body {
 	font-weight: bold;
 	color: white;
 	text-shadow: 2px 2px 5px #0A0A0A;
-	margin: 0px 0px 15px 0px;
+	margin: 0px 0px 15px 50px;
 }
 
 .header img {
@@ -55,6 +55,10 @@ html, body {
 	//margin-top: 2em;
 	padding-top: 2em;
 	padding-bottom: 6em;
+}
+
+.content hr {
+	border-top: 2px solid rgba(255, 255, 255, 1);
 }
 
 /******* menu ********/
@@ -72,15 +76,14 @@ html, body {
 }
 
 .menu ul {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .menu .nav-item {
 	text-align: center;
-	width: 170px;
+	width: 165px;
 	height: 40px;
-	margin-top: 10px;
-	margin-left: 5px;
+	margin: 10px;
 	border: 1px solid #fff;
 	background-color: white;
 	box-shadow: inset 0px 0px 10px 4px #97cbff;
@@ -229,10 +232,11 @@ html, body {
 .product-ul {
 	padding: 0;
 	list-style-type: none;
+	margin-left: 130px;
 }
 
 .product-ul .list {
-	width: 190px;
+	width: 15%;
 	float: left;
 	padding: 0px;
 	margin: 12px 16px;
@@ -248,8 +252,8 @@ html, body {
 }
 
 .product-ul .item {
-	background-image: url('../images/product/border.png');
-	background-size: 100% 100%;
+	border: 12px solid transparent;
+	border-image: url('../images/product/border.png') 30 stretch;
 	background-color: #C9C9C9;
 	border-radius: 8px;
 }
@@ -268,7 +272,6 @@ html, body {
 }*/
 
 .product-ul .item:hover {
-	border: 0px;
 	box-shadow: 2px 2px 15px rgba(50,50,50,0.6);
 }
 
@@ -344,9 +347,10 @@ html, body {
 	height: 700px;
     overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 0px 0px 20px black;
+	box-shadow: inset 0px 0px 10px 20px #97cbff;
 	border: 20px solid transparent;
 	border-image: url('../images/background/aceborder.png') 30 stretch;
+	z-index: 10;
 }
 
 .process_photo {
@@ -359,6 +363,7 @@ html, body {
 	background-position: center;
 	background-size: 100% 100%;
 	transition: transform .5s ease-out;
+	z-index: -1;
 }
 
 .quality-main-img {
@@ -521,13 +526,17 @@ html, body {
 #footer {
 	height: 140px;
 	background-image: url('../images/background/footer3.jpg');
-	//background-size: contain;
 	background-size: 100% 135%;
 	color: white;
 }
 
-.footer-info {
-	padding-top: 10px;
+#footer .row:first-child {
+	padding-top: 55px;
+}
+
+#footer .row:first-child img {
+	display:block;
+	margin:auto;
 }
 
 #footer hr {
