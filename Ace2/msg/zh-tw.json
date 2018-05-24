@@ -1,0 +1,50 @@
+{
+	"about": "關於我們",
+	"about-company": "公司簡介",
+	"about-news": "最新消息",
+	"product": "產品介紹",
+	"product-1": "精密零組件",
+	"product-2": "半導體零件",
+	"product-3": "組裝及代工",
+	"product-4": "OEM/ODM",
+	"product-5": "交通零組件",
+	"product-6": "特殊緊扣件",
+	"process": "製程規劃",
+	"process-1": "製程規劃",
+	"process-2": "工程逆向",
+	"process-3": "SPC控管",
+	"process-4": "品質管制",
+	"contact": "聯絡我們",
+	
+	"company-ace": "台灣艾斯股份有限公司",
+	"company-ace-content": "ACE擁有20年製造電子，計算機和工業緊固件的經驗。 多年來一直致力於提升其質量水平，並致力於降低成本並加強交付控制，以滿足客戶的期望。",
+	"company-team": "團隊合作",
+	"company-team-content": "卓越是我們的信念。 我們的目標不是為所有人所喜歡，但我們用非常批判的眼光來審視自己和行動，以達到完美100％的產品質量，100％的客戶滿意度。",
+	"company-service": "一流的客戶服務",
+	"company-service-content": "所有客戶的訂單都輸入到我們的計算機系統中，以進行交付安排和跟踪。 通過網絡系統，我們的生產，材料和質量保證部門緊密聯繫，為客戶提供最高效和最有效的服務。",
+	"company-support": "工程支援",
+	"company-support-content": "我們總是提供包括裝配技術在內的寶貴建議 工程圖和3D模型隨時可用來驗證設計思路並縮短新產品開發時間表。",
+	"company-process": "製造過程",
+	"company-process-content": "完全符合客戶的圖紙規格。 或我們的標準工程圖紙，並通過MRP系統進行監控以確保質量和及時交付。",
+	
+	"newsList": [{
+			"newsImg":"./images/best001.gif",
+			"newsDate":"MAY.07 2017",
+			"newsTitle":"關於網站..",
+			"newsContent":"台灣艾斯在製造電子，計算機和工業緊固件方面有20年的經驗。 它一直致力於提升其品質..."
+		},{
+			"newsImg":"./images/vented_screw.jpg",
+			"newsDate":"MAY.07 2017",
+			"newsTitle":"通風螺桿新產品..",
+			"newsContent":"我們的通風螺絲符合ANSI和DIN國際標準。 在攻絲孔中，我們利用精密機器和..."
+		}
+	],
+	
+	"add-title":"地址",
+	"add":"300新竹市中華路5段380號",
+	"contact-way":"聯絡方式",
+	"email":"信箱：ace@acece.com.tw",
+	"tel":"電話：03-5304000",
+	"fax":"傳真：03-5403000"
+	
+}

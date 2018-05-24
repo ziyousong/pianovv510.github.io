@@ -1,0 +1,48 @@
+{
+	"about": "About us",
+	"about-company": "Our Company",
+	"about-news": "News",
+	"product": "Products",
+	"product-1": "Semiconductor Parts",
+	"product-2": "Clinching Fasteners",
+	"product-3": "Assembly Components",
+	"product-4": "Public transportation",
+	"product-5": "OEM & ODM",
+	"process": "Process",
+	"process-1": "Process Planning",
+	"process-2": "Quality Control",
+	"contact": "Contact us",
+	
+	"company-ace": "Ace Components Enterprise",
+	"company-ace-content": "ACE has 20 years'experience in manufacturing electronic, computer and industrial fasteners. It has been dedicated to upgrading its quality level for many years and endeavored to reduce cost and strengthen delivery control in order to meet customers' expectations.",
+	"company-team": "Team Work",
+	"company-team-content": "Excellence is our faith. We do not aim to be liked by all, but we use very critical eyes to examine ourselves and actions to move towards perfection 100% product quality, 100% customer satisfaction.",
+	"company-service": "Superb Customer Service",
+	"company-service-content": "All customers' orders are entered in our computer system for delivery arrangement and tracking. Through network system, our production, material and quality assurance departments are closely linked to provide customers with the most efficient and effective service.",
+	"company-support": "Engineering Support",
+	"company-support-content": "We always provide valuable suggestions including assembly technology. Engineering drawings and 3D models are available any time to verify design ideas and shorten new product development timeline.",
+	"company-process": "Manufacturing Process",
+	"company-process-content": "Is generated in total compliance with customers' drawing spec. or our standard engineering drawings, and monitored to ensure quality and timely delivery via our MRP system.",
+
+	"newsList": [{
+			"newsImg":"./images/best001.gif",
+			"newsDate":"MAY.07 2017",
+			"newsTitle":"About Web-Site..",
+			"newsContent":"TAIWAN ACE has 20 years' experience in manufacturing electronic, computer and industrial fasteners. It has been dedicated to upgrading its quality..."
+		},{
+			"newsImg":"./images/vented_screw.jpg",
+			"newsDate":"MAY.07 2017",
+			"newsTitle":"New Product of Vented Screw..",
+			"newsContent":"Our vented screws are made in accordance with ANSI and DIN international standards. In tapping holes, we utilize precision machines and ..."
+		}
+	],
+	
+	"add-title":"Address",
+	"add":"No.380, Sec. 5, Zhonghua Rd. Hsin-chu, Taiwan",
+	"contact-way":"Contacts",
+	"email":"E-mail:ace@acece.com.tw",
+	"tel":"TEL:886-3-5304000",
+	"fax":"FAX:886-3-5403000"
+	
+	
+}

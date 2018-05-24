@@ -1,0 +1,58 @@
+.navbar {
+	height: 60px;
+	background-image: url('../images/navbar.png') !important;
+	background-size: 100% 100%;
+	border-bottom: 1.8px solid white;
+}
+
+.navbar .navbar-brand {
+	font-weight: bold;
+	color: white !important;
+}
+
+.navbar .navbar-brand img {
+	width: 70px;
+	margin-left: 10px;
+}
+
+.navbar .btn {
+	background-color: white;
+	box-shadow: inset 0px 0px 10px 4px #97cbff;
+	color: #1D2087;
+	margin: 0 0.7rem;
+}
+.navbar .btn:hover {
+	//color: #FFA600;
+}
+
+.navbar .navbar-nav .nav-item {
+	padding-right: 15px;
+}
+
+.navbar .navbar-nav .dropdown {
+	padding-right: 0px;
+}
+
+.navbar .langDropdown {
+	text-align: center;
+	left: -3px;
+	width: 60px;
+	padding-top: 10px;
+}
+
+.navbar .langDropdown .dropdown-item:hover {
+	background-color: rgba(50, 50, 50, 0.2);
+}
+
+.navbar .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 992px) {
+	.navbar-collapse {
+		/*background-image: url('../images/navbar.png') !important;
+		background-size: 100% 100%;*/
+		background-color: rgb(14,120,187);
+		z-index: 100;
+	}
+}
