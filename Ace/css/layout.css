@@ -343,14 +343,10 @@ html, body {
 
 .tile {
     position: absolute;
-	width: 800px;
-	height: 700px;
+	width: 28%;
+	height: 28%;
     overflow: hidden;
-	border-radius: 10px;
-	box-shadow: inset 0px 0px 10px 20px #97cbff;
-	border: 20px solid transparent;
-	border-image: url('../images/background/aceborder.png') 30 stretch;
-	z-index: 10;
+	border: 5px solid #fff;
 }
 
 .process_photo {
@@ -363,7 +359,38 @@ html, body {
 	background-position: center;
 	background-size: 100% 100%;
 	transition: transform .5s ease-out;
-	z-index: -1;
+}
+
+#process_system {
+	top: 40%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#process_command {
+	top: 10%;
+	left: 20%;
+}
+#process_product {
+	top: 10%;
+	right: 20%;
+}
+#process_order {
+	top: 40%;
+	left: 5%;
+}
+#process_account {
+	top: 40%;
+	right: 5%;
+}
+#process_purchase {
+	top: 70%;
+	left: 20%;
+}
+#process_stock {
+	top: 70%;
+	right: 20%;
 }
 
 .quality-main-img {
