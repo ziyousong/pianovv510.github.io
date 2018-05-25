@@ -8,13 +8,11 @@
 .navbar .navbar-brand {
 	font-weight: bold;
 	color: white !important;
-	position: absolute;
-	left:47%;
 }
 
 .navbar .navbar-brand img {
 	width: 80px;
-	margin-left: 10px;
+	margin-left: 40px;
 }
 
 .navbar .btn {
