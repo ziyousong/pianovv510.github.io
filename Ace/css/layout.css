@@ -37,10 +37,10 @@ html, body {
 /******* header ********/
 
 .header {
-	font-size: 30px;
+	font-size: 19px;
 	font-weight: bold;
 	color: white;
-	text-shadow: 2px 2px 5px #0A0A0A;
+	//text-shadow: 2px 2px 5px #0A0A0A;
 	margin: 0px 0px 15px 50px;
 }
 
@@ -48,6 +48,19 @@ html, body {
 	width: 80px;
 }
 
+.header .bor {
+	border: 8px solid transparent;
+	border-image: url('../images/background/aceborder.png') 30 stretch;
+	padding: 0.3rem 0rem;
+}
+
+.header-title {
+	background-color: white;
+	box-shadow: inset 0px 0px 10px 4px #97cbff;
+	color: #1D2087;
+	border-radius: 0.25rem;
+	padding: 0.3rem 1rem;
+}
 
 /******* main ********/
 
