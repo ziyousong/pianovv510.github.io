@@ -23,7 +23,7 @@
 	"company-service": "一流的客戶服務",
 	"company-service-content": "所有產品均以 SMART ERP系統為基本管理，串聯所有部門間相互製作流程及表單來往紀錄，從訂單到出貨全程電腦化管理，有效管控所有細節應注意事項，藉此提供客戶更全方位的服務。",
 	"company-support": "工程支援",
-	"company-support-content": "新開發產品零組件製程，依據客戶圖面或樣品，採用電腦軟體：AUTOCAD , SolidWorks 3D逆向分析模具組裝流程，並運用Pro/E 分析精密零件製程完整規劃。",
+	"company-support-content": "新開發產品零組件製程，依據客戶圖面或樣品，採用電腦軟體：<font color='red'>AUTOCAD , SolidWorks 3D</font>逆向分析模具組裝流程，並運用<font color='red'>Pro/E</font> 分析精密零件製程完整規劃。",
 	"company-process": "製造過程",
 	"company-process-content": "完全符合客戶的圖紙規格。 或我們的標準工程圖紙，並通過MRP系統進行監控以確保質量和及時交付。",
 	
