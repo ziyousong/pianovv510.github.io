@@ -1,3 +1,30 @@
+/******* Company *******/
+
+$(document).ready(function() {
+	if(Layout.page === 'company') {
+		$(window).scroll( function(){
+			$('.company-title span').each( function(key) {
+				
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight() + 250;
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				
+				if( bottom_of_window > bottom_of_object ){
+                
+					$(this).addClass('fadeInUp');
+					$(this).css({"opacity":"1"});
+					
+					$('.company-img').eq(key).addClass('flipInY');
+					$('.company-img').eq(key).css({"opacity":"1"});
+				}
+				
+			});
+		})
+	}
+	
+});
+
+/******* Process *******/
+
 $('.tile')
 // tile mouse actions
 .on('mouseover', function(){
@@ -18,6 +45,7 @@ $('.tile')
 	.children('.process_photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
 })
 
+/******* Quality *******/
 
 function swapQualityImg(element) {
 	

@@ -6,9 +6,14 @@ Product.page_length = 3;
 Product.setItem = function(pagenum) {
 
 	var content = '';
-	var p = 1;
+	var p = 0;
 	
 	for (var i = 0; i < Product.item_length; i++) {
+		
+		p = i;
+		if(i >= 8) {
+			p = i - 8;
+		}
 		
 		content += '<li class="list">' +
 				'<a onclick="">' +
@@ -17,6 +22,7 @@ Product.setItem = function(pagenum) {
 					'</div>' +
 				'</a></li>';
 		
+		/*
 		if(i >= 3) {
 			p = 2;
 		}
@@ -26,7 +32,7 @@ Product.setItem = function(pagenum) {
 		if(i >= 11) {
 			p = 4;
 		}
-		
+		*/
 	}
 
 	var pagecode = Product.getPage(Product.page_length, pagenum);

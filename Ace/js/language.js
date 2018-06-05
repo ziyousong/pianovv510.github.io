@@ -48,7 +48,7 @@ Language.request = function(lang) {
 
 function setText(MSG) {
 	$(".lang").each(function(index, element) {
-		$(this).text(MSG[$(this).attr('key')]);
+		$(this).html(MSG[$(this).attr('key')]);
 	});
 }
 

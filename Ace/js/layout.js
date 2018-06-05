@@ -39,17 +39,17 @@ Layout.getHtml = function() {
 		// 404
 	}
 	else if (Layout.page === 'company') {
-		Layout.setHtml(Layout.page, 'about');
+		Layout.setHtml(Layout.page, 'about', function(){});
 	}
 	else if (Layout.page === 'news') {
-		Layout.setHtml(Layout.page, 'about');
+		Layout.setHtml(Layout.page, 'about', function(){});
 	}
 	else if (Layout.page === 'contact') {
-		Layout.setHtml(Layout.page, 'contact');
+		Layout.setHtml(Layout.page, 'contact', function(){});
 	}
 	else if (Layout.page === 'process' || Layout.page === 'quality') {
 		Layout.setHtml(Layout.page, 'process', function() {
-			document.write('<script src="./js/effect.js"></script>');
+			//document.write('<script src="./js/effect.js"></script>');
 		});
 	}
 	else 
