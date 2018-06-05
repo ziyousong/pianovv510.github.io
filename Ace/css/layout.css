@@ -6,23 +6,23 @@
 html, body {
 	margin: 0px;
 	font-family: Arial, twfont;
-	background-image: url('../images/background/mainbg.jpg');
-	background-size: 100% 100%;
+	/*background-image: url('../images/background/mainbg3.png');
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: top 250px bottom 250px center;
+	background-position: top 160px center;*/
 }
 
 .layout-nav {
 	background-image: url('../images/background/banner.jpg');
-	background-size: 104% 140%;
-	height: 160px;
+	background-size: 104% 145%;
+	height: 150px;
 	background-color: rgba(20,20,20,0.5);
 }
 
 /******* banner ********/
 
 .banner {
-	padding-top: 80px;
+	padding-top: 75px;
 }
 
 .banner-name {
@@ -37,29 +37,21 @@ html, body {
 /******* header ********/
 
 .header {
-	font-size: 19px;
-	font-weight: bold;
+	position: relative;
+	top: 28px;
+	left: 20px;
+	margin-left: -50px;
+	text-align: center;
+	width: 165px;
+	height: 40px;
+	border: 1px solid #005cbf;
 	color: white;
-	//text-shadow: 2px 2px 5px #0A0A0A;
-	margin: 0px 0px 15px 50px;
-}
-
-.header img {
-	width: 80px;
-}
-
-.header .bor {
-	border: 8px solid transparent;
-	border-image: url('../images/background/aceborder.png') 30 stretch;
-	padding: 0.3rem 0rem;
-}
-
-.header-title {
-	background-color: white;
-	box-shadow: inset 0px 0px 10px 4px #97cbff;
-	color: #1D2087;
-	border-radius: 0.25rem;
-	padding: 0.3rem 1rem;
+	box-shadow: inset 0px 0px 5px 2px #97cbff;
+	background-color: #0062cc;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 37px;
+	z-index: 5;
 }
 
 /******* main ********/
@@ -68,10 +60,18 @@ html, body {
 	//margin-top: 2em;
 	padding-top: 2em;
 	padding-bottom: 6em;
+	background-image: url('../images/background/mainbg.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top 0px center;
+}
+
+.content {
+	padding-top: 2em;
 }
 
 .content hr {
-	border-top: 2px solid rgba(255, 255, 255, 1);
+	border-top: 0.07rem solid rgba(255, 255, 255, 1);
 }
 
 /******* menu ********/
@@ -142,7 +142,7 @@ html, body {
 }
 
 .company-title-left {
-	font-size: 35px;
+	font-size: 38px;
 	font-weight: 600;
 	text-align: left;
 	color: #fff;
@@ -153,11 +153,11 @@ html, body {
 .company-title-left span {
 	display: inline-block;
 	line-height: 45px;
-	opacity: 1;
+	opacity: 0;
 }
 
 .company-title-right {
-	font-size: 35px;
+	font-size: 38px;
 	font-weight: 600;
 	text-align: right;
 	color: rgb(29,32,136);
@@ -168,7 +168,7 @@ html, body {
 .company-title-right span {
 	display: inline-block;
 	line-height: 45px;
-	opacity: 1;
+	opacity: 0;
 }
 
 .company-content {
@@ -182,7 +182,7 @@ html, body {
 }
 
 .company-img {
-	margin-top: -50px;
+	opacity: 0;
 }
 
 /******* news ********/
@@ -247,14 +247,15 @@ html, body {
 .product-ul {
 	padding: 0;
 	list-style-type: none;
-	margin-left: 130px;
+	margin-left: 30px;
+	margin-top: 40px;
 }
 
 .product-ul .list {
 	width: 15%;
 	float: left;
 	padding: 0px;
-	margin: 12px 16px;
+	margin: 18px 24px;
 	cursor: pointer;
 }
 
@@ -295,7 +296,6 @@ html, body {
 	display: block;
 	text-align: center;
 	padding-top: 50px;
-	//padding-right: 65px;
 }
 
 .product-page span {
@@ -330,7 +330,7 @@ html, body {
 
 .tile {
     position: absolute;
-	width: 28%;
+	width: 25%;
 	height: 28%;
     overflow: hidden;
 	border: 5px solid #fff;
@@ -436,30 +436,43 @@ html, body {
 
 .contact-info {
 	height: 185px;
-	background-color: white;
-	border: 10px solid transparent;
-	border-image: url('../images/background/aceborder.png') 30 stretch;
+	weight: 70%;
+	border: 1px solid #fff;
+	color: white;
+	box-shadow: inset 0px 0px 5px 2px #97cbff;
+	background-color: rgba(0, 99, 204, 0.3);
+    border-color: #005cbf;
 }
 
 .contact-info h4 {
 	font-weight: bold;
-	color: #1D2087;
+	color: #fff;
+	text-align: center;
+}
+
+.contact-info hr {
+	width: 80%;
+	margin: 0px auto;
 }
 
 .contact-info .add {
+	margin-top: -10px;
 	font-weight: bold;
-	font-size: 18px;
-	color:#ff9224;
+	font-size: 17px;
+	color:#fff;
+	text-align: center;
 }
 
 .contact-info .staff {
-	padding: 8px 2px;
+	padding: 0 2px;
+	padding-top: 35px;
 }
 
 .contact-info .staff .name {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
-	color: rgb(51,51,51);
+	color: #fff;
+	margin-left: 30px;
 	margin-bottom: 10px;
 }
 
@@ -470,8 +483,8 @@ html, body {
 
 .contact-msg {
 	margin: 0 auto;
-	color: #1D2087;
-	//text-shadow: 1px 1px 2px rgba(50,50,50,0.5);
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(50,50,50,0.5);
 	font-weight: 600;
 }
 
@@ -538,14 +551,15 @@ html, body {
 /******* footer ********/
 
 #footer {
-	height: 100px;
+	height: 90px;
 	background-image: url('../images/background/footer3.jpg');
-	background-size: 100% 125%;
+	background-size: 100% 115%;
+	background-position: top -7px center;
 	color: white;
 }
 
 #footer .row:first-child {
-	padding-top: 40px;
+	padding-top: 30px;
 }
 
 #footer .row:first-child img {
@@ -555,9 +569,8 @@ html, body {
 
 #footer hr {
 	display: block;
-    height: 2px;
     border: 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.8);
     padding: 0; 
 }
 
@@ -592,11 +605,12 @@ html, body {
 }
 
 .fadeInUp {
-	-webkit-animation-duration: .5s;
-	animation-duration: .5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
 }
+
 
 @-webkit-keyframes changecolor {
 	0% {color: #444444;}
@@ -608,34 +622,80 @@ html, body {
 	100% {color: #D18800;}
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes flipInY {
   from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
 
-  to {
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
   }
 }
 
-@keyframes fadeIn {
+@keyframes flipInY {
   from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
 
-  to {
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
   }
 }
 
-.fadeIn {
-	-webkit-animation-duration: .6s;
-	animation-duration: .6s;
-	-webkit-animation-name: fadeIn;
-	animation-name: fadeIn;
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
 }
-
-
 
 
 
