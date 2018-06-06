@@ -11,28 +11,17 @@ Product.setItem = function(pagenum) {
 	for (var i = 0; i < Product.item_length; i++) {
 		
 		p = i;
-		if(i >= 8) {
-			p = i - 8;
+		if(i >= 13) {
+			p = i - 13;
 		}
 		
 		content += '<li class="list">' +
 				'<a onclick="">' +
 					'<div class="item">' +
-						'<img class="img-fluid" src="./images/product/num1p'+p+'.png" alt="..." />' +
+						'<a data-fancybox="gallery" href="./images/product/num1p'+p+'.png"><img class="img-fluid" src="./images/product/num1p'+p+'.png"></a>' +
 					'</div>' +
 				'</a></li>';
 		
-		/*
-		if(i >= 3) {
-			p = 2;
-		}
-		if(i >= 7) {
-			p = 3;
-		}
-		if(i >= 11) {
-			p = 4;
-		}
-		*/
 	}
 
 	var pagecode = Product.getPage(Product.page_length, pagenum);
