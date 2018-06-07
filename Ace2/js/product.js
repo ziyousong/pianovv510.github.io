@@ -6,26 +6,28 @@ Product.page_length = 3;
 Product.setItem = function(pagenum) {
 
 	var content = '';
-	var p = 1;
+	var p = 0;
 	
 	for (var i = 0; i < Product.item_length; i++) {
+		
+		p = i;
+		if(i >= 13) {
+			p = i - 13;
+		}
+		
+		/*content += '<li class="list">' +
+				'<a onclick="">' +
+					'<div class="item">' +
+						'<a data-fancybox="gallery" href="./images/product/num1p'+p+'.png"><img class="img-fluid" src="./images/product/num1p'+p+'.png"></a>' +
+					'</div>' +
+				'</a></li>';*/
 		
 		content += '<li class="list">' +
 				'<a onclick="">' +
 					'<div class="item">' +
-						'<img class="img-fluid" src="./images/product/num1p'+p+'.png" alt="..." />' +
+						'<img class="img-fluid zoom" src="./images/product/num1p'+p+'.png" data-zoom-image="./images/product/large/num1p'+p+'.png"/>' +
 					'</div>' +
 				'</a></li>';
-		
-		if(i >= 3) {
-			p = 2;
-		}
-		if(i >= 7) {
-			p = 3;
-		}
-		if(i >= 11) {
-			p = 4;
-		}
 		
 	}
 
