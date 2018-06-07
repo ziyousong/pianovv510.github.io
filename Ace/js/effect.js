@@ -26,7 +26,6 @@ $(document).ready(function() {
 /****** Product ********/
 
 $(".zoom").elevateZoom({
-	zoomType: "inner",
 	scrollZoom : true
 });
 
