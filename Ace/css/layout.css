@@ -270,7 +270,7 @@ html, body {
 .product-ul .item {
 	border: 12px solid transparent;
 	border-image: url('../images/product/border.png') 30 stretch;
-	background-color: #FFF;
+	background-color: #fff;
 	border-radius: 8px;
 }
 
