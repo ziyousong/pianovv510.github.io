@@ -22,7 +22,7 @@ Layout.setHtml = function (page, pagename, callback) {
 	
 	xhr.open("GET", './html/'+page+'.html', false);
 	xhr.send();
-
+	
 	var html = xhr.responseText;
 	document.getElementById("main").innerHTML = html;
 	document.getElementById("bannerName").setAttribute("key",pagename);

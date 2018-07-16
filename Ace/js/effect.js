@@ -1,4 +1,35 @@
+/******* Background *******/
+
+var rellax = new Rellax('.rellax', {
+    center: true
+  });
+
 /******* Company *******/
+
+setTimeout(function(){
+		$('.company-ACE').each(function(){
+		  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+		});
+
+		anime.timeline({loop: false})
+		  .add({
+			targets: '.company-ACE .letter',
+			scale: [4,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 950,
+			delay: function(el, i) {
+			  return 70*i;
+			}
+		  }).add({
+			targets: '.company-ACE',
+			opacity: 1,
+			duration: 1000,
+			easing: "easeOutExpo",
+			delay: 1000
+		  });
+	}, 500);
 
 $(document).ready(function() {
 	if(Layout.page === 'company') {
@@ -13,8 +44,8 @@ $(document).ready(function() {
 					$(this).addClass('fadeInUp');
 					$(this).css({"opacity":"1"});
 					
-					$('.company-img').eq(key).addClass('flipInY');
-					$('.company-img').eq(key).css({"opacity":"1"});
+					//$('.company-img').eq(key).addClass('fadeIn');
+					//$('.company-img').eq(key).css({"opacity":"1"});
 				}
 				
 			});
@@ -31,25 +62,11 @@ $(".zoom").elevateZoom({
 
 /******* Process *******/
 
-$('.tile')
-// tile mouse actions
-.on('mouseover', function(){
-  $(this).children('.process_photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-})
-.on('mouseout', function(){
-  $(this).children('.process_photo').css({'transform': 'scale(1)'});
-})
-.on('mousemove', function(e){
-  $(this).children('.process_photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-})
-// tiles set up
-.each(function(){
-  $(this)
-	// add a photo container
-	.append('<div class="process_photo"></div>')
-	// set up a background image for each tile based on data-image attribute
-	.children('.process_photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-})
+$(".tile").elevateZoom({
+  zoomType: "inner",
+  easing : true,
+  cursor: "crosshair"
+});
 
 /******* Quality *******/
 
@@ -62,4 +79,14 @@ function swapQualityImg(element) {
 	element.getElementsByTagName("img")[0].setAttribute("src", oldSrc);
 	
 }
+
+/******* Footer *******/
+
+setInterval(function(){
+	$('#footer-logo').addClass('flip');
+	setTimeout(function(){
+		$('#footer-logo').removeClass('flip');
+	}, 2000);
+}, 5000);
+
 

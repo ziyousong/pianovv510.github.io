@@ -15,13 +15,6 @@ Product.setItem = function(pagenum) {
 			p = i - 13;
 		}
 		
-		/*content += '<li class="list">' +
-				'<a onclick="">' +
-					'<div class="item">' +
-						'<a data-fancybox="gallery" href="./images/product/num1p'+p+'.png"><img class="img-fluid" src="./images/product/num1p'+p+'.png"></a>' +
-					'</div>' +
-				'</a></li>';*/
-		
 		content += '<li class="list">' +
 				'<a onclick="">' +
 					'<div class="item">' +
