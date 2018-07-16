@@ -60,7 +60,7 @@ html, body {
 	//margin-top: 2em;
 	padding-top: 2em;
 	padding-bottom: 6em;
-	background-image: url('../images/background/mainbg2.png');
+	background-image: url('../images/background/mainbg.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: top 0px center;
@@ -526,7 +526,7 @@ html, body {
 
 #footer {
 	height: 90px;
-	background-image: url('../images/background/footer3.jpg');
+	background-image: url('../images/background/footer.jpg');
 	background-size: 100% 115%;
 	background-position: top -7px center;
 	color: white;
