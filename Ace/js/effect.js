@@ -44,8 +44,6 @@ $(document).ready(function() {
 					$(this).addClass('fadeInUp');
 					$(this).css({"opacity":"1"});
 					
-					//$('.company-img').eq(key).addClass('fadeIn');
-					//$('.company-img').eq(key).css({"opacity":"1"});
 				}
 				
 			});
