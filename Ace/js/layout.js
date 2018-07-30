@@ -63,6 +63,11 @@ Layout.getHtml = function() {
 
 Layout.getHtml();
 
+var bg = Layout.getStringParamFromUrl('bg');
+
+if (bg != undefined) {
+	$('#main').css("background-image","url('./images/background/mainbg"+bg+".jpg')");
+}
 
 /*function newsInit() {
 	var newsparam = getStringParamFromUrl("news");
