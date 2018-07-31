@@ -45,15 +45,15 @@ Layout.getHtml = function() {
 		Layout.setHtml(Layout.page, 'about', function(){});
 	}
 	else if (Layout.page === 'contact') {
+		$('#main').css("background-image","url('./images/background/mainbg4.jpg')");
 		Layout.setHtml(Layout.page, 'contact', function(){});
 	}
 	else if (Layout.page === 'process' || Layout.page === 'quality') {
-		Layout.setHtml(Layout.page, 'process', function() {
-			//document.write('<script src="./js/effect.js"></script>');
-		});
+		$('#main').css("background-image","url('./images/background/mainbg5.jpg')");
 	}
 	else 
 	{
+		$('#main').css("background-image","url('./images/background/mainbg6.jpg')");
 		Layout.setHtml(Layout.page, 'product', function() {
 			document.write('<script src="./js/product.js"></script>');
 		});
