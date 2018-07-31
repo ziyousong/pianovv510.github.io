@@ -50,6 +50,9 @@ Layout.getHtml = function() {
 	}
 	else if (Layout.page === 'process' || Layout.page === 'quality') {
 		$('#main').css("background-image","url('./images/background/mainbg5.jpg')");
+		Layout.setHtml(Layout.page, 'process', function() {
+			//document.write('<script src="./js/effect.js"></script>');
+		});
 	}
 	else 
 	{
