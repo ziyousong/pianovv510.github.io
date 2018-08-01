@@ -45,18 +45,15 @@ Layout.getHtml = function() {
 		Layout.setHtml(Layout.page, 'about', function(){});
 	}
 	else if (Layout.page === 'contact') {
-		$('#main').css("background-image","url('./images/background/mainbg4.jpg')");
 		Layout.setHtml(Layout.page, 'contact', function(){});
 	}
 	else if (Layout.page === 'process' || Layout.page === 'quality') {
-		$('#main').css("background-image","url('./images/background/mainbg5.jpg')");
 		Layout.setHtml(Layout.page, 'process', function() {
 			//document.write('<script src="./js/effect.js"></script>');
 		});
 	}
 	else 
 	{
-		$('#main').css("background-image","url('./images/background/mainbg6.jpg')");
 		Layout.setHtml(Layout.page, 'product', function() {
 			document.write('<script src="./js/product.js"></script>');
 		});
@@ -65,12 +62,6 @@ Layout.getHtml = function() {
 }
 
 Layout.getHtml();
-
-var bg = Layout.getStringParamFromUrl('bg');
-
-if (bg != undefined) {
-	$('#main').css("background-image","url('./images/background/mainbg"+bg+".jpg')");
-}
 
 /*function newsInit() {
 	var newsparam = getStringParamFromUrl("news");
