@@ -55,7 +55,8 @@ $(document).ready(function() {
 /****** Product ********/
 
 $(".zoom").elevateZoom({
-	scrollZoom : true
+	scrollZoom : true,
+	lensSize: 500
 });
 
 /******* Process *******/

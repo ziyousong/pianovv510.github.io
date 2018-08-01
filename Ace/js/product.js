@@ -18,7 +18,7 @@ Product.setItem = function(pagenum) {
 		content += '<li class="list">' +
 				'<a onclick="">' +
 					'<div class="item">' +
-						'<img class="img-fluid zoom" src="./images/product/num1p'+p+'.png" data-zoom-image="./images/product/num1p'+p+'.png"/>' +
+						'<img class="img-fluid zoom" src="./images/product/num1p'+p+'.png" data-zoom-image="./images/product/large/num1p'+p+'.png"/>' +
 					'</div>' +
 				'</a></li>';
 		
