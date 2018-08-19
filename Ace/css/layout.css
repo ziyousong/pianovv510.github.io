@@ -15,7 +15,7 @@ html, body {
 .layout-nav {
 	background-image: url('../images/background/banner.jpg');
 	background-size: 104% 145%;
-	height: 150px;
+	height: 145px;
 	background-color: rgba(20,20,20,0.5);
 }
 
@@ -38,7 +38,7 @@ html, body {
 
 .header {
 	position: relative;
-	top: 28px;
+	top: 14px;
 	left: 20px;
 	margin-left: -50px;
 	text-align: center;
@@ -57,9 +57,8 @@ html, body {
 /******* main ********/
 
 .main {
-	//margin-top: 2em;
-	padding-top: 2em;
-	padding-bottom: 6em;
+	//padding-top: 2em;
+	//padding-bottom: 2em;
 	background-image: url('../images/background/mainbg.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -67,9 +66,9 @@ html, body {
 }
 
 #worldmap {
-	position: absolute;
+	position: fixed;
 	min-height: 300px;
-	width: 90%;
+	width: 70%;
 	top: 35%;
 	left: 0;
 	right: 0;
@@ -82,7 +81,7 @@ html, body {
 }
 
 .content hr {
-	margin-top: 8px;
+	margin-top: -6px;
 	border-top: 0.07rem solid rgba(255, 255, 255, 1);
 }
 
@@ -90,6 +89,7 @@ html, body {
 
 .menu {
 	position: relative;
+	margin-top: 1.3em;
 }
 
 .menu-title {
@@ -282,25 +282,16 @@ html, body {
 .product-ul {
 	padding: 0;
 	list-style-type: none;
-	margin-left: 30px;
-	margin-top: 40px;
+	margin-top: 25px;
 }
 
 .product-ul .list {
-	width: 15%;
-	float: left;
+	width: 13%;
+	display: inline-block;
 	padding: 0px;
-	margin: 18px 24px;
+	margin: 12px auto;
 }
-
-.product-ul .list:nth-child(5n+1) {
-	clear: left;
-}
-
-.product-ul .list a {
-	text-decoration: none;
-}
-
+	
 .product-ul .item {
 	border: 12px solid transparent;
 	border-image: url('../images/product/border.png') 30 stretch;
@@ -312,16 +303,8 @@ html, body {
 	
 }
 
-/*.product-ul .text {
-	font-size: 22px;
-	font-weight: 600;
-	color: #1D2087;
-	text-align: center;
-	padding-top: 10px;
-}*/
-
-.product-ul .item:hover {
-	#box-shadow: 2px 2px 15px rgba(50,50,50,0.6);
+.product-ul .list:hover {
+	box-shadow: 2px 2px 15px rgba(50,50,50,0.6);
 }
 
 .product-page {
@@ -357,6 +340,17 @@ html, body {
 	color: white;
 	border: 0px;
 	cursor: default;
+}
+
+.lb-outerContainer {
+	margin-top: 5% !important;
+	height: 500px !important;
+	width: 500px !important;
+}
+
+.lb-outerContainer .lb-image {
+	height: 500px !important;
+	width: 500px !important;
 }
 
 /******* process ********/
@@ -543,12 +537,14 @@ html, body {
 /******* footer ********/
 
 #footer {
-	height: 90px;
+	position: relative;
+	height: 85px;
 	background-image: url('../images/background/footer.jpg');
-	background-size: 100% 115%;
+	background-size: 100% 125%;
 	background-position: top -7px center;
 	color: white;
-	z-index: 100;
+	bottom: 0;
+	z-index: 10;
 }
 
 #footer .row:first-child {
