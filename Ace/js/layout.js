@@ -39,7 +39,9 @@ Layout.getHtml = function() {
 		// 404
 	}
 	else if (Layout.page === 'company') {
-		Layout.setHtml(Layout.page, 'about', function(){});
+		Layout.setHtml(Layout.page, 'about', function(){
+			$(".main").css("padding-bottom", "2vh");
+		});
 	}
 	else if (Layout.page === 'news') {
 		Layout.setHtml(Layout.page, 'about', function(){});

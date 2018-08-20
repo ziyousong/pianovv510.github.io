@@ -6,7 +6,7 @@ if (Layout.page == 'product3'){ Product.item_length = 10; }
 if (Layout.page == 'product4'){ Product.item_length = 6; }
 if (Layout.page == 'product5'){ Product.item_length = 8; }
 if (Layout.page == 'product6'){ Product.item_length = 12; }
-//Product.item_length = 15;
+Product.total_length = 15;
 Product.page_length = 3;
 
 Product.setItem = function(pagenum) {
@@ -14,7 +14,7 @@ Product.setItem = function(pagenum) {
 	var content = '';
 	var p = 1;
 	
-	for (var i = 1; i <= Product.item_length; i++) {
+	for (var i = 1; i <= Product.total_length; i++) {
 		/*
 		p = i;
 		if(i >= 14) {
@@ -22,7 +22,7 @@ Product.setItem = function(pagenum) {
 		}*/
 		
 		if (i == 1) {
-			content += '<div class="row justify-content-start">'
+			content += '<div class="row justify-content-center">'
 		}
 		/*
 		content += '<li class="list">' +
@@ -31,19 +31,23 @@ Product.setItem = function(pagenum) {
 					'</div>' +
 				'</li>';*/
 		
-		content += '<li class="list">' +
+		if (i > Product.item_length) {
+			content += '<li class="list"></li>';
+		} else {
+			content += '<li class="list">' +
 					'<a href="./images/product/'+Layout.page+'/num1p'+i+'.png" data-lightbox="mygallery">' +
 					'<div class="item">' +
 						'<img class="img-fluid" src="./images/product/'+Layout.page+'/num1p'+i+'.png" />' +
 					'</div>' +
 				'</a></li>';
+		}
 		
 		if (i % 5 == 0) {
 			content += '</div>'
-			content += '<div class="row justify-content-start">'
+			content += '<div class="row justify-content-center">'
 		}
 		
-		if (i == Product.item_length) {
+		if (i == Product.total_length) {
 			content += '</div>'
 		}
 		
