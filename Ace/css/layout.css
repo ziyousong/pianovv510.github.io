@@ -15,7 +15,7 @@ html, body {
 .layout-nav {
 	background-image: url('../images/background/banner.jpg');
 	background-size: 104% 145%;
-	height: 145px;
+	max-height: 18.5vh;
 	background-color: rgba(20,20,20,0.5);
 }
 
@@ -542,7 +542,7 @@ html, body {
 
 #footer {
 	position: relative;
-	height: 85px;
+	max-height: 10.5vh;
 	background-image: url('../images/background/footer.jpg');
 	background-size: 100% 125%;
 	background-position: top -7px center;
