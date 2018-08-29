@@ -65,32 +65,7 @@ Layout.getHtml = function() {
 
 Layout.getHtml();
 
-/*function newsInit() {
-	var newsparam = getStringParamFromUrl("news");
-	console.log(newsparam);
-	if(newsparam === undefined) {
-		var xhr = new XMLHttpRequest();
 
-		xhr.onload = function() {
-			var data = JSON.parse(this.responseText);
-			var content = '';
-			for(var key in data.newsList) {
-				content += '<div class="media">' +
-					'<img class="align-self-center mr-4 ml-6 rounded" src="'+data.newsList[key].newsImg+'" alt="...">' +
-					'<div class="media-body">' +
-					'<span class="media-date">'+data.newsList[key].newsDate+'</span>' +
-					'<div class="media-title mb-3 mt-2"><a href="./news.html?news=1">'+data.newsList[key].newsTitle+'</a></div>' +
-					'<p>'+data.newsList[key].newsContent+'<a href="./news.html?news=1">VIEW MORE></a></p></div></div>' +
-					'<br><p>';
-			}
-			content += '<div class="news-page"> <span><u>1</u></span> <span>2</span> <span>3</span> </div>';
-			document.getElementById("newsContain").innerHTML = content;
-		} 
-
-		xhr.open("GET", './msg/'+localStorage.lang+'.json');
-		xhr.send();
-	}
-}*/
 
 
 
