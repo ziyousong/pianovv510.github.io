@@ -13,9 +13,10 @@ html, body {
 }
 
 .layout-nav {
+	padding-top: 60px;
 	background-image: url('../images/background/footer.jpg');
 	//background-size: 104% 145%;
-	background-size: 100% 205%;
+	background-size: 98% 200%;
 	height: 18.5vh;
 	background-color: rgba(20,20,20,0.5);
 }
@@ -23,7 +24,7 @@ html, body {
 /******* banner ********/
 
 .banner {
-	padding-top: 75px;
+	padding-top: 30px;
 }
 
 .banner-name {
@@ -58,7 +59,6 @@ html, body {
 /******* main ********/
 
 .main {
-	//padding-bottom: 1vh;
 	background-image: url('../images/background/mainbg.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -362,10 +362,11 @@ html, body {
 
 .tile {
 	width: 100%;
-	height: 28%;
+	height: 25%;
     overflow: hidden;
 	border: 7px solid #fff;
 	border-radius: 5px;
+	margin-top: -10px;
 }
 
 .quality-main-img {
