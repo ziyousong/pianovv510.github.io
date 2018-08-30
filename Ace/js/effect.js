@@ -53,11 +53,36 @@ $(document).ready(function() {
 });
 
 /****** Product ********/
-/*
-$(".zoom").elevateZoom({
+
+$(".zoom1, .zoom2, .zoom3").elevateZoom({
 	scrollZoom : true,
-	lensSize: 500
-});*/
+	zoomWindowPosition: 1
+});
+
+$(".zoom4, .zoom5").elevateZoom({
+	scrollZoom : true,
+	zoomWindowPosition: 11
+});
+
+$(".zoom6, .zoom7, .zoom8").elevateZoom({
+	scrollZoom : true,
+	zoomWindowPosition: 2
+});
+
+$(".zoom9, .zoom10").elevateZoom({
+	scrollZoom : true,
+	zoomWindowPosition: 10
+});
+
+$(".zoom11, .zoom12, .zoom13").elevateZoom({
+	scrollZoom : true,
+	zoomWindowPosition: 3
+});
+
+$(".zoom14, .zoom15").elevateZoom({
+	scrollZoom : true,
+	zoomWindowPosition: 9
+});
 
 /******* Process *******/
 
