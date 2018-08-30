@@ -426,8 +426,11 @@ html, body {
 }
 
 .contact-info {
-	height: 185px;
 	margin-left: 1rem;
+}
+
+.contact-info .window {
+	height: 185px;
 	border: 1px solid #fff;
 	color: white;
 	box-shadow: inset 0px 0px 5px 2px #97cbff;
@@ -454,12 +457,11 @@ html, body {
 	text-align: center;
 }
 
-.contact-info .staff {
-	margin: 0 -15px;
-	padding-top: 30px;
+.contact-info .person {
+	margin: 0 0px;
 }
 
-.contact-info .staff .name {
+.contact-info .person .name {
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
@@ -508,7 +510,41 @@ html, body {
 	margin: 0 auto;
 }
 
-/******* RWD ********/
+/******* RWD 1200, 992, 768, 576 ********/
+
+@media screen and (max-width: 1200px) {
+	#main {
+		padding-bottom: 1rem;
+	}
+	.contact-map {
+		margin-left: 0;
+		padding: 0;
+	}
+	.contact-info {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.company-img {
+		margin-top: 50px;
+	}
+	.media img {
+		display: none;
+	}
+	.media-title {
+		line-height: 40px;
+	}
+	.contact-info .window {
+		height: 265px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contact-info .window {
+		height: 255px;
+	}
+}
 
 @media screen and (max-width: 576px) {
 	.company-title-left {
@@ -520,23 +556,8 @@ html, body {
 	.media {
 		height: 300px;
 	}
-}
-
-@media screen and (max-width: 950px) {
-	.company-img {
-		margin-top: 50px;
-	}
-	.media img {
-		display: none;
-	}
-	.media-title {
-		line-height: 40px;
-	}
-	#footer {
-		height: 500px !important;
-	}
-	.contact-map {
-		padding-left: 0;
+	.contact-info .window {
+		height: 400px;
 	}
 }
 
