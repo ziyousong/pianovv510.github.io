@@ -24,7 +24,7 @@ Product.setItem = function(pagenum) {
 		
 		content += '<li class="list">' +
 				'<div class="item">' +
-					'<img class="img-fluid zoom'+i+'" src="./images/product/'+Layout.page+'/num1p'+i+'.png" data-zoom-image="./images/product/large/num1p'+i+'.png"/>' +
+					'<img class="img-fluid zoom'+i+'" src="./images/product/'+Layout.page+'/num1p'+i+'.png" data-zoom-image="./images/product/large/'+Layout.page+'/num1p'+i+'.png"/>' +
 				'</div>' +
 			'</li>';
 	
