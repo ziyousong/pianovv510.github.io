@@ -24,7 +24,7 @@ html, body {
 /******* banner ********/
 
 .banner {
-	padding-top: 30px;
+	padding-top: 1%;
 }
 
 .banner-name {
@@ -307,9 +307,9 @@ html, body {
 }
 
 .product-ul .list:hover {
-	-ms-transform: scale(1.1,1.1); /* IE 9 */
-    -webkit-transform: scale(1.1,1.1); /* Safari */
-    transform: scale(1.1,1.1); /* Standard syntax */
+	/*-ms-transform: scale(1.1,1.1); /* IE 9 */
+    /*-webkit-transform: scale(1.1,1.1); /* Safari */
+    /*transform: scale(1.1,1.1); /* Standard syntax */
 }
 
 .product-page {
